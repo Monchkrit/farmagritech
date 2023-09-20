@@ -1,0 +1,78 @@
+<div class="row">
+  <div class="col">
+    <h4><small class="text-muted"><%= @time.to_formatted_s(:long) %></small></h4>
+  </div>
+</div>
+<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group mr-2" role="group" aria-label="First group">
+    <button type="button" class="btn btn-warning"><%= link_to "Prism View", gardener_garden_path(:id => @garden) %></button>
+    <button type="button" class="btn btn-warning"><%= link_to "Garden Info", gardener_gardens_gardentable_path(:id => @garden) %></button>
+    <button type="button" class="btn btn-warning"><%= link_to "Grow Info", gardener_gardens_growtable_path(:id => @garden) %></button>
+    <button type="button" class="btn btn-warning">Garden Work</button>
+  </div>
+</div>
+<div class="container-fluid work-box">
+  <div class="row">
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-primary button-box"><%= link_to "Sign Up", gardener_jobs_path(:id => @garden) %></button>
+      <button type="button" class="btn btn-primary button-box"><%= link_to "Schedule", gardener_jobs_schedule_path(:gardener => current_user, :garden_id => @garden.id) %></button>
+    </div>
+  </div>
+</div>
+<div class="container-fluid work-box">
+  <% @rows.each do |bed| %>
+  <div class="row justify-content-center work-head-row">
+    <p class="h2"><strong>Work Bed <%= bed.row_num + 1 %></strong></p>
+  </div>
+  <div class="row">
+    <div class="col-sm work-box">
+      <p class="h3 work-head">Cultivating</p>
+      <p><% unless bed.cultdate(bed).blank? %>
+        Last Cultivated: <%= bed.cultdate(bed).strftime("%B %d, %Y") %> <%= bed.cultdate(bed).strftime("%l:%M %p") %>
+      <% end %>
+      </p>
+    </div>
+    <div class="col-sm work-box">
+      <p class="h3 work-head">Feeding</p>
+      <p>
+      <% unless bed.feeddate(bed).blank? %>
+        Last Feeding: <%= bed.feeddate(bed).strftime("%B %d, %Y") %> <%= bed.feeddate(bed).strftime("%l:%M %p") %>
+      <% end %>
+      </p>
+    </div>
+    <div class="col-sm work-box">
+      <p class="h3 work-head">Seeding / Planting</p>
+      <p>
+        Number of Cubes: <%= @garden.length * 4 %><br />
+      </p>
+      <% unless @cubes.where(:row_id => bed).last.sow_time.blank? %>
+      <p>
+        Date Planted: <%= @cubes.where(:row_id => bed).last.sow_time.strftime("%B %d, %Y") %>        
+      </p>
+        <% end %>
+    </div>
+    <div class="col-sm work-box">
+      <p class="h3 work-head">Weeding</p>
+      <p>
+      <% unless bed.weeddate(bed).blank? %>
+        Last Weeding: <%= bed.weeddate(bed).strftime("%B %d, %Y") %> <%= bed.weeddate(bed).strftime("%l:%M %p") %>
+      <% end %>
+      </p>
+    </div>
+    <div class="col-sm work-box">
+      <p class="h3 work-head">Watering</p>
+      <% unless bed.irrtime(bed).blank? %>
+        Last Irrigated: <%= bed.irrtime(bed).strftime("%B %d, %Y") %> <%= bed.irrtime(bed).strftime("%l:%M %p") %>
+      <% end %>
+    </div>
+    <div class="col-sm work-box">
+      <p class="h3 work-head">Harvesting</p>
+      <p>
+      <% unless bed.harvestdate(bed).blank? %>
+        Last Harvest: <%= bed.harvestdate(bed).strftime("%B %d, %Y") %> <%= bed.harvestdate(bed).strftime("%l:%M %p") %>
+      <% end %>
+      <p>
+    </div>
+  </div><br />
+  <% end %>
+</div>

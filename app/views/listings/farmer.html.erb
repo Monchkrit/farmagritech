@@ -1,0 +1,37 @@
+<div class="col">
+  <div class="row">
+    <p class="h4"><small class="text-muted"><%= @time.to_formatted_s(:long) %></small></p>
+  </div>
+</div>
+<div class="row">
+  <table class="table table-hover">
+    <thead class="thead-dark">
+      <th class="center">Image</th>
+      <th class="center">Name</th>
+      <th class="center">Description</th>
+      <th class="center">Market Date</th>
+      <th class="center">Price</th>
+      <th class="center">Number Remaining</th>
+      <th class="center">Action</th>
+    </thead>
+    <tbody>    
+      <% @listings.each do |listing| %>
+      <tr>
+        <td class="center"><%= image_tag listing.picture.url, class:"img-thumbnail" %></td>
+        <td class="center"><%= listing.name %></td>
+        <td class="center"><%= listing.description %></td>
+        <td class="center"><%= listing.market_date.strftime("%B %-d, %Y") %></td>
+        <td class="center"><%= number_to_currency(listing.price) %></td>
+        <td class="center"><%= listing.maxorder %></td>
+        <td>
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-primary"><%= link_to 'View', listing %></li>
+            <li class="list-group-item list-group-item-primary"><%= link_to 'Edit', edit_listing_path(listing) %></li>
+            <li class="list-group-item list-group-item-primary"><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+          </ul>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

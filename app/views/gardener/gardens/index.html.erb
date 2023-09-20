@@ -1,0 +1,51 @@
+<div class="container work-box">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <%= render 'gardener/gardens/enrollInstruction' %>
+        <p class="h4"><small class="text-muted"><%= @time.to_formatted_s(:long) %></small></p>
+      </div>
+    </div>
+    <div class="row align-contents-center">
+      <div class="col">
+        <p class="h2 center gardens-head">Gardens Online</p>
+        <hr />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <% @gardens.each do |garden| %>
+          <% if garden.gardtype == "Community" %>
+            <div class="row work-box">
+              <div class="col-md">
+                <p class="h3 center"><%= link_to garden.title, gardener_garden_path(garden) %></p>
+                <p class="h4 center"><%= garden.street %><br />
+                <%= garden.city %>, <%= garden.state %> <%= garden.zipcode %>
+                <% if current_user && current_user.enrolled_in?(garden) %>
+                  <p class="h3 badge badge-info">You are Enrolled!</p>
+                <% else %>
+                  <p class="center"><%= link_to 'Enroll', garden_enrollments_path(garden), class: 'btn btn-primary', method: :post %></p>
+                  </p>
+                <% end %>
+              </div>
+              <% unless garden.picture.blank? %>
+              <div class="col-md">
+                <%= image_tag garden.picture.url %>
+              </div>
+              <% end %>
+              <div class="col-md">
+                <p class="h3 center"><u>Farmer</u></p>
+                <% @locfarmer = User.get_farmer(garden) %>
+                <% @locfarmer.each do |f| %>
+                  <p class="h4 center"><%= f.first_name %> <%= f.last_name %><br />
+                  <%= f.email %><br /></p>
+                <% end %>
+              </div>
+            </div>
+          <% else %>
+          <% end %>        
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

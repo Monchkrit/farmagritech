@@ -1,0 +1,170 @@
+<div class="row">
+  <div class="col">
+    <h4><small class="text-muted"><%= @time.to_formatted_s(:long) %></small></h4>
+  </div>
+</div>
+<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group mr-2" role="group" aria-label="First group">
+    <button type="button" class="btn btn-warning"><%= link_to "Prism View", gardener_garden_path(:id => @garden) %></button>
+    <button type="button" class="btn btn-warning">Garden Info</button>
+    <button type="button" class="btn btn-warning"><%= link_to "Grow Info", gardener_gardens_growtable_path(:id => @garden) %></button>
+    <button type="button" class="btn btn-warning"><%= link_to "Garden Work", gardener_jobs_worktable_path(:id => @garden) %></button>
+  </div>
+</div>
+<div class="col part-box">
+  <div class="row">
+    <div class="col">
+      <table class="table">
+        <thead class="thead-dark">
+          <p class="text-center display-4">Garden Information</p>
+          <th scope="col" class="h5"><strong>Farmer</strong></th>
+          <th scope="col" class="h5"><strong>Garden Address</strong></th>
+          <th scope="col" class="h5"><strong>Garden Type / </strong><br />
+          <strong>Description</strong>
+          </th>
+          <th scope="col" class="h5"><strong>Garden Size</strong></th>
+          <th scope="col" class="h5"><strong>Crops / Number Planted</strong><br />
+            <strong>Date Planted</strong>
+          </th>
+          <th scope="col" class="h5"><strong><%= link_to "Plant Hardiness Zone", "https://planthardiness.ars.usda.gov/PHZMWeb/Default.aspx", :target => "_blank" %></strong></th>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= @garden.user.first_name %> <%= @garden.user.last_name %></td>
+            <td>
+              <%= @garden.street %><br />
+              <%= @garden.city %><br />
+              <%= @garden.state %><br />
+              <%= @garden.zipcode %><br />
+            </td>
+            <td>
+              Type: <%= @garden.gardtype %><br />
+              Description: <%= @garden.description %>
+            </td>
+            <td>
+              <p><%= @garden.length %> Beds</p>
+              <p><%= @garden.width * @garden.length%> Prisms<br />
+                Each prism is 1 square meter.<br /></p>
+              <p><%= @cubes.count %> Cubes (4 per prism)</p>
+
+            </td>
+            <td>
+              <% @crops.each do |crop|  %>
+                <% unless crop.blank? %>
+                <% @plants = Soilcube.where(:crop_name => crop, :garden_id => @garden) %>
+                  <%= crop %> / <%= @plants.sum(:seedcount) %><br />
+                <% end %>
+              <% end %>
+            </td>
+            <td>
+              <% @phz.each do |phtitle| %>
+              <%= phtitle.zonetitle %> &#x2109
+              <% end %>
+              <br />Minimum Average Temperature
+            </td>        
+          </tr>
+        </tbody>
+      </table>
+      <div class="row justify-content-center">
+        <button type="button" class="btn btn-success " data-toggle="modal" data-target="#soilModal">
+          Soil Information
+        </button>
+      </div>
+      <% @soil.each do |soil| %>
+      <table class="table">
+        <thead class="thead-dark">
+          <th scope="col" class="h5"><strong>Symbol</strong></th>
+          <th scope="col" class="h5"><strong>Name</strong></th>
+          <th scope="col" class="h5"><strong>Slope</strong></th>                  
+          <th scope="col" class="h5"><strong>Elevation</strong></th>
+          <th scope="col" class="h5"><strong>Description</strong></th>
+        </thead>        
+        <tbody>
+          <tr>        
+            <td>
+              <%= soil.musym %>                    
+            </td>
+            <td>                    
+              <%= soil.muname %>
+            </td>
+            <td>                    
+              <%= soil.runoff %>                    
+            </td>                  
+            <td>                    
+              <%= soil.elev_r %>' Above Sea Level                    
+            </td>
+            <td>                    
+              <%= soil.geomdesc %>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br class="clear">
+      <table class="table">
+        <thead class="thead-dark">
+          <th scope="col" class="h5"><strong>Frost Free Days</strong></th>
+          <th scope="col" class="h5"><strong>Non-Irrigated Soil Capacity</strong></th>
+          <th scope="col" class="h5"><strong>Irrigated Soil Capacity</strong></th>
+          <th scope="col" class="h5"><strong>Available Water Capacity</strong></th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <%= soil.ffd_r %>                  
+            </td>
+            <td>
+              <% if soil.nicap_humanized_rating.blank? %>
+              <p>Not available</p>
+              <% else %>
+              <%= soil.nicap_humanized_rating %>, <%= soil.nisubcap_humanized_rating %>
+              <% end %>
+            </td>
+            <td>
+            <% if soil.icap_humanized_rating.blank? %>
+              <p>Not available</p>
+              <% else %>
+              <%= soil.icap_humanized_rating %>, <%= soil.isubcap_humanized_rating %>
+              <% end %>
+            </td>
+            <td>
+              <%= soil.aws025wta %>%
+            </td>
+          <tr>
+        </tbody>
+      </table>
+      <br class="clear">
+      <table class="table">
+        <thead class="thead-dark">
+          <th scope="col" class="h5"><strong>pH Balance</strong></th>
+          <th scope="col" class="h5"><strong>Percent of Organic Material</strong></th>
+          <th scope="col" class="h5"><strong>Water Movement</strong</th>
+          <th scope="col" class="h5"><strong>Drainage</strong></th>
+          <th scope="col" class="h5"><strong>Mud Level</strong></th>
+          <th scope="col" class="h5"><strong>Erodability</strong></th>
+        </thead>
+          <tr>
+            <td>
+              <%= soil.ph1to1h2o_r %>
+            </td>
+            <td>
+              <%= soil.om_r %>%
+            </td>
+            <td>
+              <%= soil.kwfact * 0.1417 %> inches per hour
+            </td>
+            <td>
+              <%= soil.drainagecl %>
+            </td>
+            <td>
+              <%= soil.wsatiated_r %>% Water
+            </td>
+            <td>
+              <%= soil.kwfact %> out of 1
+            </td>
+          </tr>
+      </table>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>

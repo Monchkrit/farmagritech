@@ -1,0 +1,9 @@
+<p class="h1">New Listing</p>
+
+<% if gardener? %>
+  <%= render 'newform' %>
+<% else %>
+  <%= render 'gardens/new' %>
+<% end %>
+
+<%= link_to 'Back', listings_path, class: "btn btn-link" %>

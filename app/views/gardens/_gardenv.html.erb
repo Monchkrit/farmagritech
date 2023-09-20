@@ -1,0 +1,222 @@
+<div class="modal fade" id="soilModal" tabindex="-1" role="dialog" aria-labelledby="soilModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="soilModalLabel">Find Soil Information</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="lead">On the bottom of this page is a text box in which you must enter a map unit symbol for your garden. 
+        In order to do that you need to access the
+        United States Department of Agricultural <%= link_to "Web Soil Survey", "https://websoilsurvey.sc.egov.usda.gov/App/HomePage.htm", :target => "_blank" %>.
+        </p>
+        <br />
+        <p>
+          These are the steps to find your Map Unit Symbol, and any other soil data you are interested in for your garden.
+        </p>
+        <dl class="row">
+          <dt class="col-sm-3">Step 1:</dt>
+            <dd class="col-sm-9">Click <%= link_to "Web Soil Survey", "https://websoilsurvey.sc.egov.usda.gov/App/HomePage.htm", :target => "_blank" %>, then click "Start WSS" on the Web Soil Survey page.</dd>
+          <dt class="col-sm-3">Step 2:</dt>
+            <dd class="col-sm-9">In the Area of Interest Tab on the left side click on "Address", then enter the address of your garden.</dd>
+          <dt class="col-sm-3">Step 3:</dt>
+            <dd class="col-sm-9">Click the AOI button with the tiny rectangle on the menu bar.</dd>
+          <dt class="col-sm-3">Step 4:</dt>
+            <dd class="col-sm-9">Draw a small box around the marker over your garden on the map.</dd>
+          <dt class="col-sm-3">Step 5:</dt>
+            <dd class="col-sm-9">Click the Soil Map tab on the top of the page.</dd>
+          <dt class="col-sm-3">Step 6:</dt>
+            <dd class="col-sm-9">Caps matter. Record the three letter "Map Unit Symbol" from the Map Unit Legend section on the left of the page.</dd>
+          <dt class="col-sm-3">Step 7:</dt>
+            <dd class="col-sm-9">Type the Map Unit Symbol into the Enter Symbol box and press the enter key.</dd>
+        </dl>
+        <%= form_with model: @garden, url: garden_path(@garden), method: "patch" do |f| %>
+          <%= f.label :musym, "Enter Symbol" %>
+          <%= f.text_field :musym %>
+          <%= f.submit "Save" %>
+        <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <h4><small class="text-muted"><%= @time.to_formatted_s(:long) %></small></h4>
+  </div>
+</div>
+<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group mr-2" role="group" aria-label="First group">
+    <button type="button" class="btn btn-warning"><%= link_to "Prism View", garden_path(:id => @garden) %></button>
+    <button type="button" class="btn btn-warning">Garden Info</button>
+    <button type="button" class="btn btn-warning"><%= link_to "Grow Info", growtable_path(:id => @garden) %></button>
+    <button type="button" class="btn btn-warning"><%= link_to "Garden Work", worktable_path(:garden_id => @garden) %></button>
+  </div>
+</div>
+<div class="col part-box">
+  <div class="row">
+    <div class="col">
+      <p class="text-center display-4"><strong>Garden Information</strong></p>
+      <table class="table">
+        <thead class="thead-dark">
+          <th scope="col" class="h5"><strong>Farmer</strong></th>
+          <th scope="col" class="h5"><strong>Garden Address</strong></th>
+          <th scope="col" class="h5"><strong>Garden Type / </strong><br />
+          <strong>Description</strong>
+          </th>
+          <th scope="col" class="h5"><strong>Garden Size</strong></th>
+          <th scope="col" class="h5"><strong>Crops / Number Planted /</strong><br />
+            <strong>Date Planted</strong>
+          </th>
+          <th scope="col" class="h5"><strong><%= link_to "Plant Hardiness Zone", "https://planthardiness.ars.usda.gov/PHZMWeb/Default.aspx", :target => "_blank" %></strong></th>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= @garden.user.first_name %> <%= @garden.user.last_name %></td>
+            <td>
+              <%= @garden.street %><br />
+              <%= @garden.city %><br />
+              <%= @garden.state %><br />
+              <%= @garden.zipcode %><br />
+            </td>
+            <td>
+              Type: <%= @garden.gardtype %><br />
+              Description: <%= @garden.description %>
+            </td>
+            <td>
+              <p><%= @garden.length %> Beds</p>
+              <p><%= @garden.width * @garden.length%> Prisms<br />
+                Each prism is 1 square meter.<br /></p>
+              <p><%= @cubes.count %> Cubes (4 per prism)</p>
+            </td>
+            <td>
+              <% @crops.each do |crop|  %>
+                <% unless crop.blank? %>
+                <% @plants = Soilcube.where(:crop_name => crop, :garden_id => @garden) %>
+                  <%= crop %> / <%= @plants.sum(:seedcount) %><br />
+                <% end %>
+              <% end %>
+            </td>
+            <td>
+              <% @phz.each do |phtitle| %>
+              <%= phtitle.zonetitle %> &#x2109
+              <% end %>
+              <br />Minimum Average Temperature
+            </td>        
+          </tr>
+        </tbody>
+      </table>
+      <div class="row justify-content-center">
+        <button type="button" class="btn btn-success " data-toggle="modal" data-target="#soilModal">
+          Soil Information
+        </button>
+      </div>
+      <% @soil.each do |soil| %>
+      <table class="table">
+        <thead class="thead-dark">
+          <th scope="col" class="h5"><strong>Symbol</strong></th>
+          <th scope="col" class="h5"><strong>Name</strong></th>
+          <th scope="col" class="h5"><strong>Slope</strong></th>                  
+          <th scope="col" class="h5"><strong>Elevation</strong></th>
+          <th scope="col" class="h5"><strong>Description</strong></th>
+        </thead>        
+        <tbody>
+          <tr>        
+            <td>
+              <%= soil.musym %>                    
+            </td>
+            <td>                    
+              <%= soil.muname %>
+            </td>
+            <td>                    
+              <%= soil.runoff %>                    
+            </td>                  
+            <td>                    
+              <%= soil.elev_r %>' Above Sea Level                    
+            </td>
+            <td>                    
+              <%= soil.geomdesc %>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="h5">Soil Survey Staff, Natural Resources Conservation Service, United States Department of Agriculture. 
+      Soil Survey Geographic (SSURGO) Database. Available online at https://sdmdataaccess.sc.egov.usda.gov.
+      <br class="clear">
+      <table class="table">
+        <thead class="thead-dark">
+          <th scope="col" class="h5"><strong>Frost Free Days</strong></th>
+          <th scope="col" class="h5"><strong>Non-Irrigated Soil Capacity</strong></th>
+          <th scope="col" class="h5"><strong>Irrigated Soil Capacity</strong></th>
+          <th scope="col" class="h5"><strong>Available Water Capacity</strong></th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <%= soil.ffd_r %>                  
+            </td>
+            <td>
+              <% if soil.nicap_humanized_rating.blank? %>
+              <p>Not available</p>
+              <% else %>
+              <%= soil.nicap_humanized_rating %>, <%= soil.nisubcap_humanized_rating %>
+              <% end %>
+            </td>
+            <td>
+            <% if soil.icap_humanized_rating.blank? %>
+              <p>Not available</p>
+              <% else %>
+              <%= soil.icap_humanized_rating %>, <%= soil.isubcap_humanized_rating %>
+              <% end %>
+            </td>
+            <td>
+              <%= soil.aws025wta %>%
+            </td>
+          <tr>
+        </tbody>
+      </table>
+      <br class="clear">
+      <table class="table">
+        <thead class="thead-dark">
+          <th scope="col" class="h5"><strong>pH Balance</strong></th>
+          <th scope="col" class="h5"><strong>Percent of Organic Material</strong></th>
+          <th scope="col" class="h5"><strong>Water Movement</strong</th>
+          <th scope="col" class="h5"><strong>Drainage</strong></th>
+          <th scope="col" class="h5"><strong>Mud Level</strong></th>
+          <th scope="col" class="h5"><strong>Erodability</strong></th>
+        </thead>
+          <tr>
+            <td>
+              <%= soil.ph1to1h2o_r %>
+            </td>
+            <td>
+              <%= soil.om_r %>%
+            </td>
+            <td>
+              <%= soil.kwfact * 0.1417 %> inches per hour
+            </td>
+            <td>
+              <%= soil.drainagecl %>
+            </td>
+            <td>
+              <%= soil.wsatiated_r %>% Water
+            </td>
+            <td>
+              <%= soil.kwfact %> out of 1
+            </td>
+          </tr>
+      </table>
+      <% end %>
+      <br class="clear">
+      <div class="row justify-content-between">
+        <div class="col col-lg-2">
+          <%= link_to "Destroy", garden_path(@garden), method: :delete, data: {confirm: 'Are you sure you want to delete this garden?'}, class: 'btn btn-danger' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

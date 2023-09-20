@@ -1,0 +1,68 @@
+<div class="col">
+  <div class="row form-box">  
+    <div class="col">
+      <p class="display-4">Add a New Garden</p>     
+      <p class="h4"><strong>Please describe your garden before creating listings.</strong></p>
+
+      <%= form_with model: Garden.new, local: true do |f| %>
+      <div class="row">
+        <div class="col">        
+          <p><%= f.label(:title, "Garden Title", class:"lead") %></p>
+          <p><%= f.text_field :title %></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">        
+          <p><%= f.label(:gardtype, "Garden Type", class:"lead") %></p>
+          <p><%= f.select(:gardtype, [['Private'], ['Community']]) %></p>
+        </div>
+        <div class="col">        
+          <p><%= f.label(:description, "Garden Description", class:"lead") %></p>
+          <p><%= f.select(:description, [['Field'], ['Greenhouse'], ['Orchard'], ['Container']]) %></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">        
+          <p><%= f.label(:street, "Street Address", class:"lead") %></p>
+          <p><%= f.text_field :street %></p>
+        </div>
+
+        <div class="col">
+          <p class="lead"><%= f.label(:city, "City") %></p>
+          <p><%= f.text_field :city %></p>
+        </div>
+
+        <div class="col">
+          <p class="lead"><%= f.label(:state, "State") %></p>
+          <p><%= f.text_field :state %></p>
+        </div>
+
+        <div class="col">
+          <p class="lead"><%= f.label(:zipcode, "Zipcode") %></p>
+          <p><%= f.text_field :zipcode %></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p class="lead">Beds: Maximum 8</p>          
+          <p><%= f.number_field :length %></p><br />
+        </div>      
+      </div>
+      <div class="row">
+        <div class="col">
+          <p class="lead"> Prisms per bed: (1 meter each) Maximum 30</p>
+          <p><%= f.number_field :width%></p>
+          <br />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p><%= f.file_field :picture%></p><br />
+
+          <%= f.submit "Create", class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>

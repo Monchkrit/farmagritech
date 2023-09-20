@@ -1,0 +1,74 @@
+<div class="row">
+  <div class="col">
+    <h4><small class="text-muted"><%= @time.to_formatted_s(:long) %></small></h4>
+  </div>
+</div>
+<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group mr-2" role="group" aria-label="First group">
+  <button type="button" class="btn btn-warning"><%= link_to "Prism View", gardener_garden_path(:id => @garden) %></button>
+  <button type="button" class="btn btn-warning"><%= link_to "Garden Info", gardener_gardens_gardentable_path(:id => @garden) %></button>
+  <button type="button" class="btn btn-warning"><%= link_to "Grow Info", gardener_gardens_growtable_path(:id => @garden) %></button>
+  <button type="button" class="btn btn-warning"><%= link_to "Garden Work", gardener_jobs_worktable_path(:id => @garden) %></button>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col">       
+      <p class="display-3 center">Sign Up for Jobs</p>
+      <div class="job-box">
+        <p class="h3">Cultivation Job</p>
+        <% @rows.each do |bed| %>
+          <% unless bed.cultdate(bed).blank? %>
+          <p class="lead">Bed <%= bed.row_num + 1 %> last completed: <%= bed.cultdate(bed).strftime("%B %d, %Y") %>
+          <% end %>         
+          </p>
+        <% end %>        
+        <p class="lead"><%= link_to "Sign up", gardener_jobs_new_path(:garden_id => @garden, :name => "Cultivate"), class: "btn btn-primary" %>
+      </div>
+      <div class="job-box">
+        <p class="h3">Feeding Job</p>
+        <% @rows.each do |bed| %>
+          <% unless bed.feeddate(bed).blank? %>
+          <p class="lead">Bed <%= bed.row_num + 1 %> last completed: <%= bed.feeddate(bed).strftime("%B %d, %Y") %>
+          <% end %>         
+          </p>
+        <% end %>        
+        <p class="lead"><%= link_to "Sign up", gardener_jobs_new_path(:garden_id => @garden, :name => "Feed"), class: "btn btn-primary" %>
+      </div>
+      <div class="job-box">
+        <p class="h3">Seeding / Planting Job</p>
+        <p class="lead"><%= link_to "Sign up", gardener_jobs_new_path(:garden_id => @garden, :name => "Seed"), class: "btn btn-primary" %>
+      </div>
+      <div class="job-box">
+        <p class="h3">Weeding Job</p>
+        <% @rows.each do |bed| %>
+          <% unless bed.weeddate(bed).blank? %>
+          <p class="lead">Bed <%= bed.row_num + 1 %> last completed: <%= bed.weeddate(bed).strftime("%B %d, %Y") %>
+          <% end %>         
+          </p>
+        <% end %>        
+        <p class="lead"><%= link_to "Sign up", gardener_jobs_new_path(:garden_id => @garden, :name => "Weed"), class: "btn btn-primary" %>
+      </div>
+      <div class="job-box">
+        <p class="h3">Watering Job</p>
+        <% @rows.each do |bed| %>
+          <% unless bed.irrtime(bed).blank? %>
+          <p class="lead">Bed <%= bed.row_num + 1 %> last completed: <%= bed.irrtime(bed).strftime("%B %d, %Y") %>
+          <% end %>         
+          </p>
+        <% end %>        
+        <p class="lead"><%= link_to "Sign up", gardener_jobs_new_path(:garden_id => @garden, :name => "Irrigate"), class: "btn btn-primary" %>
+      </div>
+      <div class="job-box">
+        <p class="h3">Harvesting Job</p>
+        <% @rows.each do |bed| %>
+          <% unless bed.harvestdate(bed).blank? %>
+          <p class="lead">Bed <%= bed.row_num + 1 %> last completed: <%= bed.harvestdate(bed).strftime("%B %d, %Y") %>
+          <% end %>         
+          </p>
+        <% end %>        
+        <p class="lead"><%= link_to "Sign up", gardener_jobs_new_path(:garden_id => @garden, :name => "Harvest"), class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>

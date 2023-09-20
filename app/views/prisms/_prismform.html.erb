@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+    <p class="h4"><small class="text-muted"><%= @time.to_formatted_s(:long) %></small></p>
+    </div>
+  </div>
+  <div class="col">
+    <div class="row justify-content-center form-box">
+      <span class="border border-white">
+      <p class="h1">Plant Your Prism Cubes</p>
+      <p class="lead"><font color="red">Only use this on a clear prism,
+        or to clear a prism</font></p>
+      <%= form_with url: prism_path, method: "patch", local: true do |f| %>
+        <%= f.label :crop_name, "Crop Name", class:"lead" %>
+        <p><%= f.text_field :crop_name %></p>
+        <%= f.label :nOfCubes, "How many cubes to plant?", class:"lead" %>
+        <p><%= f.number_field :nOfCubes %></p>
+        <%= f.label :seedcount, "Number to plant in each cube", class:"lead" %>
+        <p><%= f.number_field :seedcount %></p>
+        <%= link_to "Back", garden_path(@garden), class: 'btn btn-link' %>
+        <%= f.hidden_field :sow_time, :value => @time %>
+        <%= f.submit "Plant" %>
+      <% end %>
+      </span>
+    </div>
+  </div>    
+    <%= render 'gardens/pi' %>
+</div>

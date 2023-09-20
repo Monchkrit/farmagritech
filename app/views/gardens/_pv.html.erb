@@ -1,0 +1,72 @@
+<div class="row">
+  <div class="col">
+    <h4><small class="text-muted"><%= @time.to_formatted_s(:long) %></small></h4>
+  </div>
+</div>
+<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group mr-2" role="group" aria-label="First group">
+    <button type="button" class="btn btn-warning">Prism View</button>
+    <button type="button" class="btn btn-warning"><%= link_to "Garden Info", gardentable_path(:id => @garden) %></button>
+    <button type="button" class="btn btn-warning"><%= link_to "Grow Info", growtable_path(:id => @garden) %></button>
+    <button type="button" class="btn btn-warning"><%= link_to "Garden Work", worktable_path(:garden_id => @garden) %></button>
+  </div>
+</div>
+  <div class="row">
+    <div class="col-sm-12">
+      <table class="prism-table-head">
+        <% @rows.each_with_index do |gardenrow, index| %>
+          <% @rows.select { | row | row.row_num == index}.each do |row| %>
+            <td class="row-cols"></td>
+            <td class="prism-cols">
+              <%= link_to 'Plant Bed', edit_row_path(row), class:"lead" %> <%= (row.row_num + 1) %>
+              <br /><i class="fas fa-arrow-down"></i>
+            </td>
+            <td class="row-cols"></td>
+          <% end %>
+        <% end %>        
+      </table>
+    </div>
+    <div class="col-sm-12">
+      <table class="prism-table">
+        <thead>
+        </thead>
+        <tbody>
+          <% @prisms.rank(:column_order).each_with_index do |gardenprism, index| %>
+            <tr>
+              <% @prisms.rank(:column_order).select { | prism | prism.col_num == index}.each do |prism| %>
+                <td class="row-boxes">Bed <%= prism.row_num + 1 %> Prism <%= prism.col_num + 1 %></td>
+                <td class="prism-boxes">
+                  <ul class="list-unstyled w-auto">
+                    <li><%= link_to 'Plant Prism', edit_prism_path(prism), class:"h6" %></li>
+                    <li><% @loccubes = Soilcube.where(:prism_id => prism) %></li>
+                      <% @loccubes.each do |c| %>
+                    <li>
+                      <%= link_to '* ', edit_soilcube_path(c, :garden_id => @garden) %>
+                      <%= c.crop_name %>
+                    </li>
+                    <% end %>
+                  </ul>
+                </td>
+                <td class="row-boxes"></td>
+              <% end %>
+            </tr>
+          <% end %>        
+        </tbody>      
+      </table>
+      <div class="row justify-content-left">
+        <div class="col-sm-7">
+          <figure class="figure">
+            <% unless @garden.picture.blank? %>
+              <%= image_tag @garden.picture.url %>
+            <% end %>
+            <figcaption class="figure-caption text-right"><%= @garden.address %></figcaption>
+          </figure>
+          <%= form_with model: @garden do |f| %>
+            <p><%= f.file_field :picture%></p>
+            <p><%= f.submit "Update Picture", class: 'btn btn-primary' %></p>
+          <% end %>
+        </div>
+      </div>     
+    </div>
+  <%= render partial: "gardens/pi" %>
+</div>

@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="col">
+    <div class="row listing-box">    
+      <div class="card" style: "width: 18rem;">
+        <%= image_tag @listing.picture.url, class:"card-img-top" %>
+      </div>
+      <div class="col">
+        <p class="h3">
+        <%= @listing.name %>
+        </p>
+        <p>
+        <%= @listing.description %>
+        </p>
+        <p>
+        <%= @listing.product_type %>
+        </p>
+        <p>
+        For Sale: <%= @listing.market_date.strftime("%B %-d, %Y") %>
+        </p>
+        <p>
+        <%= "Sold by #{@lister.first_name} #{@lister.last_name}" %></p>
+        </p>
+        <p>Sold in <%= @listing.city %>, <%= @listing.state %></p>
+        <p>
+        <%= number_to_currency(@listing.price) %>
+        </p><br />
+        <p>
+        <div id="map"></div>
+        <%= link_to "Order", new_listing_order_path(@listing), class: "btn btn-primary" %>
+        </p>   
+        <% if (user_signed_in?) && (current_user.id == @listing.user_id) %>
+          <%= link_to 'Edit', edit_listing_path(@listing), class: "btn btn-link" %> | 
+        <% end %>
+        <%= link_to 'Back', listings_path, class: "btn btn-link" %>
+      </div>
+    </div>
+  </div>
+</div>
+<% if @listing.latitude.present? && @listing.longitude.present? %>
+<script>
+var map;
+var service;
+var infowindow;
+function initMap() {
+  var myLatLng = {lat: <%= @listing.latitude %>, lng: <%= @listing.longitude %>};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 12,
+    center: myLatLng
+  });
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Fresh Product!'
+  });
+}
+</script>
+
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCA9G9Gltn94DJ97E3G6QyEn-kEWKh8swc&libraries=places&callback=initMap">
+</script>
+<% end %>

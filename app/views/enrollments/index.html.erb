@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col">
+    <h4><small class="text-muted"><%= @time.to_formatted_s(:long) %></small></h4>
+  </div>
+</div>
+<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group mr-2" role="group" aria-label="First group">
+  <button type="button" class="btn btn-warning"><%= link_to "Prism View", garden_path(:id => @garden) %></button>
+    <button type="button" class="btn btn-warning"><%= link_to "Garden Info", gardentable_path(:id => @garden) %></button>
+    <button type="button" class="btn btn-warning"><%= link_to "Grow Info", growtable_path(:id => @garden) %></button>
+    <button type="button" class="btn btn-warning"><%= link_to "Garden Work", worktable_path(:garden_id => @garden) %></button>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <p class="display-4">Current Garden Enrollments</p>
+      <% @gardenrolls.each do |ge| %>
+        <div class="row part-box">
+          Name: <%= ge.get_first_name(ge.user_id) %> <%= ge.get_last_name(ge.user_id) %> <br />
+          Email: <%= ge.get_email(ge.user_id) %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

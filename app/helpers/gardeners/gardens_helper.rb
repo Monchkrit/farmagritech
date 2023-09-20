@@ -1,0 +1,2 @@
+module Gardeners::GardensHelper
+end

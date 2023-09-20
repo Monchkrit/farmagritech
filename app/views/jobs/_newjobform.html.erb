@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col">       
+      <p class="h2">New Job <%= @garden.title %></p>
+      <div class="form-box">
+        <%= form_with model: @job  do |f| %>
+          <p class="lead center"><%= f.label :gardener_id, "Gardener" %><%= f.collection_select(:gardener_id, Enrollment.where(:garden_id => @garden), :user_id, :first_name) %></p>
+          <p class="lead center"><%= f.label :name, "Job Task" %><%= f.text_field(:name, :value => params[:job_name]) %></p>
+          <p class="lead center"><%= f.label :start_time, "Start Time" %><%= f.datetime_select :start_time %></p>
+          <%= f.hidden_field :garden_id, :value => @garden.id %>
+          <%= f.hidden_field :farmer_id, :value => @garden.user_id %>
+          <%= f.hidden_field :status, :value => false %>
+          <%= f.hidden_field :verified, :value => true %>
+          <p class="center"><%= f.submit :Work, class: "btn btn-primary" %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

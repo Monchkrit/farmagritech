@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="col">
+    <h4><small class="text-muted"><%= @time.to_formatted_s(:long) %></small></h4>
+  </div>
+</div>
+<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group mr-2" role="group" aria-label="First group">
+  <button type="button" class="btn btn-warning"><%= link_to "Prism View", gardener_garden_path(:id => @garden) %></button>
+  <button type="button" class="btn btn-warning"><%= link_to "Garden Info", gardener_gardens_gardentable_path(:id => @garden) %></button>
+  <button type="button" class="btn btn-warning"><%= link_to "Grow Info", gardener_gardens_growtable_path(:id => @garden) %></button>
+  <button type="button" class="btn btn-warning"><%= link_to "Garden Work", gardener_jobs_worktable_path(:id => @garden) %></button>
+  </div>
+</div>
+<div class="container-fluid">
+    <div class="col">
+      <p class="display-3 center">Work Schedule for <%= @gardener.first_name %> <%= @gardener.last_name %></p>
+        <% @enrolled.each do |e| %>
+          <% @locgarden = Garden.find_by_id(e.garden_id) %>
+          <p class="h1 center"><%= @locgarden.title %> Schedule</p>
+          <% @locjobs = @jobs.where(:garden_id => @locgarden).order(start_time: :desc) %>
+          <div class="job-box">
+            <% @locjobs.each do |job| %>
+                <div class="row">
+                  <div class="col">
+                    <%= job.name %>
+                  </div>
+                  <div class="col">
+                    <%= job.start_time %>
+                  </div>
+                  <div class="col">
+                    <% if job.verified == true %>
+                    <span class="badge badge-pill badge-success">Verified</span>
+                    <% else %>
+                    <span class="badge badge-pill badge-dark">Unverified</span>
+                    <% end %>
+                  </div>
+                </div>
+              <hr />
+            <% end %>
+            </div>
+        <% end %>
+        <br class="clear">
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<p class="display-4 center">Your Purchase History</p>
+<div class="row">
+  <div class="col">
+    <h4><small class="text-muted"><%= @time.to_formatted_s(:long) %></small></h4>
+  </div>
+</div>
+<div class="container-fluid">
+  <table class="table table-hover">
+      <thead class="thead-dark">
+        <th class="center">Image</th>
+        <th>Order Verified</th>
+        <th class="center">Item</th>
+        <th class="center">Price</th>
+        <th class="center">Farmer's Name</th>
+        <th>Pickup Address</th>
+        <th class="center">Contact Number</th>
+        <th class="center">Pickup Date and Time</th>
+        <th class="center">Date Purchased</th>
+      </thead>
+      <% @orders.each do |order| %>
+        <tr>
+          <td class="center"><%= image_tag order.listing.picture.url, class:"img-thumbnail" %></td>
+          <% if order.verified == true %>      
+          <th class="badge badge-pill badge-success">Verified</td>
+          <% else %>
+          <th class="badge badge-pill badge-dark">Unverified</td>
+          <% end %>
+          <td class="center"><%= order.listing.name %></td>
+          <td class="center"><%= number_to_currency(order.listing.price) %></td>
+          <td class="center"><%= order.farmer.first_name %> <%= order.farmer.last_name %></td>
+          <% @listing = Listing.find_by_id(order.listing_id) %>
+          <td><%= @listing.street %><br />
+            <%= @listing.city %>, <%= order.state %><br />
+            <%= @listing.zipcode %><br /></td>      
+          <td class="center"><%= @listing.telephone %><br />
+          <td class="center"><%= @listing.market_date.strftime("%B %-d, %Y") %> at <%= @listing.market_date.strftime("%l:%M %p") %><br />
+          <td class="center"><%= order.created_at.strftime("%B %-d, %Y") %></td>
+        </tr>
+      <% end %>
+  </table>
+</div>

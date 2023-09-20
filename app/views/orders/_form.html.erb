@@ -1,0 +1,45 @@
+
+<% if @listing.maxorder > 0 %>
+<div class="container">
+  <div class="col-md-6">
+    <div class="row justify-content-center form-box">
+      <span class="border border-white">      
+      <div class="col">
+        <div class="card" style: "width: 18rem;">
+        <%= image_tag @listing.picture.url, class:"card-img-top" %><br />
+          <div class="card-body">
+            <h5 class="card-title"><%= @listing.name %><br /></h5>
+            <p class="card-text">
+            <%= @listing.description %><br />
+            <%= @listing.product_type %><br />
+            <p>For Sale: <%= @listing.market_date.strftime("%B %-d, %Y") %><br /></p>
+            <p class="h5">Sold by <%= @farmer.first_name %> <%= @farmer.last_name %></p>            
+            <p>Sold in <%= @listing.city %>, <%= @listing.state %></p>
+            <p>Items remaining: <%= @listing.maxorder %></p>
+            <p><%= number_to_currency(@listing.price) %></p><br />
+            <%= link_to 'Back', @listing, class: "btn btn-link" %><br />
+          </div>
+        </div>
+      </div>
+      <% if signed_in? %>
+        <%= form_with scope: :order, url: listing_orders_path, local: true do |f| %>
+            <%= f.hidden_field :user_id %>
+            <%= f.submit "Order", class: 'btn btn-primary' %>
+        <% end %>
+      <% end %>
+    </div>
+
+    </span>
+  </div>
+</div>
+<% else %>
+<div class="container">
+  <div class="col">
+    <div class="row">
+      <p class="display-3">The farmer has no items available to order on PlantForm. Please check back to see if more become available later.</p>
+      <p class="h3">You may contact the farmer to see if they have some more at <%= @listing.telephone %>.</p>
+    </div>
+  </div>
+</div>
+<% end %>
+

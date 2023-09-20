@@ -1,0 +1,58 @@
+<div class="container-md text-center work-box gardens-head">
+  <div class="row justify-content-center">
+    <div class="col-lg-auto">
+      <p class="display-4">Local Farm Grown Fruit</p>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <h4><small class="text-muted"><%= @time.to_formatted_s(:long) %></small></h4>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="col">
+    <div class="row">
+      <ul class="list-inline sort-box">
+        <li class="list-inline-item sort-row">Sort: </li>
+        <li class="list-inline-item sort-row"><%= link_to "All", listings_path %></li>
+        <li class="list-inline-item sort-row"><%= link_to "Vegetables", vegetables_path %></li>
+        <li class="list-inline-item h6">FRUITS</li>
+        <li class="list-inline-item sort-row"><%= link_to "Herbs", herbs_path %></li>
+        <li class="list-inline-item sort-row"><%= link_to "Flowers", flowers_path %></li>
+        <li class="list-inline-item sort-row"><%= link_to "Indoor Plants", indoor_plants_path %></li>
+        <li class="list-inline-item sort-row"><%= link_to "Outdoor Plants", outdoor_plants_path %></li>
+        <li class="list-inline-item sort-row"><%= link_to "Trees", trees_path %></li>
+        <li class="list-inline-item sort-row"></li>
+        <li class="list-inline-item sort-row">
+        <%= form_with url: "/fruits", method: "get", local: true do |f| %>
+          <%= f.text_field :search, id: :search %>
+          <%= f.submit "City Search" %>
+        <% end %>
+        </li>
+      </ul>      
+    </div>
+  </div>
+</div>
+<div class="row">
+  <% @listings.each do |listing| %>
+    <div class="col-md-3">
+      <div class="card" style: "width: 18rem;">
+      <%= image_tag listing.picture.url, class:"card-img-top" %><br />
+        <div class="card-body">
+          <h5 class="card-title"><%= listing.name %><br /></h5>
+          <p class="card-text">
+          <%= listing.description %><br />
+          <%= listing.product_type %><br />
+          <p>For Sale: <%= listing.market_date.strftime("%B %-d, %Y") %><br /></p>
+          <% @owner = User.find_by_id(listing.user_id) %>
+          <p class="h5">Sold by <%= @owner.first_name %> <%= @owner.last_name %></p>
+          <p>Sold in <%= listing.city %>, <%= listing.state %></p>
+          <p>Maximum orders: <%= listing.maxorder %></p>
+          <%= number_to_currency(listing.price) %><br />
+          <%= link_to 'Show', listing, class: "btn btn-link" %><br />
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

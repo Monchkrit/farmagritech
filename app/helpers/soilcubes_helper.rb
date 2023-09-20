@@ -1,0 +1,2 @@
+module SoilcubesHelper
+end

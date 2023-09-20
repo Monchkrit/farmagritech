@@ -1,0 +1,23 @@
+<% if current_user && current_user.enrolled_in?(@garden) %>
+<div class="container">
+  <div class="row">
+    <div class="col">       
+      <p class="h2">New Job <%= @garden.title %></p>
+      <div class="form-box">
+        <%= form_with model: @job, url: gardener_jobs_create_path do |f| %>
+          <p class="lead center"><%= f.label :name, "Job Task" %><%= f.text_field(:name, :value => params[:name]) %></p>
+          <p class="lead center"><%= f.label :start_time, "Start Time" %><%= f.datetime_select :start_time %></p>
+          <%= f.hidden_field :garden_id, :value => @garden.id %>
+          <%= f.hidden_field :farmer_id, :value => @garden.user_id %>
+          <%= f.hidden_field :gardener_id, :value => current_user.id %>
+          <%= f.hidden_field :status, :value => false %>
+          <%= f.hidden_field :verified, :value => false %>
+          <p class="center"><%= f.submit :Signup, class: "btn btn-primary" %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<% else %>
+<p class="center"><%= link_to 'Enroll', garden_enrollments_path(@garden), class: 'btn btn-primary', method: :post %></p>
+<% end %>

@@ -1,0 +1,30 @@
+
+
+  <h1>Update your garden data</h1>
+  <h4>Import PHM Zone data</h4>
+    <%= form_tag import_phmuszipcodes_path, multipart: true do %>
+      <%= file_field_tag :file %>
+      <%= submit_tag "Import CSV" %>
+    <% end %>
+
+    <h4>Import soil data</h4>
+      <%= form_tag soil_import_path, multipart: true do %>
+        <%= file_field_tag :file %>
+        <%= submit_tag "Import CSV" %> 
+      <% end %>
+
+    <h4>Import planttype data</h4>
+    <%= form_tag import_planttypes_path, multipart: true do %>
+      <%= file_field_tag :file %>
+      <%= submit_tag "Import CSV" %> 
+    <% end %>
+
+    <%= form_with model: @garden, local: true do |g| %>
+      <%= g.label "Garden Type" %>
+      <%= g.text_field :gardtype %>
+      <%= g.label "Garden Description" %>
+      <%= g.text_field :description %>
+      <%= g.label "Garden Title" %>
+      <%= g.text_field "title" %>
+      <%= g.submit %>
+    <% end %>

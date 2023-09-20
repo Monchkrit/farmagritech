@@ -1,0 +1,14 @@
+<div class="col">
+  <div class="row">    
+    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+      <div class="btn-group mr-2" role="group" aria-label="First group">
+        <button type="button" class="btn btn-warning"><%= link_to "Home", root_path %></button>
+        <button type="button" class="btn btn-warning">Prism View</button>
+        <button type="button" class="btn btn-warning"><%= link_to "Garden Info", gardentable_path %></button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <p class="h4"><small class="text-muted"><%= @time.to_formatted_s(:long) %></small></p>
+  </div>
+</div>

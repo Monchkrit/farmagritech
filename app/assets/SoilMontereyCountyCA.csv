@@ -1,0 +1,409 @@
+"om_r","awc_r","wsatiated_r","kwfact","ph1to1h2o_r","compname","slope_r","runoff","tfact","elev_r","geomdesc","ffd_r","nirrcapcl","nirrcapscl","irrcapcl","irrcapscl","mukey","musym","muname","drainagecl","aws025wta"
+1.25,0.14,30,0.24,4.50,"Cid",3,"Low",2,120,"interfluves, uplands, urban land",215,2,"e",,,115343,"CnB","Cid-Urban land complex, 1 to 5 percent slopes","Moderately well drained",3.52
+2,0.10,44,0.17,4.60,"Colfax",2,"Very high",4,244,"depressions, uplands",215,3,"w",,,115344,"CoA","Colfax sandy loam, 0 to 3 percent slopes","Somewhat poorly drained",2.57
+2,0.17,41,0.37,5.00,"Worsham",2,"Medium",5,244,"depressions, uplands",215,5,"w",,,115344,"CoA","Colfax sandy loam, 0 to 3 percent slopes","Poorly drained",2.57
+3.5,0.13,39,0.28,5.50,"Wehadkee",1,"Low",5,244,"depressions on flood plains, valleys",215,6,"w",,,115344,"CoA","Colfax sandy loam, 0 to 3 percent slopes","Poorly drained",2.57
+1.25,0.12,34,0.28,5.00,"Creedmoor",5,"High",5,244,"interfluves, uplands",215,2,"e",,,115345,"CrB","Creedmoor loam, 2 to 8 percent slopes","Moderately well drained",3.05
+1.25,0.14,37,0.17,5.30,"Mayodan",5,"Low",5,244,"interfluves, uplands",215,2,"e",,,115345,"CrB","Creedmoor loam, 2 to 8 percent slopes","Well drained",3.05
+0.25,0.16,44,0.37,5.90,"Georgeville",5,"Medium",5,244,"interfluves, uplands",215,2,"e",,,2440218,"GfB2","Georgeville silty clay loam, 2 to 8 percent slopes, moderately eroded","Well drained",3.99
+1,0.15,41,0.28,5.00,"Tarrus",5,"Medium",4,244,"interfluves, uplands",215,2,"e",,,2440218,"GfB2","Georgeville silty clay loam, 2 to 8 percent slopes, moderately eroded","Well drained",3.99
+1.25,0.12,17,0.1,4.50,"Goldston",30,"High",2,120,"hillslopes on ridges, uplands",215,7,"s",,,115354,"GsE","Goldston-Badin complex, 15 to 45 percent slopes","Well drained",3.40
+1.25,0.18,46,0.37,5.00,"Tarrus",30,"High",4,120,"hillslopes on ridges, uplands",215,6,"e",,,115354,"GsE","Goldston-Badin complex, 15 to 45 percent slopes","Well drained",3.40
+2,0.17,27,0.17,4.50,"Badin",30,"High",3,120,"hillslopes on ridges, uplands",215,6,"e",,,115354,"GsE","Goldston-Badin complex, 15 to 45 percent slopes","Well drained",3.40
+1.25,0.12,21,0.15,4.50,"Goldston",5,"Medium",2,120,"interfluves, uplands",215,4,"s",,,115352,"GsB","Goldston-Badin complex, 2 to 8 percent slopes","Well drained",3.46
+2,0.17,28,0.2,4.50,"Badin",6,"Medium",3,120,"hillslopes on ridges, uplands",215,2,"e",,,115352,"GsB","Goldston-Badin complex, 2 to 8 percent slopes","Well drained",3.46
+1.25,0.12,17,0.1,4.50,"Goldston",12,"Medium",2,120,"hillslopes on ridges, uplands",215,4,"s",,,115353,"GsC","Goldston-Badin complex, 8 to 15 percent slopes","Well drained",3.35
+2,0.17,27,0.17,4.50,"Badin",12,"Medium",3,120,"hillslopes on ridges, uplands",215,3,"e",,,115353,"GsC","Goldston-Badin complex, 8 to 15 percent slopes","Well drained",3.35
+1.25,0.11,34,0.32,4.50,"Helena",5,"Medium",5,244,"ridges, uplands",215,2,"e",,,115355,"HeB","Helena fine sandy loam, 2 to 8 percent slopes","Moderately well drained",2.94
+2,0.17,41,0.37,5.00,"Worsham",2,"Medium",5,244,"depressions, uplands",215,5,"w",,,115355,"HeB","Helena fine sandy loam, 2 to 8 percent slopes","Poorly drained",2.94
+3.5,0.13,39,0.28,5.50,"Wehadkee",1,"Low",5,244,"depressions on flood plains, valleys",215,6,"w",,,115355,"HeB","Helena fine sandy loam, 2 to 8 percent slopes","Poorly drained",2.94
+1.25,0.16,46,0.32,6.20,"Iredell",1,"Very high",5,244,"interfluves, uplands",215,2,"w",,,115356,"IrA","Iredell loam, 0 to 3 percent slopes","Moderately well drained",4.30
+2.5,0.20,42,0.37,6.50,"Armenia",1,"Very high",5,244,"drainageways on interfluves, uplands",215,6,"w",,,115356,"IrA","Iredell loam, 0 to 3 percent slopes","Poorly drained",4.30
+1.25,0.13,35,0.24,5.80,"Enon",5,"Medium",3,244,"interfluves, uplands",215,2,"e",,,2440238,"MeB2","Mecklenburg sandy clay loam, 2 to 8 percent slopes, moderately eroded","Well drained",3.26
+1.25,0.14,41,0.28,6.40,"Lloyd",4,"Low",5,244,"interfluves, uplands",215,2,"e",,,2440238,"MeB2","Mecklenburg sandy clay loam, 2 to 8 percent slopes, moderately eroded","Well drained",3.26
+0.75,0.13,37,0.28,6.50,"Mecklenburg",5,"Medium",5,244,"interfluves, uplands",215,2,"e",,,2440238,"MeB2","Mecklenburg sandy clay loam, 2 to 8 percent slopes, moderately eroded","Well drained",3.26
+0.75,0.12,42,0.17,6.20,"Pacolet",5,"Medium",5,244,"interfluves, uplands",215,2,"e",,,2440238,"MeB2","Mecklenburg sandy clay loam, 2 to 8 percent slopes, moderately eroded","Well drained",3.26
+1,0.15,29,0.2,4.50,"Misenheimer",2,"Very high",2,120,"interfluves, uplands",215,3,"w",,,115358,"MhA","Misenheimer-Cid complex, 0 to 3 percent slopes","Moderately well drained",3.68
+1.25,0.14,30,0.24,4.50,"Cid",2,"Low",2,120,"interfluves, uplands",215,2,"w",,,115358,"MhA","Misenheimer-Cid complex, 0 to 3 percent slopes","Moderately well drained",3.68
+1.25,0.20,44,0.49,5.50,"Secrest",2,"Low",4,120,"interfluves, uplands",215,2,"w",,,115361,"ScA","Secrest-Cid complex, 0 to 3 percent slopes","Moderately well drained",4.63
+1.25,0.14,30,0.24,4.50,"Cid",2,"Low",2,120,"interfluves, uplands",215,2,"w",,,115361,"ScA","Secrest-Cid complex, 0 to 3 percent slopes","Moderately well drained",4.63
+3.5,0.13,39,0.28,5.50,"Wehadkee",1,"Low",5,120,"depressions on flood plains, valleys",215,6,"w",,,115361,"ScA","Secrest-Cid complex, 0 to 3 percent slopes","Poorly drained",4.63
+1.25,0.10,33,0.15,5.50,"Tarrus",5,"Medium",4,244,"interfluves, uplands",215,2,"e",,,2440249,"TbB2","Tarrus gravelly silty clay loam, 2 to 8 percent slopes, moderately eroded","Well drained",2.50
+1.25,0.10,33,0.15,5.50,"Tarrus",12,"Medium",4,244,"hillslopes on ridges, uplands",215,3,"e",,,2440250,"TbC2","Tarrus gravelly silty clay loam, 8 to 15 percent slopes, moderately eroded","Well drained",2.50
+1.25,0.14,36,0.2,5.00,"Tarrus",5,"Medium",4,244,"interfluves, uplands",215,2,"e",,,2440251,"TuB","Tarrus-Urban land complex, 2 to 8 percent slopes","Well drained",3.22
+1.25,0.15,39,0.43,5.00,"White Store",5,"Very high",4,244,"interfluves, uplands",215,2,"e",,,115370,"WhB","White Store loam, 2 to 8 percent slopes","Moderately well drained",3.85
+1.25,0.15,39,0.43,5.00,"White Store",12,"Very high",4,244,"hillslopes on ridges, uplands",215,3,"e",,,115371,"WhC","White Store loam, 8 to 15 percent slopes","Moderately well drained",3.85
+1.25,0.14,42,0.24,5.50,"Tarrus",5,"Medium",4,120,"interfluves, uplands",215,2,"e",,,2440243,"TaB","Tarrus gravelly silt loam, 2 to 8 percent slopes","Well drained",3.74
+0.75,0.12,41,0.28,5.50,"Pacolet",10,"Medium",4,244,"hillslopes on ridges, uplands",215,7,"e",,,115360,"PgC","Pacolet-Gullied land complex, 4 to 15 percent slopes","Well drained",3.30
+1.25,0.14,41,0.28,6.40,"Lloyd",4,"Low",5,244,"interfluves, uplands",215,2,"e",,,2424542,"LdB2","Lloyd clay loam, 2 to 8 percent slopes, moderately eroded","Well drained",3.50
+1.25,0.14,41,0.28,6.40,"Lloyd",12,"Medium",5,244,"hillslopes, uplands",215,3,"e",,,2424543,"LdC2","Lloyd clay loam, 8 to 15 percent slopes, moderately eroded","Well drained",3.50
+1.25,0.15,36,0.2,5.50,"Wynott",5,"Medium",3,244,"interfluves, uplands",215,2,"e",,,2425180,"WyB","Wynott gravelly loam, 2 to 8 percent slopes","Well drained",3.80
+1.25,0.15,36,0.2,5.50,"Wynott",12,"High",3,244,"interfluves, uplands",215,3,"e",,,2425181,"WyC","Wynott gravelly loam, 8 to 15 percent slopes","Well drained",3.80
+0.75,0.12,42,0.17,6.20,"Pacolet",25,"High",5,244,"hillslopes on ridges, uplands",215,6,"e",,,2440239,"PaE2","Pacolet sandy clay loam, 15 to 40 percent slopes, moderately eroded","Well drained",3.14
+1.25,0.14,42,0.24,5.50,"Tarrus",12,"Medium",4,120,"interfluves, uplands",215,3,"e",,,2440244,"TaC","Tarrus gravelly silt loam, 8 to 15 percent slopes","Well drained",3.74
+1.25,0.14,42,0.24,5.50,"Tarrus",25,"High",4,120,"interfluves, uplands",215,6,"e",,,2440245,"TaD","Tarrus gravelly silt loam, 15 to 35 percent slopes","Well drained",3.74
+1.25,0.13,27,0.2,4.50,"Goldston",5,"Medium",2,213.3999939,"interfluves, uplands",230,4,"s",,,115333,"BaB","Badin channery silt loam, 2 to 8 percent slopes","Well drained",4.14
+2,0.17,28,0.17,5.00,"Badin",5,"Medium",3,213.3999939,"interfluves, uplands",230,3,"e",,,115333,"BaB","Badin channery silt loam, 2 to 8 percent slopes","Well drained",4.14
+1.25,0.14,30,0.2,5.00,"Tatum",5,,3,213.3999939,"interfluves, uplands",230,2,"e",,,115333,"BaB","Badin channery silt loam, 2 to 8 percent slopes","Well drained",4.14
+2,0.16,45,0.28,7.30,"Alo",6,"Very high",3,525.5,"hills, uplands",255,3,"e",3,"e",455537,"AaC","Alo silty clay, 2 to 9 percent slopes","Well drained",4.00
+2,0.16,45,0.28,7.00,"Alo",12,"Very high",3,525.5,"hills, uplands",255,3,"e",,,455538,"AaD","Alo silty clay, 9 to 15 percent slopes","Well drained",4.00
+2,0.16,45,0.28,7.00,"Alo",23,"Very high",3,525.5,"hills, uplands",255,6,"e",,,455539,"AaE","Alo silty clay, 15 to 30 percent slopes","Well drained",4.00
+2,0.16,45,0.28,7.00,"Alo",40,"Very high",3,525.5,"hills, uplands",255,6,"e",,,455540,"AaF","Alo silty clay, 30 to 50 percent slopes","Well drained",4.00
+2,0.16,45,0.28,7.00,"Alo",38,"Very high",3,525.5,"hills, uplands",255,7,"e",,,455541,"Ab","Alo-Millsholm complex","Well drained",4.30
+2,0.19,38,0.24,6.50,"Millsholm",38,"Very high",1,,"hills, uplands",,7,"e",,,455541,"Ab","Alo-Millsholm complex","Well drained",4.30
+0.75,0.11,46,0.37,7.50,"Alviso",1,"High",5,0,"basin floors, basin floors, tidal flats",347,8,,,,455542,"Ac","Alviso silty clay loam","Very poorly drained",2.75
+0.75,0.11,46,0.37,7.50,"Alviso",1,"High",5,0,"basin floors, basin floors, tidal flats",347,6,"w",4,"w",455543,"Ad","Alviso silty clay loam, drained","Very poorly drained",2.75
+1.5,0.15,38,0.37,5.60,"Antioch",1,"High",3,167.5,"alluvial fans, terraces, valleys",260,3,"s",3,"s",455544,"AeA","Antioch very fine sandy loam, 0 to 2 percent slopes","Moderately well drained",3.75
+1.5,0.15,38,0.37,5.60,"Antioch",6,"High",3,167.5,"alluvial fans, terraces, valleys",260,3,"e",3,"e",455545,"AeC","Antioch very fine sandy loam, 2 to 9 percent slopes","Moderately well drained",3.75
+1.5,0.15,38,0.37,5.60,"Antioch",12,"High",3,167.5,"alluvial fans, terraces, valleys",260,4,"e",4,"e",455546,"AeD","Antioch very fine sandy loam, 9 to 15 percent slopes","Moderately well drained",3.75
+2.5,,,,,"Aquic Xerofluvents",3,"Very low",5,,"flood plains, river valleys",,4,"w",4,"w",455547,"Af","Aquic Xerofluvents","Somewhat poorly drained",
+0.75,0.11,28,0.2,6.50,"Arbuckle",6,"High",5,318.5,"terraces, valleys",216,3,"e",2,"e",455548,"AgC","Arbuckle gravelly loam, 2 to 9 percent slopes","Well drained",2.75
+0.75,0.11,28,0.2,6.50,"Arbuckle",12,"High",5,318.5,"terraces, valleys",216,4,"e",,,455549,"AgD","Arbuckle gravelly loam, 9 to 15 percent slopes","Well drained",2.75
+0.75,0.07,32,0.32,6.20,"Arnold",63,"Low",4,396,"escarpments, hills, uplands",252,7,"e",,,455552,"Am","Arnold-San Andreas complex","Somewhat excessively drained",2.63
+2.5,0.14,34,0.17,6.70,"San Andreas",63,"Medium",3,,"mountains, uplands",,7,"e",,,455552,"Am","Arnold-San Andreas complex","Well drained",2.63
+3.5,0.13,32,0.32,6.50,"Santa Ynez",20,"Very high",3,,"terraces",,6,"e",,,455553,"Ar","Arnold-Santa Ynez complex","Moderately well drained",2.33
+0.75,0.07,32,0.32,6.20,"Arnold",20,"Low",4,396,"hills, terraces, uplands",252,6,"e",,,455553,"Ar","Arnold-Santa Ynez complex","Somewhat excessively drained",2.33
+2,0.08,27,0.1,7.30,"Arroyo Seco",1,"Very low",5,472.5,"alluvial fans, alluvial plains",235,4,"s",3,"s",455554,"AsA","Arroyo Seco gravelly sandy loam, 0 to 2 percent slopes","Well drained",2.00
+2,0.08,27,0.1,7.30,"Arroyo Seco",4,"Very low",5,472.5,"alluvial fans, alluvial plains",235,4,"e",3,"e",455555,"AsB","Arroyo Seco gravelly sandy loam, 2 to 5 percent slopes","Well drained",2.00
+2,0.08,27,0.1,7.30,"Arroyo Seco",7,"Low",5,472.5,"alluvial fans, alluvial plains",235,4,"e",3,"e",455556,"AsC","Arroyo Seco gravelly sandy loam, 5 to 9 percent slopes","Well drained",2.00
+2,0.16,45,0.24,7.90,"Ayar",10,"Very high",4,556,"hills, uplands",265,3,"e",,,455559,"AyD","Ayar silty clay, 5 to 15 percent slopes","Well drained",4.00
+2,0.08,27,0.17,7.30,"Arroyo Seco",1,"Very low",5,472.5,"alluvial fans, alluvial plains",235,3,"s",2,"s",455557,"AvA","Arroyo Seco gravelly loam, 0 to 2 percent slopes","Well drained",2.00
+2,0.08,27,0.17,7.30,"Arroyo Seco",4,"Very low",5,472.5,"alluvial fans, alluvial plains",235,3,"e",2,"e",455558,"AvB","Arroyo Seco gravelly loam, 2 to 5 percent slopes","Well drained",2.00
+,0.00,,,,"Pits",100,,,244,"quarries",215,8,"s",,,2687031,"Pt","Pits, quarry",,0.18
+0.100000001,0.14,34,0.24,5.30,"Udorthents",3,,5,244,"quarries, spoil piles",215,7,"e",,,2687031,"Pt","Pits, quarry","Well drained",0.18
+0.5,0.09,35,0.2,6.20,"Udorthents",8,,5,244,"interfluves on uplands on piedmonts",215,7,"e",,,115374,"DAM","Dam","Well drained",2.25
+1.25,0.13,35,0.1,5.50,"Appling",5,"Medium",5,75,"interfluves, uplands",228,2,"e",,,115328,"AeB","Ailey-Appling complex, 2 to 8 percent slopes","Well drained",1.67
+1.25,0.04,39,0.1,5.50,"Ailey",5,"Medium",4,75,"low hills, sandhills",228,3,"s",,,115328,"AeB","Ailey-Appling complex, 2 to 8 percent slopes","Well drained",1.67
+1.25,0.13,35,0.1,5.50,"Appling",12,"Medium",5,75,"hillslopes on ridges, uplands",228,6,"s",,,115329,"AgC","Ailey-Appling complex, 8 to 15 percent slopes, bouldery","Well drained",1.99
+1.25,0.04,39,0.1,5.50,"Ailey",12,"Medium",4,75,"low hills, sandhills",228,6,"s",,,115329,"AgC","Ailey-Appling complex, 8 to 15 percent slopes, bouldery","Well drained",1.99
+1.25,0.13,35,0.2,5.00,"Appling",5,"Medium",5,244,"interfluves, uplands",215,2,"e",,,115330,"ApB","Appling sandy loam, 2 to 8 percent slopes","Well drained",3.25
+1.25,0.11,36,0.24,5.80,"Helena",5,"Medium",3,244,"ridges, uplands",215,2,"e",,,115330,"ApB","Appling sandy loam, 2 to 8 percent slopes","Moderately well drained",3.25
+1.25,0.12,33,0.24,5.30,"Vance",5,"Medium",3,244,"interfluves, uplands",215,2,"e",,,115330,"ApB","Appling sandy loam, 2 to 8 percent slopes","Well drained",3.25
+1.25,0.13,35,0.2,5.00,"Appling",12,"Medium",5,244,"hillslopes on ridges, uplands",215,3,"e",,,115331,"ApC","Appling sandy loam, 8 to 15 percent slopes","Well drained",3.27
+1.25,0.13,35,0.2,5.00,"Appling",6,"Medium",5,244,"hillslopes on ridges, uplands",215,3,"e",,,115332,"AuB","Appling-Urban land complex, 2 to 8 percent slopes","Well drained",3.22
+1.25,0.11,36,0.24,5.80,"Helena",5,"Medium",3,244,"ridges, uplands",215,2,"e",,,115332,"AuB","Appling-Urban land complex, 2 to 8 percent slopes","Moderately well drained",3.22
+1.25,0.12,33,0.24,5.30,"Vance",5,"Medium",3,244,"interfluves, uplands",215,2,"e",,,115332,"AuB","Appling-Urban land complex, 2 to 8 percent slopes","Well drained",3.22
+2,0.17,28,0.2,5.00,"Badin",5,"Medium",3,120,"interfluves, uplands",215,2,"e",,,115337,"BuB","Badin-Urban land complex, 2 to 8 percent slopes","Well drained",4.25
+2,0.17,28,0.2,5.00,"Badin",17,"Medium",3,120,"hillslopes on ridges, uplands",215,4,"e",,,115338,"BuC","Badin-Urban land complex, 8 to 15 percent slopes","Well drained",4.25
+2,0.17,28,0.2,5.00,"Badin",12,"Medium",3,120,"hillslopes on ridges, uplands",215,3,"e",,,115334,"BaC","Badin channery silt loam, 8 to 15 percent slopes","Well drained",4.25
+1.25,0.18,42,0.43,5.90,"Georgeville",5,"Medium",5,244,"interfluves, uplands",215,2,"e",,,115348,"GeB","Georgeville silt loam, 2 to 8 percent slopes","Well drained",4.25
+1.25,0.17,46,0.43,5.00,"Tarrus",5,"Medium",4,244,"interfluves, uplands",215,2,"e",,,115348,"GeB","Georgeville silt loam, 2 to 8 percent slopes","Well drained",4.25
+2,0.18,43,0.37,4.90,"Badin",5,"Medium",3,120,"interfluves, uplands",215,2,"e",,,115348,"GeB","Georgeville silt loam, 2 to 8 percent slopes","Well drained",4.25
+1.25,0.12,21,0.15,4.50,"Goldston",10,"Medium",2,120,"hillslopes on ridges, uplands",215,4,"s",,,115350,"GoC","Goldston very channery silt loam, 4 to 15 percent slopes","Well drained",2.86
+1.25,0.12,21,0.15,4.50,"Goldston",30,"High",2,120,"hillslopes on ridges, uplands",215,7,"s",,,115351,"GoE","Goldston very channery silt loam, 15 to 45 percent slopes","Well drained",2.86
+0.5,0.09,35,0.2,6.20,"Udorthents",8,,5,200,"interfluves on uplands on piedmonts",215,7,"e",,,115368,"Ud","Udorthents, loamy","Well drained",2.25
+1.25,0.17,39,0.32,5.00,"Badin",5,"Medium",3,120,"interfluves, uplands",215,2,"e",,,2440232,"BdB2","Badin channery silty clay loam, 2 to 8 percent slopes, moderately eroded","Well drained",4.25
+1.25,0.17,39,0.32,5.00,"Badin",12,"Medium",3,120,"hillslopes on ridges, uplands",215,3,"e",,,2440233,"BdC2","Badin channery silty clay loam, 8 to 15 percent slopes, moderately eroded","Well drained",4.25
+0.75,0.13,29,0.1,5.30,"Cecil",5,"Medium",5,244,"interfluves, uplands",215,2,"e",,,2440234,"CeB2","Cecil gravelly sandy clay loam, 2 to 8 percent slopes, moderately eroded","Well drained",3.35
+0.75,0.13,29,0.1,5.30,"Cecil",12,"Medium",5,244,"interfluves, uplands",215,3,"e",,,2440236,"CeC2","Cecil gravelly sandy clay loam, 8 to 15 percent slopes, moderately eroded","Well drained",3.35
+2.5,0.20,40,0.37,5.50,"Chewacla",1,"Low",5,244,"flood plains, valleys",215,4,"w",,,115341,"ChA","Chewacla silt loam, 0 to 2 percent slopes, frequently flooded","Somewhat poorly drained",4.85
+2.5,0.16,46,0.28,6.00,"Congaree",1,"Low",5,244,"flood plains, valleys",215,3,"w",,,115341,"ChA","Chewacla silt loam, 0 to 2 percent slopes, frequently flooded","Moderately well drained",4.85
+3.5,0.13,39,0.28,5.50,"Wehadkee",1,"Low",5,244,"depressions on flood plains, valleys",215,6,"w",,,115341,"ChA","Chewacla silt loam, 0 to 2 percent slopes, frequently flooded","Poorly drained",4.85
+1.25,0.14,30,0.24,4.50,"Cid",3,"Low",2,120,"interfluves, uplands",215,2,"e",,,115342,"CmB","Cid channery silt loam, 1 to 5 percent slopes","Moderately well drained",3.52
+2,0.16,45,0.24,7.90,"Ayar",23,"Very high",4,556,"hills, uplands",265,4,"e",,,455560,"AyE","Ayar silty clay, 15 to 30 percent slopes","Well drained",4.00
+2,0.16,45,0.24,7.90,"Ayar",40,"Very high",4,556,"hills, uplands",265,6,"e",,,455561,"AyF","Ayar silty clay, 30 to 50 percent slopes","Well drained",4.00
+,,,,,"Badland",39,"Very high",,,"bluffs, drainageways, escarpments, uplands",325,8,,,,455562,"Ba","Badland",,
+2.5,0.08,36,0.02,6.50,"Baywood",9,"Very low",5,125,"dune fields, dunes",300,6,"e",4,"s",455563,"BbC","Baywood sand, 2 to 15 percent slopes","Somewhat excessively drained",2.00
+4.5,0.16,30,0.17,6.20,"Chamise",40,"Very high",5,244,"terraces",270,7,"e",,,455566,"CaF","Chamise shaly loam, 30 to 50 percent slopes","Well drained",4.00
+2.5,0.17,40,0.32,7.00,"Chualar",1,"Low",5,312,"alluvial fans, terraces",237,3,"c",1,,455567,"CbA","Chualar loam, 0 to 2 percent slopes","Well drained",4.25
+2.5,0.17,40,0.32,7.00,"Chualar",4,"Low",5,312,"alluvial fans, terraces",237,3,"e",2,"e",455568,"CbB","Chualar loam, 2 to 5 percent slopes","Well drained",4.25
+2.5,0.17,40,0.32,7.00,"Chualar",7,"Medium",5,312,"alluvial fans, terraces",237,3,"e",2,"e",455569,"CbC","Chualar loam, 5 to 9 percent slopes","Well drained",4.25
+0.75,0.10,28,0.15,6.70,"Cieneba",53,"Medium",2,685,"mountains",237,7,"e",,,455570,"CcG","Cieneba fine gravelly sandy loam, 30 to 75 percent slopes","Somewhat excessively drained",2.50
+0.75,0.10,28,0.15,6.50,"Cieneba",68,"Medium",2,685,"mountains",237,7,"e",,,455572,"Ce","Cieneba-Sur-Rock outcrop complex","Somewhat excessively drained",2.31
+1.5,0.08,25,0.05,6.50,"Sur",68,"Medium",2,,"mountains",,7,"e",,,455572,"Ce","Cieneba-Sur-Rock outcrop complex","Somewhat excessively drained",2.31
+1.5,0.14,41,0.2,7.50,"Climara",23,"Very high",3,533,"hills, uplands",225,6,"e",,,455575,"ChE","Climara clay, 15 to 30 percent slopes","Well drained",3.50
+1.5,0.14,41,0.2,7.50,"Climara",40,"Very high",3,533,"hills, uplands",225,7,"e",,,455577,"Ck","Climara-Montara complex","Well drained",3.88
+2,0.19,35,0.17,7.50,"Montara",53,"Very high",1,,"hills",,7,"e",,,455577,"Ck","Climara-Montara complex","Well drained",3.88
+0.050000001,0.04,,,6.50,"Coastal beaches",3,"Very low",5,,"beaches",,8,,,,455578,"Cm","Coastal beaches",,1.00
+2,0.15,44,0.24,7.50,"Cropley",1,"High",5,324,"alluvial fans, basins, flood plains",280,3,"s",2,"s",455579,"CnA","Cropley silty clay, 0 to 2 percent slopes","Well drained",3.75
+2.5,0.16,34,0.17,7.00,"Danville",1,"High",5,243,"alluvial fans",290,3,"s",2,"s",455581,"DaA","Danville sandy clay loam, 0 to 2 percent slopes","Well drained",4.00
+2.5,0.16,34,0.17,7.00,"Danville",6,"Very high",5,243,"alluvial fans",290,3,"e",2,"e",455582,"DaC","Danville sandy clay loam, 2 to 9 percent slopes","Well drained",4.00
+0.75,0.12,32,0.1,6.50,"Gaviota",6,"High",1,386,"hills, uplands",210,,,,,455586,"DcC","Dibble loam, 2 to 9 percent slopes","Somewhat excessively drained",3.72
+0.75,0.17,40,0.37,5.90,"Dibble",6,"Very high",4,396,"hills, uplands",210,3,"e",,,455586,"DcC","Dibble loam, 2 to 9 percent slopes","Well drained",3.72
+0.75,0.17,40,0.49,5.90,"Dibble",12,"Very high",4,396,"hills, uplands",210,4,"e",,,455587,"DdB","Dibble silt loam, 9 to 15 percent slopes","Well drained",4.08
+0.75,0.17,40,0.49,5.90,"Dibble",23,"Very high",4,396,"hills, uplands",210,6,"e",,,455588,"DdE","Dibble silt loam, 15 to 30 percent slopes","Well drained",4.08
+0.75,0.17,40,0.49,5.90,"Dibble",40,"Very high",4,396,"hills, uplands",210,7,"e",,,455589,"DdF","Dibble silt loam, 30 to 50 percent slopes","Well drained",4.08
+2,0.19,43,0.37,8.20,"Docas",1,"Medium",5,349,"alluvial fans, alluvial plains",250,3,"c",1,,455590,"DeA","Docas silty clay loam, 0 to 2 percent slopes","Well drained",4.75
+2,0.19,43,0.37,8.20,"Docas",6,"High",5,349,"alluvial fans, alluvial plains",250,3,"e",2,"e",455591,"DeC","Docas silty clay loam, 2 to 9 percent slopes","Well drained",4.75
+0.75,,,,,"Dune land",26,"Very low",,48,"dune fields, dunes",,8,,,,455592,"Df","Dune land","Excessively drained",
+2.5,0.17,34,0.37,6.70,"Elder",6,"Medium",3,232,"alluvial fans, valleys",262,3,"e",2,"e",455595,"EbC","Elder very fine sandy loam, 2 to 9 percent slopes","Well drained",4.25
+2.5,0.14,39,0.37,6.70,"Elder",1,"Low",4,232,"alluvial fans, alluvial plains",262,3,"s",2,"s",455596,"EcA","Elder loam, gravelly substratum, 0 to 2 percent slopes","Well drained",3.50
+4,0.13,38,0.2,6.50,"Elkhorn",4,"Low",5,125,"terraces",265,3,"e",2,"e",455597,"EdB","Elkhorn fine sandy loam, 2 to 5 percent slopes","Well drained",3.25
+4,0.13,38,0.2,6.50,"Elkhorn",7,"Medium",5,125,"terraces",265,3,"e",2,"e",455598,"EdC","Elkhorn fine sandy loam, 5 to 9 percent slopes","Well drained",3.25
+4,0.13,38,0.2,6.50,"Elkhorn",12,"Medium",5,125,"terraces",265,4,"e",3,"e",455599,"EdD","Elkhorn fine sandy loam, 9 to 15 percent slopes","Well drained",3.25
+2,0.15,39,0.32,6.30,"Elkhorn",10,"Very high",2,125,"terraces",265,4,"e",3,"e",455600,"EeD","Elkhorn fine sandy loam, thin surface variant, 5 to 15 percent slopes","Well drained",3.63
+4,0.13,38,0.2,6.50,"Elkhorn",10,"High",5,125,"terraces",,,,,,455600,"EeD","Elkhorn fine sandy loam, thin surface variant, 5 to 15 percent slopes","Well drained",3.63
+2,0.15,39,0.32,6.30,"Elkhorn",23,"Very high",2,125,"terraces",265,6,"e",4,"e",455601,"EeE","Elkhorn fine sandy loam, thin surface variant, 15 to 30 percent slopes","Well drained",3.66
+4,0.13,38,0.17,6.50,"Elkhorn",23,"High",5,125,"terraces",265,,,,,455601,"EeE","Elkhorn fine sandy loam, thin surface variant, 15 to 30 percent slopes","Well drained",3.66
+2,0.15,39,0.32,6.30,"Elkhorn",23,"High",3,125,"terraces",265,,,,,455601,"EeE","Elkhorn fine sandy loam, thin surface variant, 15 to 30 percent slopes","Well drained",3.66
+0.75,0.05,17,0.02,7.00,"Fluvents",8,"Low",5,,"flood plains",,7,"s",,,455602,"Fa","Fluvents, stony","Somewhat excessively drained",1.25
+1.5,0.08,25,0.05,6.50,"Sur",75,"Medium",2,,"mountains, uplands",,8,,,,455603,"Ga","Gamboa-Sur complex","Somewhat excessively drained",2.02
+5.5,0.13,30,0.05,6.20,"Junpero",75,,3,,"mountains, uplands",,8,,,,455603,"Ga","Gamboa-Sur complex","Well drained",2.02
+3,0.06,23,0.05,6.70,"Gamboa",75,"Low",3,533,"mountains, uplands",250,8,,,,455603,"Ga","Gamboa-Sur complex","Somewhat excessively drained",2.02
+0.800000012,0.12,38,0.32,5.80,"Garey",6,"Medium",5,198,"terraces",260,3,"e",2,"e",455604,"GbC","Garey sandy loam, 2 to 9 percent slopes","Well drained",3.00
+0.800000012,0.12,38,0.32,5.80,"Garey",20,"High",5,198,"terraces",260,6,"e",,,455605,"GbE","Garey sandy loam, 9 to 30 percent slopes","Well drained",3.00
+0.800000012,0.12,38,0.32,5.80,"Garey",40,"High",5,198,"terraces",260,7,"e",,,455606,"GbF2","Garey sandy loam, 30 to 50 percent slopes, eroded","Well drained",3.00
+0.800000012,0.12,38,0.32,5.80,"Garey",33,"High",5,198,"terraces",260,7,"e",,,455607,"Gc","Garey-Oceano complex","Well drained",2.56
+1,0.07,35,0.24,6.50,"Oceano",33,"Low",5,,"terraces",,7,"e",,,455607,"Gc","Garey-Oceano complex","Excessively drained",2.56
+0.75,0.12,32,0.15,6.50,"Gaviota",28,"Medium",1,640,"hills, uplands",262,6,"e",,,455610,"GeE","Gaviota-San Andreas complex, 15 to 30 percent slopes","Somewhat excessively drained",3.23
+2.5,0.14,34,0.2,6.70,"San Andreas",20,"Medium",3,,"hills, uplands",,6,"e",,,455610,"GeE","Gaviota-San Andreas complex, 15 to 30 percent slopes","Well drained",3.23
+2.5,0.14,34,0.2,6.70,"San Andreas",45,"Medium",3,,"mountains, uplands",,7,"e",,,455611,"GeG","Gaviota-San Andreas complex, 30 to 75 percent slopes","Well drained",3.25
+0.75,0.12,32,0.15,6.50,"Gaviota",58,"Medium",1,640,"mountains, uplands",262,7,"e",,,455611,"GeG","Gaviota-San Andreas complex, 30 to 75 percent slopes","Somewhat excessively drained",3.25
+3,0.19,29,0.17,6.50,"Gazos",23,"High",2,617,"hills, uplands",275,6,"e",,,455612,"GfE","Gazos silt loam, 15 to 30 percent slopes","Well drained",4.75
+3,0.19,30,0.2,6.50,"Gazos",40,"High",2,763,"hills, uplands",260,7,"e",,,455613,"GfF","Gazos silt loam, 30 to 50 percent slopes","Well drained",4.75
+4,0.13,31,0.15,6.70,"Gilroy",33,"High",2,458,"hills, uplands",250,6,"e",,,455615,"GgE","Gilroy gravelly loam, 15 to 50 percent slopes","Well drained",3.25
+4,0.13,31,0.15,6.70,"Gilroy",53,"High",2,458,"hills, uplands",250,7,"e",,,455616,"GgG2","Gilroy gravelly loam, 30 to 75 percent slopes, eroded","Well drained",3.25
+1.25,0.19,36,0.32,6.20,"Gloria",6,"Very high",2,320,"terraces, valleys",255,3,"e",3,"e",455617,"GhC","Gloria sandy loam, 2 to 9 percent slopes","Well drained",4.75
+1.25,0.19,36,0.32,6.20,"Gloria",12,"Very high",2,320,"terraces, valleys",255,4,"e",,,455618,"GhD","Gloria sandy loam, 9 to 15 percent slopes","Well drained",4.75
+1.25,0.19,36,0.32,6.20,"Gloria",33,"Very high",2,320,"terraces, valleys",255,6,"e",,,455619,"GhF","Gloria sandy loam, 15 to 50 percent slopes","Well drained",4.75
+2,0.08,27,0.1,7.30,"Arroyo Seco",3,,5,,"alluvial fans",280,,,,,455620,"GkB","Gorgonio sandy loam, 0 to 5 percent slopes","Well drained",2.82
+2,0.12,29,0.1,6.50,"Gorgonio",3,"Negligible",5,460,"alluvial fans",280,3,"e",3,"s",455620,"GkB","Gorgonio sandy loam, 0 to 5 percent slopes","Somewhat excessively drained",2.82
+0.75,0.13,32,0.32,7.00,"Greenfield",4,"Low",5,548,"alluvial fans, terraces, valleys",262,3,"e",2,"e",455621,"GmB","Greenfield fine sandy loam, 2 to 5 percent slopes","Well drained",3.25
+0.75,0.13,33,0.32,7.00,"Greenfield",7,"Low",5,548,"alluvial fans, terraces, valleys",262,3,"e",2,"e",455622,"GmC","Greenfield fine sandy loam, 5 to 9 percent slopes","Well drained",3.25
+0.75,0.13,32,0.32,7.00,"Greenfield",12,"Low",5,548,"terraces, valleys",262,4,"e",3,"e",455623,"GmD","Greenfield fine sandy loam, 9 to 15 percent slopes","Well drained",3.25
+2,0.18,35,0.37,6.50,"Haire",23,"Very high",3,368,"hills, uplands",250,6,"e",,,455624,"HaE","Haire loam, 15 to 30 percent slopes","Moderately well drained",4.50
+0.75,0.11,29,0.1,7.00,"Hanford",3,"Very low",5,556,"alluvial fans, flood plains, valleys",,3,"e",2,"s",455625,"HbB","Hanford gravelly sandy loam, 0 to 5 percent slopes","Well drained",2.75
+3,0.13,23,0.05,7.00,"Henneke",45,"Very high",1,685,"hills, uplands",242,7,"e",,,455626,"HcF","Henneke extremely stony clay loam, 15 to 75 percent slopes","Excessively drained",3.25
+5.5,0.13,30,0.05,6.20,"Junipero",40,"Medium",3,883,"mountains, mountains",145,6,"e",,,455627,"JaF","Junipero loamy sand, 30 to 50 percent slopes","Well drained",3.25
+5.5,0.13,31,0.1,6.20,"Junipero",53,"Medium",3,883,"mountains, mountains",145,7,"e",,,455628,"JbG","Junipero sandy loam, 30 to 75 percent slopes","Well drained",3.25
+1.5,0.08,25,0.05,6.50,"Sur",68,"Medium",2,,"mountains, mountains",,8,,,,455629,"Jc","Junipero-Sur complex","Somewhat excessively drained",2.63
+5.5,0.13,31,0.1,6.20,"Junipero",68,"Medium",3,883,"mountains, mountains",145,8,,,,455629,"Jc","Junipero-Sur complex","Well drained",2.63
+3.5,0.19,41,0.28,8.20,"Linne",10,"High",3,350,"hills, uplands",265,3,"e",3,"e",455630,"LaD","Linne silty clay loam 5 to 15 percent slopes","Well drained",4.75
+3.5,0.19,41,0.28,8.20,"Linne",23,"Very high",3,350,"hills, uplands",265,6,"e",4,"e",455631,"LaE","Linne silty clay loam, 15 to 30 percent slopes","Well drained",4.75
+3.5,0.19,41,0.28,8.20,"Linne",40,"Very high",3,350,"hills, uplands",265,7,"e",,,455632,"LaF","Linne silty clay loam, 30 to 50 percent slopes","Well drained",4.75
+2.5,0.17,47,0.2,7.30,"Diablo",23,"Very high",4,,"hills, uplands",,6,"e",4,"e",455634,"LbE","Linne-Diablo complex, 15 to 30 percent slopes","Well drained",4.52
+3.5,0.19,41,0.28,8.20,"Linne",23,"Very high",3,350,"hills, uplands",265,6,"e",4,"e",455634,"LbE","Linne-Diablo complex, 15 to 30 percent slopes","Well drained",4.52
+3.5,0.19,41,0.28,8.20,"Linne",23,"Very high",3,350,"hills, uplands",265,6,"e",4,"e",455635,"LcE","Linne-Shedd silty clay loams, 15 to 30 percent slopes","Well drained",4.86
+3,0.20,52,0.32,8.20,"Shedd",23,"Very high",3,,"hills, uplands",,6,"e",,,455635,"LcE","Linne-Shedd silty clay loams, 15 to 30 percent slopes","Well drained",4.86
+3,0.20,52,0.32,8.20,"Shedd",40,"Very high",3,,"hills, uplands",,6,"e",,,455636,"LcF","Linne-Shedd silty clay loams, 30 to 50 percent slopes","Well drained",4.85
+3.5,0.19,41,0.28,8.20,"Linne",40,"Very high",3,350,"hills, uplands",265,6,"e",,,455636,"LcF","Linne-Shedd silty clay loams, 30 to 50 percent slopes","Well drained",4.85
+3,0.20,52,0.37,8.20,"Shedd",33,"Very high",3,,"hills, uplands",,6,"e",,,455637,"LcF2","Linne-Shedd silty clay loams, 15 to 50 percent slopes, eroded","Well drained",4.88
+3.5,0.19,41,0.28,8.20,"Linne",33,"Very high",3,350,"hills, uplands",265,6,"e",,,455637,"LcF2","Linne-Shedd silty clay loams, 15 to 50 percent slopes, eroded","Well drained",4.88
+3,0.20,51,0.37,8.20,"Shedd",63,"Very high",3,,"hills, uplands",,7,"e",,,455638,"LcG2","Linne-Shedd silty clay loams, 50 to 75 percent slopes, eroded","Well drained",4.85
+3.5,0.19,41,0.28,8.20,"Linne",63,"Very high",3,350,"hills, uplands",265,7,"e",,,455638,"LcG2","Linne-Shedd silty clay loams, 50 to 75 percent slopes, eroded","Well drained",4.85
+3.5,0.18,45,0.32,6.50,"Lockwood",1,"Medium",5,320,"alluvial fans, terraces",330,3,"c",1,,455639,"LdA","Lockwood loam, 0 to 2 percent slopes","Well drained",4.50
+3.5,0.18,45,0.32,6.50,"Lockwood",6,"High",5,320,"alluvial fans, terraces",330,3,"e",2,"e",455640,"LdC","Lockwood loam, 2 to 9 percent slopes","Well drained",4.50
+3.5,0.14,37,0.15,6.50,"Lockwood",12,"Medium",5,320,"alluvial fans, terraces",330,3,"e",,,455643,"LeD","Lockwood shaly loam, 9 to 15 percent slopes","Well drained",3.50
+3.5,0.13,38,0.15,6.50,"Lockwood",1,"Low",5,320,"alluvial fans, valleys",330,3,"w",2,"w",455644,"LgA","Lockwood shaly loam, 0 to 2 percent slopes, wet","Well drained",3.25
+6,0.12,22,0.1,5.60,"Lopez",23,"High",1,553,"hills, uplands",250,7,"e",,,455645,"LhE","Lopez shaly loam, 15 to 30 percent slopes","Somewhat excessively drained",2.70
+2.5,0.15,32,0.15,6.10,"Los Gatos",63,"High",2,320,"hills, uplands",265,7,"e",,,455647,"LkG","Los Gatos gravelly loam, 50 to 75 percent slopes","Well drained",3.75
+3,0.19,39,0.28,6.70,"Los Osos",12,"Very high",3,548,"hills, uplands",260,3,"e",,,455648,"LmD","Los Osos clay loam, 9 to 15 percent slopes","Well drained",4.75
+3,0.19,39,0.28,6.70,"Los Osos",53,"Very high",3,548,"hills, mountains, uplands",260,7,"e",,,455652,"Ln","Los Osos-Millsholm complex","Well drained",4.75
+2,0.19,38,0.28,6.50,"Millsholm",53,"High",1,,"hills, mountains, uplands",,7,"e",,,455652,"Ln","Los Osos-Millsholm complex","Well drained",4.75
+2.5,0.19,40,0.32,7.00,"McCoy",23,"Very high",3,503,"hills, uplands",250,4,"e",,,455654,"MaE","McCoy clay loam, 15 to 30 percent slopes","Well drained",4.75
+2.5,0.19,40,0.32,7.00,"McCoy",40,"Very high",3,503,"hills, uplands",250,6,"e",,,455655,"MaF","McCoy clay loam, 30 to 50 percent slopes","Well drained",4.75
+2.5,0.19,40,0.32,7.00,"McCoy",63,"Very high",3,503,"hills, uplands",250,7,"e",,,455656,"MaG","McCoy clay loam, 50 to 75 percent slopes","Well drained",4.75
+4,0.13,31,0.15,6.70,"Gilroy",23,"High",2,,"hills",,4,"e",,,455657,"MbE","McCoy-Gilroy complex, 15 to 30 percent slopes","Well drained",4.15
+2.5,0.19,40,0.32,7.00,"McCoy",23,"Very high",3,503,"hills, uplands",250,4,"e",,,455657,"MbE","McCoy-Gilroy complex, 15 to 30 percent slopes","Well drained",4.15
+4,0.13,31,0.15,6.70,"Gilroy",53,"High",2,,"hills, uplands",,7,"e",,,455658,"MbG","McCoy-Gilroy complex, 30 to 75 percent slopes","Well drained",4.13
+2.5,0.19,40,0.32,7.00,"McCoy",53,"Very high",3,503,"hills, uplands",250,7,"e",,,455658,"MbG","McCoy-Gilroy complex, 30 to 75 percent slopes","Well drained",4.13
+2.5,0.13,28,0.15,6.70,"McCoy",53,"Very high",3,503,"hills, uplands",250,7,"e",,,455659,"McG","McCoy gravelly loam, very stony subsoil variant, 30 to 75 percent slopes","Well drained",3.25
+2.5,0.08,20,0.1,6.50,"Plaskett",53,"Medium",1,,"mountains, mountains",,7,"e",,,455660,"Md","McMullin-Plaskett complex","Excessively drained",2.73
+2,0.13,32,0.17,6.10,"McMullin",53,"High",1,731,"hills, mountains",252,7,"e",,,455660,"Md","McMullin-Plaskett complex","Somewhat excessively drained",2.73
+0.75,0.09,39,0.28,7.50,"Metz",1,"Low",5,385,"flood plains",257,3,"s",2,"s",455661,"Me","Metz loamy sand","Somewhat excessively drained",2.25
+0.75,0.15,39,0.37,7.50,"Metz",1,"Low",5,385,"flood plains",257,3,"s",2,"s",455662,"Mf","Metz fine sandy loam","Somewhat excessively drained",3.75
+0.75,0.09,39,0.28,7.50,"Metz",6,"Medium",5,385,"flood plains",257,4,"e",,,455663,"Mg","Metz complex","Somewhat excessively drained",3.00
+0.75,0.15,39,0.32,7.50,"Metz",6,"Medium",5,,"flood plains",,3,"e",2,"e",455663,"Mg","Metz complex","Somewhat excessively drained",3.00
+2,0.16,45,0.24,7.30,"Alo",63,"Very high",3,,"hills, uplands",,7,"e",,,455665,"Mk","Millsholm-Alo association","Well drained",4.50
+2,0.19,38,0.32,6.50,"Millsholm",63,"High",1,591,"hills, uplands",230,7,"e",,,455665,"Mk","Millsholm-Alo association","Well drained",4.50
+3,0.19,29,0.17,6.50,"Gazos",53,"High",2,,"hills, uplands",,7,"e",,,455666,"Mm","Millsholm-Gazos complex","Well drained",4.75
+2,0.19,38,0.32,6.50,"Millsholm",53,"High",1,591,"hills, uplands",230,7,"e",,,455666,"Mm","Millsholm-Gazos complex","Well drained",4.75
+3,0.20,40,0.32,7.90,"Mocho",6,"High",5,536,"alluvial fans",275,3,"e",2,"e",455669,"MoC","Mocho silty clay loam, 2 to 9 percent slopes","Well drained",5.00
+2,0.19,36,0.2,7.50,"Montara",45,"Very high",1,472,"hills, mountains, uplands",225,7,"e",,,455670,"Mp","Montara-Rock outcrop complex","Well drained",4.75
+,,,,,"Rock outcrop",45,,,,"hills, mountains",,8,,,,455670,"Mp","Montara-Rock outcrop complex",,4.75
+3.5,0.18,41,0.24,8.20,"Nacimiento",12,"High",3,739,"hills, uplands",225,3,"e",,,455671,"NaD","Nacimiento silty clay loam, 9 to 15 percent slopes","Well drained",4.50
+2,0.10,30,0.28,5.80,"Narlon",6,"Very high",3,125,"marine terraces",300,4,"e",,,455677,"NcC","Narlon loamy fine sand, 2 to 9 percent slopes","Somewhat poorly drained",2.50
+2,0.10,30,0.28,5.80,"Narlon",23,"Very high",3,125,"hills",300,6,"e",,,455678,"NcE","Narlon loamy fine sand, 15 to 30 percent slopes","Somewhat poorly drained",2.50
+1,0.07,35,0.24,5.80,"Oceano",9,"Very low",5,171,"hills, hills",275,6,"e",4,"e",455679,"OaD","Oceano loamy sand, 2 to 15 percent slopes","Excessively drained",1.75
+3,0.19,41,0.32,7.30,"Pacheco",1,"Medium",5,62,"flood plains",335,3,"w",,,455683,"Pb","Pacheco silty clay loam, occasionally flooded","Somewhat poorly drained",4.75
+2,0.17,35,0.24,6.50,"Parkfield",6,"Very high",3,457,"terraces",250,3,"e",3,"e",455684,"PcC","Parkfield clay, 2 to 9 percent slopes","Well drained",4.25
+2,0.17,35,0.24,6.50,"Parkfield",23,"Very high",3,457,"terraces",250,4,"e",,,455685,"PcE","Parkfield clay, 15 to 30 percent slopes","Well drained",4.25
+2.5,0.14,34,0.17,6.70,"San Andreas",6,,3,,"hills, uplands",,,,,,455686,"PdC","Pfeiffer fine sandy loam, 2 to 9 percent slopes","Well drained",3.13
+2,0.14,36,0.2,6.70,"Pfeiffer",6,"Low",5,472,"hills, uplands",260,3,"e",,,455686,"PdC","Pfeiffer fine sandy loam, 2 to 9 percent slopes","Well drained",3.13
+2,0.14,37,0.17,6.70,"Pfeiffer",12,"Low",5,472,"hills, uplands",260,4,"e",,,455687,"PdD","Pfeiffer fine sandy loam, 9 to 15 percent slopes","Well drained",3.16
+2.5,0.14,35,0.2,6.70,"San Andreas",12,"Medium",3,,"hills, hills",,,,,,455687,"PdD","Pfeiffer fine sandy loam, 9 to 15 percent slopes","Well drained",3.16
+2,0.14,36,0.1,6.70,"Pfeiffer",68,"Medium",5,472,"mountains, uplands",260,7,"e",,,455688,"Pe","Pfeiffer-Rock outcrop complex","Well drained",3.00
+,,,,,"Rock outcrop",68,,,,"mountains",,8,,,,455688,"Pe","Pfeiffer-Rock outcrop complex",,3.00
+0.75,0.15,39,0.32,7.50,"Metz",1,,5,,"flood plains",,,,,,455689,"Pf","Pico fine sandy loam","Somewhat excessively drained",3.54
+2.5,0.14,35,0.24,8.20,"Pico",1,"Very low",5,230,"flood plains",250,3,"c",1,,455689,"Pf","Pico fine sandy loam","Well drained",3.54
+0.75,0.10,34,0.24,6.30,"Pinnacles",18,"High",3,609,"uplands, terraces",190,6,"e",,,455690,"PgE","Pinnacles coarse sandy loam, 5 to 30 percent slopes","Well drained",2.52
+0.75,0.10,34,0.24,6.30,"Pinnacles",53,"Very high",3,609,"terraces, uplands",190,6,"e",,,455690,"PgE","Pinnacles coarse sandy loam, 5 to 30 percent slopes","Well drained",2.52
+4,0.13,31,0.15,6.70,"Gilroy",33,"High",2,458,"hills, uplands",250,6,"e",,,455690,"PgE","Pinnacles coarse sandy loam, 5 to 30 percent slopes","Well drained",2.52
+3.5,0.19,41,0.32,8.20,"Linne",23,"Very high",3,350,"hills, uplands",265,6,"e",,,455690,"PgE","Pinnacles coarse sandy loam, 5 to 30 percent slopes","Well drained",2.52
+2.5,0.19,40,0.32,7.00,"McCoy",23,"Very high",3,503,"hills, uplands",250,4,"e",,,455690,"PgE","Pinnacles coarse sandy loam, 5 to 30 percent slopes","Well drained",2.52
+0.75,0.12,29,0.2,8.20,"San Timoteo",18,"High",3,579,"hills, uplands",275,4,"e",,,455690,"PgE","Pinnacles coarse sandy loam, 5 to 30 percent slopes","Well drained",2.52
+3,0.20,52,0.37,8.20,"Shedd",23,"Very high",3,411,"hills, uplands",250,6,"e",,,455690,"PgE","Pinnacles coarse sandy loam, 5 to 30 percent slopes","Well drained",2.52
+0.75,0.12,37,0.17,6.50,"Vista",23,"Medium",3,652,"hills, uplands",265,6,"e",,,455690,"PgE","Pinnacles coarse sandy loam, 5 to 30 percent slopes","Well drained",2.52
+0.75,0.13,37,0.32,7.30,"Xerorthents",33,"Medium",5,307,"alluvial fans, fan piedmonts, terraces",,6,"e",,,455690,"PgE","Pinnacles coarse sandy loam, 5 to 30 percent slopes","Well drained",2.52
+0.75,0.10,28,0.15,6.30,"Pinnacles",53,"Very high",3,609,"uplands, terraces",240,7,"e",,,455691,"PhG2","Pinnacles stony sandy loam, 30 to 75 percent slopes, eroded","Well drained",2.94
+4,0.13,31,0.15,6.70,"Gilroy",53,"High",2,458,"hills, uplands",250,7,"e",,,455691,"PhG2","Pinnacles stony sandy loam, 30 to 75 percent slopes, eroded","Well drained",2.94
+2.5,0.19,40,0.32,7.00,"McCoy",53,"Very high",3,503,"hills, uplands",250,7,"e",,,455691,"PhG2","Pinnacles stony sandy loam, 30 to 75 percent slopes, eroded","Well drained",2.94
+0.75,0.12,37,0.17,6.50,"Vista",53,"Medium",3,652,"hills, uplands",265,7,"e",,,455691,"PhG2","Pinnacles stony sandy loam, 30 to 75 percent slopes, eroded","Well drained",2.94
+0.75,0.10,34,0.24,6.30,"Pinnacles",18,"Very high",3,609,"terraces, uplands",190,6,"e",,,455691,"PhG2","Pinnacles stony sandy loam, 30 to 75 percent slopes, eroded","Well drained",2.94
+1.25,0.09,29,0.1,5.80,"Pinnacles",18,"High",3,609,"terraces",240,6,"e",,,455692,"PkE","Pinnacles coarse sandy loam, very gravelly subsoil variant, 5 to 30 percent slopes","Well drained",2.25
+1.25,0.09,29,0.1,5.80,"Pinnacles",40,"High",3,609,"terraces",240,7,"e",,,455693,"PkF","Pinnacles coarse sandy loam, very gravelly subsoil variant, 30 to 50 percent slopes","Well drained",2.25
+1.25,0.18,34,0.32,6.70,"Placentia",12,"Very high",3,388,"terraces",275,4,"e",4,"e",455697,"PnD","Placentia sandy loam, 9 to 15 percent slopes","Well drained",4.50
+1.25,0.18,34,0.32,6.70,"Placentia",23,"Very high",3,388,"terraces",275,6,"e",,,455698,"PnE","Placentia sandy loam, 15 to 30 percent slopes","Well drained",4.50
+1.25,0.18,34,0.32,6.70,"Placentia",23,"Very high",3,388,"terraces",275,6,"e",,,455699,"PoE","Placentia-Arbuckle complex, 15 to 30 percent slopes","Well drained",3.80
+0.75,0.11,28,0.17,6.50,"Arbuckle",23,"Very high",5,,"terraces",,4,"e",,,455699,"PoE","Placentia-Arbuckle complex, 15 to 30 percent slopes","Well drained",3.80
+0.75,0.10,32,0.1,6.20,"Reliz",53,"High",1,,"hills, mountains",,7,"e",,,455700,"Pp","Plaskett-Reliz complex","Excessively drained",2.23
+2.5,0.08,20,0.1,6.50,"Plaskett",53,"Medium",1,933,"mountains, mountains",210,7,"e",,,455700,"Pp","Plaskett-Reliz complex","Excessively drained",2.23
+0.75,0.04,11,,7.00,"Fluvents",3,"Very low",5,,"flood plains",,8,,,,455702,"Ps","Psamments and Fluvents, frequently flooded","Excessively drained",1.00
+0.75,0.04,23,0.02,7.00,"Psamments",3,"Very low",5,,"flood plains",,6,"w",,,455702,"Ps","Psamments and Fluvents, frequently flooded","Excessively drained",1.00
+6,,,,,"Xerorthents",55,,1,,"mountains, mountains",,7,"e",,,455708,"Rc","Rock outcrop-Xerorthent association","Well drained",
+,,,,,"Rock outcrop",53,,,883,"mountains",325,8,,,,455708,"Rc","Rock outcrop-Xerorthent association",,
+2.5,0.14,35,0.2,6.70,"San Andreas",23,"Medium",3,411,"hills, hills",275,6,"e",4,"e",455713,"ScE","San Andreas fine sandy loam, 15 to 30 percent slopes","Well drained",3.50
+2.5,0.14,34,0.24,6.70,"San Andreas",53,"Medium",3,411,"hills, mountains",275,7,"e",,,455714,"ScG","San Andreas fine sandy loam, 30 to 75 percent slopes","Well drained",3.50
+0.75,0.12,29,0.2,8.20,"San Timoteo",53,"Medium",3,579,"hills, uplands",275,7,"e",,,455717,"SeG","San Timoteo gravelly loam, 30 to 75 percent slopes","Well drained",3.00
+6,0.12,23,0.05,5.80,"Santa Lucia",9,"Medium",2,472,"hills, uplands",237,4,"e",3,"e",455718,"SfD","Santa Lucia shaly clay loam, 2 to 15 percent slopes","Well drained",3.00
+6,0.12,22,0.1,5.60,"Lopez",53,"High",1,,"hills",,7,"e",,,455721,"Sg","Santa Lucia-Reliz association","Somewhat excessively drained",2.77
+0.75,0.10,32,0.15,6.20,"Reliz",53,"High",1,,"hills, uplands",,7,"e",,,455721,"Sg","Santa Lucia-Reliz association","Excessively drained",2.77
+6,0.12,23,0.05,5.80,"Santa Lucia",53,"High",2,472,"hills, uplands",237,7,"e",,,455721,"Sg","Santa Lucia-Reliz association","Well drained",2.77
+3.5,0.13,32,0.32,6.50,"Santa Ynez",6,"Very high",3,,"terraces",,,,,,455722,"ShC","Santa Ynez fine sandy loam, 2 to 9 percent slopes","Moderately well drained",3.25
+3.5,0.13,25,0.15,6.50,"Santa Ynez",6,"Very high",3,186,"terraces",275,3,"e",3,"e",455722,"ShC","Santa Ynez fine sandy loam, 2 to 9 percent slopes","Moderately well drained",3.25
+2.5,0.17,47,0.2,7.30,"Diablo",12,,3,,"hills, hills",,,,,,455723,"ShD","Santa Ynez fine sandy loam, 9 to 15 percent slopes","Well drained",3.58
+3.5,0.13,32,0.32,6.50,"Santa Ynez",12,"Very high",3,186,"hills, terraces",275,4,"e",4,"e",455723,"ShD","Santa Ynez fine sandy loam, 9 to 15 percent slopes","Moderately well drained",3.58
+3.5,0.13,32,0.32,6.50,"Santa Ynez",10,"Very high",3,186,"hills, terraces",275,4,"e",4,"e",455724,"ShD2","Santa Ynez fine sandy loam, 5 to 15 percent slopes, eroded","Moderately well drained",3.25
+2.5,0.14,34,0.2,6.70,"San Andreas",23,,3,,"hills",,,,,,455725,"ShE","Santa Ynez fine sandy loam, 15 to 30 percent slopes","Well drained",3.29
+3.5,0.13,32,0.28,6.50,"Santa Ynez",23,,3,,"terraces",,,,,,455725,"ShE","Santa Ynez fine sandy loam, 15 to 30 percent slopes","Moderately well drained",3.29
+3.5,0.13,32,0.32,6.50,"Santa Ynez",23,"Very high",3,186,"hills, terraces",275,6,"e",,,455725,"ShE","Santa Ynez fine sandy loam, 15 to 30 percent slopes","Moderately well drained",3.29
+3,0.18,52,0.37,8.20,"Shedd",53,"High",3,411,"hills, uplands",250,7,"e",,,455726,"SmG3","Shedd silt loam, 30 to 75 percent slopes, severely eroded","Well drained",4.50
+3,0.20,52,0.37,8.20,"Shedd",12,"High",3,411,"hills, uplands",250,4,"e",,,455727,"SnD","Shedd silty clay loam, 9 to 15 percent slopes","Well drained",5.00
+3,0.20,52,0.37,8.20,"Shedd",40,"Very high",3,411,"hills, uplands",250,6,"e",,,455729,"SnF2","Shedd silty clay loam, 30 to 50 percent slopes, eroded","Well drained",5.00
+3,0.12,34,0.17,6.50,"Sheridan",10,"Low",3,609,"hills, hills",210,4,"e",,,455730,"SoD","Sheridan coarse sandy loam, 5 to 15 percent slopes","Well drained",3.00
+3,0.12,34,0.17,6.50,"Sheridan",53,"Medium",3,609,"hills, hills, mountains, mountains",210,7,"e",,,455732,"SoG","Sheridan coarse sandy loam, 30 to 75 percent slopes","Well drained",3.00
+0.75,0.13,32,0.28,7.00,"Greenfield",10,"Low",5,,"alluvial fans, terraces",,3,"e",3,"e",455733,"SpD","Snelling-Greenfield complex, 5 to 15 percent slopes","Well drained",3.11
+0.75,0.12,31,0.28,6.70,"Snelling",10,"High",5,328,"alluvial fans, terraces",205,3,"e",,,455733,"SpD","Snelling-Greenfield complex, 5 to 15 percent slopes","Well drained",3.11
+0.75,0.12,31,0.24,6.70,"Snelling",20,"Very high",5,,"alluvial fans, terraces",,4,"e",,,455734,"SpE2","Snelling-Greenfield complex, 9 to 30 percent slopes, eroded","Well drained",3.13
+0.75,0.13,32,0.32,7.00,"Greenfield",20,"Medium",5,328,"alluvial fans, terraces",250,4,"e",,,455734,"SpE2","Snelling-Greenfield complex, 9 to 30 percent slopes, eroded","Well drained",3.13
+5.5,0.13,31,0.1,6.20,"Junipero",68,"Medium",3,,"mountains, mountains",,7,"e",,,455737,"Ss","Sur-Junipero complex","Well drained",2.31
+1.5,0.08,25,0.05,6.50,"Sur",68,"Medium",2,1066,"mountains, mountains",200,7,"e",,,455737,"Ss","Sur-Junipero complex","Somewhat excessively drained",2.31
+1.5,0.08,25,0.05,6.50,"Sur",63,"Medium",2,1066,"mountains, mountains",200,7,"e",,,455738,"St","Sur-Plaskett complex","Somewhat excessively drained",2.00
+2.5,0.08,20,0.1,6.50,"Plaskett",63,"Medium",1,,"mountains, mountains",,7,"e",,,455738,"St","Sur-Plaskett complex","Excessively drained",2.00
+0.75,0.07,33,0.05,5.90,"Tangair",6,"Very low",5,143,"marine terraces",300,4,"w",3,"w",455739,"TaC","Tangair fine sand, 2 to 9 percent slopes","Somewhat poorly drained",1.75
+0.75,0.08,32,0.1,7.00,"Tujunga",3,"Negligible",5,656,"alluvial fans, flood plains",287,4,"e",,,455740,"TbB","Tujunga fine sand, 0 to 5 percent slopes","Excessively drained",2.00
+0.75,0.12,37,0.17,6.50,"Vista",10,"Low",3,652,"hills, uplands",265,4,"e",,,455741,"VaD","Vista coarse sandy loam, 5 to 15 percent slopes","Well drained",3.00
+0.75,0.12,37,0.17,6.50,"Vista",53,"Medium",3,652,"hills, uplands",265,7,"e",,,455743,"VaG","Vista coarse sandy loam, 30 to 75 percent slopes","Well drained",3.00
+0.75,0.10,37,0.17,6.50,"Vista",53,"Medium",3,652,"hills, mountains, uplands",265,7,"e",,,455744,"Vb","Vista-Rock outcrop complex","Well drained",2.50
+,,,,,"Rock outcrop",53,,,26,"hills, mountains",325,8,,,,455744,"Vb","Vista-Rock outcrop complex",,2.50
+2.5,0.17,48,0.2,7.30,"Xererts",53,"Very high",4,518,"hills, uplands",,7,"e",,,455751,"Xa","Xererts-Xerolls complex","Somewhat poorly drained",4.50
+3.5,0.19,34,0.2,7.30,"Xerolls",53,"Very high",4,,"hills, uplands",,7,"e",,,455751,"Xa","Xererts-Xerolls complex","Somewhat poorly drained",4.50
+0.75,0.08,30,0.1,6.20,"Xerorthents",30,"Medium",5,236,"alluvial fans, terraces",,6,"e",,,455752,"Xb","Xerorthents, sandy","Well drained",2.00
+0.75,0.13,38,0.32,7.30,"Xerorthents",33,"Medium",5,307,"alluvial fans, terraces",,6,"e",,,455753,"Xc","Xerorthents, loamy","Well drained",3.25
+0.75,0.13,36,0.32,7.30,"Xerorthents",58,"Very high",5,411,"alluvial fans, terraces",240,7,"e",,,455754,"Xd","Xerorthents, dissected","Well drained",3.25
+1.5,0.08,36,0.15,5.60,"Corralitos",6,"Very low",5,153,"alluvial fans",260,3,"e",3,"e",693537,"CuC","Corralitos loamy sand, 2 to 9 percent slopes","Somewhat excessively drained",2.00
+2,0.21,40,0.24,5.60,"Cotati",12,"Very high",3,153,"hills, terraces",260,4,"e",,,693538,"CvD2","Cotati loam, 9 to 15 percent slopes, eroded","Moderately well drained",5.25
+0.75,0.15,39,0.43,5.60,"Cotati",23,"Very high",3,153,"terraces",260,6,"e",,,693539,"CvE2","Cotati loam, 15 to 30 percent slopes, eroded","Moderately well drained",3.75
+1.5,0.13,39,0.37,6.30,"Hanford",6,"Low",3,336,"alluvial fans, flood plains",260,3,"e",2,"e",693540,"HfC","Hanford loam, 2 to 9 percent slopes","Well drained",3.25
+4,0.06,14,0.05,5.70,"Burgundy",63,"High",1,441,"hills, hills",194,7,"e",,,1862006,104,"Knuckle-Burgundy-Argixerolls complex, 20 to 70 percent slopes","Well drained",1.52
+1,0.07,23,0.1,5.10,"Knuckle",60,"Medium",2,699,"hills, hills",194,7,"e",,,1862006,104,"Knuckle-Burgundy-Argixerolls complex, 20 to 70 percent slopes","Somewhat excessively drained",1.52
+1,0.10,30,0.15,5.10,"Argixerolls",28,"Very high",2,393.7999878,"hills, hills",194,7,"e",,,1862006,104,"Knuckle-Burgundy-Argixerolls complex, 20 to 70 percent slopes","Well drained",1.52
+3,0.17,39,0.28,7.10,"Casino",60,"Very high",2,699,"hills, hills",250,7,"e",,,1862006,104,"Knuckle-Burgundy-Argixerolls complex, 20 to 70 percent slopes","Moderately well drained",1.52
+4,0.06,14,0.05,7.10,"Burgundy",35,"Very high",1,441,"hills, hills",194,7,"e",,,1862006,104,"Knuckle-Burgundy-Argixerolls complex, 20 to 70 percent slopes","Well drained",1.52
+1,0.07,34,0.32,5.10,"Knuckle",35,"Medium",1,699,"hills, hills",194,7,"e",,,1862006,104,"Knuckle-Burgundy-Argixerolls complex, 20 to 70 percent slopes","Somewhat excessively drained",1.52
+1,0.10,30,0.15,5.10,"Argixerolls",35,"Very high",2,393,"hills, hills",194,6,"e",,,1862006,104,"Knuckle-Burgundy-Argixerolls complex, 20 to 70 percent slopes","Well drained",1.52
+1,0.13,37,0.24,6.60,"Tuborcio",43,"Very high",3,620,"hills, hills",194,6,"e",,,1862011,122,"Tuborcio sandy loam, 35 to 50 percent slopes","Well drained",3.30
+1,0.13,37,0.24,6.00,"Tuborcio",60,"Very high",3,620,"hills, hills",194,6,"e",,,1862011,122,"Tuborcio sandy loam, 35 to 50 percent slopes","Well drained",3.30
+1,0.15,38,0.28,5.00,"Backdoor",43,"Very high",3,590,"hills, hills",194,7,"e",,,1862011,122,"Tuborcio sandy loam, 35 to 50 percent slopes","Well drained",3.30
+70,0.30,65,,6.10,"Tuborcio",28,"Very high",4,620,"hills, hills",194,6,"e",,,1862011,122,"Tuborcio sandy loam, 35 to 50 percent slopes","Well drained",3.30
+7,0.12,35,0.2,6.50,"Rimtrail",3,"Low",5,163,"river valleys, valley flats",194,2,"e",3,"e",1862010,112,"Rimtrail sandy loam, 0 to 5 percent slopes","Well drained",3.02
+7,0.12,34,0.24,6.50,"Rimtrail",7,"High",5,163,"valley flats, river valleys",194,2,"e",3,"e",1862010,112,"Rimtrail sandy loam, 0 to 5 percent slopes","Well drained",3.02
+1,0.15,38,0.28,5.00,"Backdoor",15,"Very high",3,590,"hills, hills",194,6,"e",,,1862010,112,"Rimtrail sandy loam, 0 to 5 percent slopes","Well drained",3.02
+1,0.15,39,0.28,5.00,"Backdoor",60,"High",3,590,"hills, hills",194,7,"e",,,1862009,111,"Backdoor-Tuborcio complex, 20 to 70 percent slopes","Well drained",3.57
+1,0.13,31,0.1,6.00,"Tuborcio",35,"Very high",4,620,"hills, hills",194,6,"e",,,1862009,111,"Backdoor-Tuborcio complex, 20 to 70 percent slopes","Well drained",3.57
+1,0.15,29,0.17,6.10,"Backdoor",60,"High",3,590,"hills, hills",194,7,"e",,,1862009,111,"Backdoor-Tuborcio complex, 20 to 70 percent slopes","Well drained",3.57
+1,0.15,38,0.28,5.00,"Backdoor",43,"Very high",5,590,"hills, hills",194,7,"e",,,1862009,111,"Backdoor-Tuborcio complex, 20 to 70 percent slopes","Well drained",3.57
+1,0.13,31,0.1,6.00,"Tuborcio",60,"Very high",4,620,"hills, hills",194,6,"e",,,1862009,111,"Backdoor-Tuborcio complex, 20 to 70 percent slopes","Well drained",3.57
+1,0.15,28,0.17,6.10,"Backdoor",43,"High",3,590,"hills, hills",194,7,"e",,,1862009,111,"Backdoor-Tuborcio complex, 20 to 70 percent slopes","Well drained",3.57
+1,0.12,23,0.1,5.60,"Highpeaks",43,"High",1,979,"hills, hills",194,7,"e",,,1862012,138,"Rock outcrop-Highpeaks-Chalone complex, 35 to 50 percent slopes","Well drained",2.38
+1,0.09,27,0.2,6.50,"Chalone",43,"High",2,683,"hills, hills",194,6,"e",,,1862012,138,"Rock outcrop-Highpeaks-Chalone complex, 35 to 50 percent slopes","Well drained",2.38
+1,0.10,30,0.15,6.30,"Argixerolls",43,"Very high",2,575.7999878,"hills, hills",194,6,"e",,,1862012,138,"Rock outcrop-Highpeaks-Chalone complex, 35 to 50 percent slopes","Well drained",2.38
+1,0.12,21,0.1,5.60,"Highpeaks",60,"Very high",1,979,"hills, hills",194,7,"e",,,1862012,138,"Rock outcrop-Highpeaks-Chalone complex, 35 to 50 percent slopes","Well drained",2.38
+75,0.45,65,,5.60,"Tuborcio",43,"Very high",3,620,"hills, hills",194,6,"e",,,1862013,148,"Backdoor-Tuborcio complex, 35 to 50 percent slopes","Well drained",3.63
+1,0.15,39,0.37,5.00,"Backdoor",43,"High",3,590,"hills, hills",194,6,"e",,,1862013,148,"Backdoor-Tuborcio complex, 35 to 50 percent slopes","Well drained",3.63
+1,0.15,38,0.37,5.00,"Backdoor",28,"Very high",3,590,"hills, hills",194,6,"e",,,1862013,148,"Backdoor-Tuborcio complex, 35 to 50 percent slopes","Well drained",3.63
+1,0.10,30,0.15,5.10,"Argixerolls",22,"High",2,,"hills, hills",194,6,"e",,,1862013,148,"Backdoor-Tuborcio complex, 35 to 50 percent slopes","Well drained",3.63
+1,0.12,35,0.28,7.00,"Backdoor",15,"High",3,590,"hills, hills",194,6,"e",,,1862014,152,"Backdoor sandy loam, 9 to 20 percent slopes","Well drained",3.31
+7,0.12,34,0.2,6.50,"Rimtrail",3,"Low",5,163,"valley flats, river valleys",194,2,"e",3,"e",1862014,152,"Backdoor sandy loam, 9 to 20 percent slopes","Well drained",3.31
+3.5,0.18,44,0.24,8.20,"Nacimiento",40,"Very high",3,437,"hillslopes on hills",325,6,"e",6,"e",2747740,"NbF","Nacimiento-Los Osos complex, 30 to 50 percent slopes, MLRA 15","Well drained",4.58
+3,0.19,39,0.24,6.70,"Los Osos",40,"Very high",3,437,"hillslopes on hills",325,6,"e",6,"e",2747740,"NbF","Nacimiento-Los Osos complex, 30 to 50 percent slopes, MLRA 15","Well drained",4.58
+6,0.11,34,0.05,5.40,"Santa Lucia",40,"High",2,197,"mountain slopes on mountains, hillslopes on hills",325,6,"e",,,2747745,"SfF","Santa Lucia channery clay loam, 30 to 50 percent slopes, MLRA 15","Well drained",2.85
+0.75,0.12,37,0.28,6.80,"Gaviota",53,"Medium",1,640,"hills, mountains, -- Error in Exists On --",325,7,"e",,,2747728,"GdF","Gaviota sandy loam, 30 to 75 percent slopes, MLRA 15","Somewhat excessively drained",3.00
+0.75,0.12,37,0.28,6.80,"Gaviota",25,"Medium",1,640,"hills, mountains, -- Error in Exists On --",325,7,"e",,,2747720,"GdE","Gaviota sandy loam, 15 to 30 percent slopes, MLRA 15","Somewhat excessively drained",3.00
+3.5,0.18,46,0.32,8.00,"Nacimiento",20,"Medium",3,450,"mountain slopes on mountains, hillslopes on hills",330,4,"e",,,2747734,"NaE","Nacimiento silty clay loam, 15 to 30 percent slopes, MLRA 15","Well drained",4.50
+3.5,0.19,40,0.32,8.10,"Nacimiento",40,"Very high",3,293,"mountain slopes on mountains, hillslopes on hills",330,6,"e",,,2747735,"NaF","Nacimiento silty clay loam, 30 to 50 percent slopes, MLRA 15","Well drained",4.75
+2.5,0.19,44,0.24,7.50,"San Benito",63,"Very high",4,,"hills",,7,"e",,,2747741,"NbG","Nacimiento-Los Osos complex, 50 to 75 percent slopes, MLRA 15","Well drained",4.62
+3,0.19,39,0.24,6.70,"Los Osos",63,"Very high",3,,"hills, uplands",,7,"e",,,2747741,"NbG","Nacimiento-Los Osos complex, 50 to 75 percent slopes, MLRA 15","Well drained",4.62
+3.5,0.18,41,0.24,8.20,"Nacimiento",63,"Very high",3,739,"hills, uplands",225,7,"e",,,2747741,"NbG","Nacimiento-Los Osos complex, 50 to 75 percent slopes, MLRA 15","Well drained",4.62
+6,0.12,31,0.05,6.00,"Santa Lucia",23,"High",2,490.2999878,"mountain slopes on mountains, hillslopes on hills",325,4,"e",,,2747742,"SfE","Santa Lucia channery clay loam, 15 to 30 percent slopes, MLRA 15","Well drained",2.75
+4,0.16,38,0.2,5.50,"Lockwood",1,"Low",5,320,"alluvial fans on valleys, terraces on valleys",330,3,"s",2,"s",2833387,"LeA","Lockwood channery loam, 0 to 2 percent slopes, MLRA 14","Well drained",4.00
+3.5,0.14,37,0.15,6.50,"Lockwood",6,"Medium",5,320,"alluvial fans, terraces, valleys",330,3,"e",2,"e",2833356,"LeC","Lockwood channery loam, 2 to 9 percent slopes, MLRA 14","Well drained",3.50
+0.75,0.10,28,0.15,6.70,"Cieneba",63,"Medium",2,797,"mountain slopes on mountains, hillslopes on hills",240,7,"e",,,455571,"Cd","Cieneba-Rock outcrop complex, 50 to 75 percent slopes, cool MAAT, MLRA 15","Somewhat excessively drained",2.50
+3,0.17,42,0.28,6.40,"Los Osos",23,"Very high",3,396,"mountain slopes on mountains, hillslopes on hills",280,4,"e",4,"e",455649,"LmE","Los Osos clay loam, 15 to 30 percent slopes, MLRA 15","Well drained",4.25
+3,0.17,42,0.28,6.40,"Los Osos",40,"Very high",3,396,"mountain slopes on mountains, hillslopes on hills",280,6,"e",6,"e",455650,"LmF","Los Osos clay loam, 30 to 50 percent slopes, MLRA 15","Well drained",4.25
+3,0.17,42,0.28,6.40,"Los Osos",65,"Very high",3,590,"mountain slopes on mountains, hillslopes on hills",280,7,"e",,,455651,"LmG","Los Osos clay loam, 50 to 75 percent slopes, MLRA 15","Well drained",4.25
+1.5,0.18,43,0.37,7.00,"Rincon",1,"Medium",5,164,"alluvial fans on valleys, terraces on valleys",280,4,"s",2,"s",2833409,"RaA","Rincon clay loam, 0 to 2 percent slopes, MLRA 14","Well drained",4.50
+1.5,0.17,43,0.32,7.00,"Rincon",6,"High",5,240,"alluvial fans on valleys, terraces on valleys",280,4,"e",2,"e",455704,"RaC","Rincon clay loam, 2 to 9 percent slopes, MLRA 14","Well drained",4.25
+1.5,0.19,38,0.32,6.70,"Rincon",12,"Very high",5,307,"alluvial fans on alluvial plain remnants, terraces on alluvial plain remnants",250,4,"e",3,"e",455705,"RaD","Rincon clay loam, 9 to 15 percent slopes, MLRA 14","Well drained",4.75
+1.5,0.19,38,0.32,6.70,"Rincon",23,"Very high",5,307,"alluvial fans on valleys, terraces on valleys",250,6,"e",,,455706,"RaE","Rincon clay loam, 15 to 30 percent slopes, MLRA 14","Well drained",4.75
+3.5,0.18,46,0.32,8.00,"Nacimiento",40,"Very high",3,417,"mountain slopes on mountains, hillslopes on hills",300,6,"e",,,455674,"NaG","Nacimiento silty clay loam, 15 to 75 percent slopes, MLRA 15","Well drained",4.50
+2,0.16,45,0.28,8.20,"Cropley",6,"Very high",5,324,"alluvial fans, terraces",280,3,"e",2,"e",455580,"CnC","Cropley silty clay, 2 to 9 percent slopes, MLRA 14","Well drained",4.00
+2.5,0.16,40,0.32,8.20,"Salinas",1,"Low",5,160.1000061,"alluvial fans, alluvial flats, alluvial plains, flood plains, terraces",300,3,"c",1,,2833377,"SaA","Salinas loam, 0 to 2 percent slopes, MLRA 14","Well drained",4.00
+2.5,0.18,40,0.37,7.00,"Salinas",1,"Low",5,328,"alluvial fans, alluvial plains, terraces",300,3,"c",1,,2833371,"SbA","Salinas clay loam, 0 to 2 percent slopes, MLRA 14","Well drained",4.61
+3,0.20,40,0.37,7.90,"Mocho",1,"High",5,171,"flood plains",275,,,,,2833371,"SbA","Salinas clay loam, 0 to 2 percent slopes, MLRA 14","Well drained",4.61
+2.5,0.18,40,0.37,7.50,"Salinas",6,"Medium",5,315,"alluvial fans, alluvial plains, terraces",266,3,"e",2,"e",2833375,"SbC","Salinas clay loam, 2 to 9 percent slopes, MLRA 14","Well drained",4.50
+3,0.12,33,0.17,6.40,"Sheridan",23,"Very high",3,727,"hills, hills, mountain slopes, mountains",315,6,"e",,,455731,"SoE","Sheridan coarse sandy loam, 15 to 30 percent slopes, MLRA 15","Well drained",2.95
+2.5,0.11,36,0.17,5.80,"Elder",1,"Low",5,229,"alluvial fans, alluvial plains, flood plains",330,3,"c",1,,2833398,"EaA","Elder sandy loam, 0 to 2 percent slopes, MLRA 14","Well drained",2.75
+1.25,0.12,35,0.28,6.70,"Placentia",1,"Low",3,239,"alluvial fans, alluvial plains, terraces",315,3,"s",3,"s",455695,"PnA","Placentia sandy loam, 0 to 2 percent slopes, MLRA 14","Well drained",3.00
+1.25,0.12,35,0.28,6.00,"Placentia",6,"Low",3,400,"alluvial fans, alluvial plains, terraces",300,4,"e",4,"e",455696,"PnC","Placentia sandy loam, 2 to 9 percent slopes, MLRA 14","Well drained",3.00
+3,0.18,34,0.32,8.20,"Mocho",1,"Low",5,202,"alluvial fans, alluvial plains, flood plains, valleys",315,3,"c",1,,2833429,"MnA","Mocho silt loam, 0 to 2 percent slopes, MLRA 14","Well drained",4.16
+3,0.15,35,0.37,8.00,"Mocho",1,"Medium",4,291,"alluvial fans, alluvial plains, flood plains, valleys",315,3,"c",1,,455668,"MoA","Mocho silty clay loam, 0 to 2 percent slopes, MLRA 14","Well drained",3.75
+3,0.17,39,0.32,8.00,"Shedd",20,"Very high",3,450,"hills, hills, uplands",315,6,"e",,,455728,"SnE","Shedd silty clay loam, 15 to 30 percent slopes, MLRA 15","Well drained",4.25
+3,0.18,40,0.24,6.30,"Pacheco",1,"Very low",5,200,"alluvial plains, flood plains",330,3,"w",2,"w",455682,"Pa","Pacheco clay loam, MLRA 14","Poorly drained",4.45
+3,0.17,40,0.28,7.50,"Sorrento",1,"Medium",5,438,"alluvial plains, flood plains",300,3,"c",1,,455735,"SrA","Sorrento clay loam, 0 to 2 percent slopes, MLRA 14","Well drained",4.25
+3,0.18,40,0.28,7.50,"Sorrento",6,"High",5,558,"alluvial fans, alluvial plains, flood plains",300,3,"e",2,"e",455736,"SrC","Sorrento clay loam, 2 to 9 percent slopes, MLRA 14","Well drained",4.50
+1.700000048,0.15,49,0.24,8.00,"Clear Lake",0.5,"High",5,11,"basin floors on valleys",230,3,"w",2,"w",455574,"Cg","Clear Lake clay, sandy substratum, drained, 0 to 1 percent slopes, MLRA 14","Poorly drained",3.75
+1.700000048,0.15,49,0.24,8.00,"Clear Lake",0.5,"High",5,3,"basin floors on valleys",230,4,"w",3,"w",455573,"Cf","Clear Lake clay, 0 to 1 percent slopes, frequently flooded, MLRA 14","Poorly drained",3.75
+2,0.16,40,0.28,6.40,"Millsholm",53,"High",1,914,"hillslopes on hills",230,7,"e",,,455664,"MhG","Millsholm loam, 15 to 65 percent slopes, MLRA 15","Well drained",3.90
+1.5,0.15,44,0.24,6.20,"Cropley",23,"Medium",5,344,"hills, terraces, valleys",280,3,"s",2,"s",455584,"DbE","Diablo clay, 15 to 30 percent slopes, MLRA 15","Moderately well drained",4.23
+2.5,0.17,48,0.2,7.00,"Diablo",23,"Very high",4,344,"-- Error in Exists On --",280,4,"e",4,"e",455584,"DbE","Diablo clay, 15 to 30 percent slopes, MLRA 15","Well drained",4.23
+1.5,0.13,36,0.24,6.40,"Arnold",33,"Low",4,138,"hills, terraces",330,6,"e",6,"e",455551,"AkF","Arnold loamy sand, 15 to 50 percent slopes, MLRA 15","Somewhat excessively drained",3.40
+1.5,0.13,36,0.24,6.40,"Arnold",15,"Low",4,129,"hills, terraces",330,6,"e",6,"e",455550,"AkD","Arnold loamy sand, 9 to 20 percent slopes, MLRA 15","Somewhat excessively drained",3.40
+6,0.12,31,0.05,6.00,"Santa Lucia",23,"High",2,163,"mountain slopes on mountains, hillslopes on hills",310,4,"e",,,455565,"CaE","Chamise channery loam, 15 to 30 percent slopes, MLRA 15","Well drained",3.38
+4.5,0.13,34,0.17,5.80,"Chamise",23,"Very high",3,163,"hills, terraces",310,6,"e",,,455565,"CaE","Chamise channery loam, 15 to 30 percent slopes, MLRA 15","Well drained",3.38
+3.5,0.14,37,0.15,6.50,"Lockwood",23,"Medium",5,163,"alluvial fans, terraces, valleys",310,3,"e",2,"e",455565,"CaE","Chamise channery loam, 15 to 30 percent slopes, MLRA 15","Well drained",3.38
+1.25,0.12,35,0.28,6.00,"Placentia",12,"Low",3,210,"alluvial fans, alluvial plains, terraces",310,4,"e",4,"e",455564,"CaD","Chamise channery loam, 9 to 15 percent slopes, MLRA 15","Well drained",3.42
+6,0.12,31,0.05,6.00,"Santa Lucia",12,"High",2,210,"mountain slopes on mountains, hillslopes on hills",310,4,"e",,,455564,"CaD","Chamise channery loam, 9 to 15 percent slopes, MLRA 15","Well drained",3.42
+3.5,0.14,37,0.15,6.50,"Lockwood",12,"Medium",5,210,"alluvial fans, terraces, valleys",310,3,"e",2,"e",455564,"CaD","Chamise channery loam, 9 to 15 percent slopes, MLRA 15","Well drained",3.42
+4.5,0.13,34,0.17,5.80,"Chamise",12,"Very high",3,210,"hills, terraces",310,6,"e",,,455564,"CaD","Chamise channery loam, 9 to 15 percent slopes, MLRA 15","Well drained",3.42
+1.5,0.19,38,0.32,6.70,"Rincon",12,"Very high",5,210,"alluvial fans on alluvial plain remnants, terraces on alluvial plain remnants",310,4,"e",3,"e",455564,"CaD","Chamise channery loam, 9 to 15 percent slopes, MLRA 15","Well drained",3.42
+1.5,0.14,41,0.2,7.50,"Climara",40,"Very high",3,533,"mountain slopes, mountains",225,7,"e",,,455576,"ChF","Climara clay, 30 to 50 percent slopes, MLRA 15","Well drained",3.50
+2.5,0.17,48,0.2,7.00,"Diablo",40,"Very high",4,250,"-- Error in Exists On --",290,4,"e",4,"e",455585,"DbF","Diablo clay, 30 to 50 percent slopes, MLRA 15","Well drained",4.24
+3.5,0.16,37,0.28,6.70,"Lodo",40,"Very high",1,250,"mountain slopes on mountains, ridges, hillslopes on hills",290,6,"e",6,"e",455585,"DbF","Diablo clay, 30 to 50 percent slopes, MLRA 15","Somewhat excessively drained",4.24
+2.5,0.14,37,0.15,5.80,"Soper",12,,,183,"hills, mountains, uplands",325,6,"e",6,"e",455583,"DbD","Diablo clay, 5 to 25 percent slopes, MLRA 15","Well drained",4.22
+1.5,0.14,47,0.17,7.00,"Clear Lake",12,,,183,"drainageways on hills",325,4,"e",2,"e",455583,"DbD","Diablo clay, 5 to 25 percent slopes, MLRA 15","Poorly drained",4.22
+2.5,0.17,48,0.2,7.00,"Diablo",12,"Very high",4,183,"-- Error in Exists On --",325,4,"e",4,"e",455583,"DbD","Diablo clay, 5 to 25 percent slopes, MLRA 15","Well drained",4.22
+3,0.17,39,0.32,8.00,"Shedd",12,,3,351,"-- Error in Exists On --",290,,,,,455633,"LbD","Linne-Diablo complex, 9 to 15 percent slopes","Well drained",4.25
+2,0.17,51,0.32,8.00,"Linne",12,,3,351,"hills, hillslopes, mountain slopes, mountains",290,4,"e",4,"e",455633,"LbD","Linne-Diablo complex, 9 to 15 percent slopes","Well drained",4.25
+2.5,0.17,48,0.2,7.00,"Diablo",12,"Very high",4,351,"-- Error in Exists On --",290,4,"e",4,"e",455633,"LbD","Linne-Diablo complex, 9 to 15 percent slopes","Well drained",4.25
+1.5,0.14,38,0.28,6.10,"Botella",2,"Low",5,482,"fans, flood plains",260,3,"c",1,,693542,"YoA","Yolo loam, 0 to 20 percent slopes, occasionally flooded, MLRA 15","Well drained",4.19
+2,0.14,46,0.15,7.50,"Cropley",2,"Low",5,482,"alluvial fans, terraces",260,3,"s",2,"s",693542,"YoA","Yolo loam, 0 to 20 percent slopes, occasionally flooded, MLRA 15","Well drained",4.19
+3,0.20,41,0.2,6.10,"Gazos",2,"Low",3,482,"hills, mountains, uplands",260,4,"e",4,"e",693542,"YoA","Yolo loam, 0 to 20 percent slopes, occasionally flooded, MLRA 15","Well drained",4.19
+1.5,0.13,42,0.28,6.70,"Pleasanton",2,"Low",5,482,"fans",260,3,"e",2,"e",693542,"YoA","Yolo loam, 0 to 20 percent slopes, occasionally flooded, MLRA 15","Well drained",4.19
+2.5,0.16,45,0.32,7.90,"Sorrento",2,"Low",5,482,"fans, flood plains",260,3,"e",2,"e",693542,"YoA","Yolo loam, 0 to 20 percent slopes, occasionally flooded, MLRA 15","Well drained",4.19
+1.5,0.17,41,0.43,5.80,"Yolo",2,"Low",5,482,"alluvial fans on valleys, flood plains on valleys",260,3,"c",1,,693542,"YoA","Yolo loam, 0 to 20 percent slopes, occasionally flooded, MLRA 15","Well drained",4.19
+45,0.28,63,,,"Rindge",1,"Negligible",2,4,"sloughs",280,6,"w",,,455707,"Rb","Rindge muck, 0 to 2 percent slopes, MLRA 14","Very poorly drained",7.00
+0.75,0.04,11,,7.00,"Fluvents",3,"Very low",5,475,"alluvial plains, flood plains",273,6,"w",,,455701,"Pr","Psamments and Fluvents, occasionally flooded, MLRA 14","Excessively drained",1.00
+0.75,0.04,23,0.02,7.00,"Psamments",3,"Very low",5,475,"alluvial plains, flood plains",273,6,"w",,,455701,"Pr","Psamments and Fluvents, occasionally flooded, MLRA 14","Excessively drained",1.00
+2.5,0.17,42,0.28,7.00,"San Benito",63,"Very high",4,505,"hills, uplands",210,7,"e",,,455716,"SdG","San Benito-Alo complex, 50 to 75 percent slopes, MLRA 15","Well drained",3.97
+2,0.12,44,0.28,7.60,"Alo",63,"High",3,505,"hills, uplands",210,7,"e",,,455716,"SdG","San Benito-Alo complex, 50 to 75 percent slopes, MLRA 15","Well drained",3.97
+2.5,0.18,42,0.28,7.50,"San Benito",40,"Very high",4,460,"hills, uplands",240,6,"e",,,455715,"SdF","San Benito-Diablo complex, 30 to 50 percent slopes, MLRA 15","Well drained",4.41
+2.5,0.16,46,0.2,7.30,"Diablo",40,"Very low",4,460,"hills, uplands",240,6,"e",,,455715,"SdF","San Benito-Diablo complex, 30 to 50 percent slopes, MLRA 15","Well drained",4.41
+2.5,0.14,34,0.1,6.30,"Los Gatos",40,"High",2,732,"hills, uplands",297,6,"e",,,455646,"LkF","Los Gatos gravelly loam, 30 to 50 percent slopes, thermic, high precipitation, MLRA 15","Well drained",3.50
+0.75,0.12,36,0.17,6.50,"Vista",23,"Medium",3,453,"hills, uplands",260,6,"e",,,455742,"VaE","Vista coarse sandy loam, 15 to 30 percent slopes, cool, MLRA 15","Well drained",3.00
+1,0.07,39,0.15,8.20,"Corducci",2,"Very low",5,170,"alluvial fans, flood plains, stream terraces, valleys",281,6,"e",,,3027893,300,"Corducci-Typic Xerofluvents, 0 to 5 percent slopes, occasionally flooded, MLRA 14","Somewhat excessively drained",1.70
+1.5,0.07,38,0.1,7.60,"Typic Xerofluvents",2,"Very low",5,170,"alluvial plains, flood plains, stream terraces, valleys",281,6,"e",,,3027893,300,"Corducci-Typic Xerofluvents, 0 to 5 percent slopes, occasionally flooded, MLRA 14","Somewhat excessively drained",1.70
+1.5,0.12,34,0.24,7.50,"Metz",2,"Very low",5,170,"alluvial plains, flood plains, stream terraces, valleys",281,6,"e",,,3027893,300,"Corducci-Typic Xerofluvents, 0 to 5 percent slopes, occasionally flooded, MLRA 14","Somewhat excessively drained",1.70
+0.5,0.07,36,0.1,7.50,"Tujunga",2,"Very low",5,170,"alluvial plains, flood plains, stream terraces, valleys",281,6,"e",,,3027893,300,"Corducci-Typic Xerofluvents, 0 to 5 percent slopes, occasionally flooded, MLRA 14","Somewhat excessively drained",1.70
+0.5,0.18,41,0.37,7.50,"Xeropsamments",2,"Very low",5,170,"alluvial plains, channels, drainageways, valleys",281,8,"w",,,3027893,300,"Corducci-Typic Xerofluvents, 0 to 5 percent slopes, occasionally flooded, MLRA 14","Excessively drained",1.70
+0.5,0.05,21,0.05,7.50,"Xerofluvents",2,"Very low",5,170,"alluvial plains, channels, drainageways, valleys",281,8,"w",,,3027893,300,"Corducci-Typic Xerofluvents, 0 to 5 percent slopes, occasionally flooded, MLRA 14","Excessively drained",1.70

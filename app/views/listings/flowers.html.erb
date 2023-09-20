@@ -1,0 +1,35 @@
+<div class="container-md text-center work-box gardens-head">
+  <div class="row justify-content-center">
+    <div class="col-lg-auto">
+      <p class="display-4">Local Grown Flowers</p>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <h4><small class="text-muted"><%= @time.to_formatted_s(:long) %></small></h4>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <ul class="list-inline sort-box">
+        <li class="list-inline-item sort-row">Sort: </li>
+        <li class="list-inline-item sort-row"><%= link_to "All", listings_path %></li>
+        <li class="list-inline-item sort-row"><%= link_to "Vegetables", vegetables_path %></li>
+        <li class="list-inline-item sort-row"><%= link_to "Fruits", fruits_path %></li>
+        <li class="list-inline-item sort-row"><%= link_to "Herbs", herbs_path %></li>
+        <li class="list-inline-item h6">FLOWERS</li>
+        <li class="list-inline-item sort-row"><%= link_to "Indoor Plants", indoor_plants_path %></li>
+        <li class="list-inline-item sort-row"><%= link_to "Outdoor Plants", outdoor_plants_path %></li>
+        <li class="list-inline-item sort-row"><%= link_to "Trees", trees_path %></li>
+        <li class="list-inline-item sort-row"></li>
+        <li class="list-inline-item sort-row">
+        <%= form_with url: "/flowers", method: "get", local: true do |f| %>
+          <%= f.text_field :search, id: :search %>
+          <%= f.submit "City Search" %>
+        <% end %>
+        </li>
+      </ul>  
+  </div>
+</div>

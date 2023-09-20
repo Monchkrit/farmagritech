@@ -1,0 +1,109 @@
+<div class="row">
+  <div class="col">
+    <h4><small class="text-muted"><%= @time.to_formatted_s(:long) %></small></h4>
+  </div>
+</div>
+<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group mr-2" role="group" aria-label="First group">
+    <button type="button" class="btn btn-warning"><%= link_to "Prism View", garden_path(:id => @garden) %></button>
+    <button type="button" class="btn btn-warning"><%= link_to "Garden Info", gardentable_path(:id => @garden) %></button>
+    <button type="button" class="btn btn-warning">Grow Info</button>
+    <button type="button" class="btn btn-warning"><%= link_to "Garden Work", worktable_path(:garden_id => @garden) %></button>
+  </div>
+</div>
+<div class="col part-box">
+  <div class="row">
+    <div class="col">
+      <p class="display-4 text-center"><strong>Grow Information</strong></p>
+       
+      <table class="table">
+        <thead class="thead-dark">
+          <th scope="col" class="h5"><strong>Bed</strong></th>          
+          <th scope="col" class="h5"><strong>Crops</strong></th>
+          <th scope="col" class="h5"><strong>Irrigation</strong></th>
+        </thead>          
+        <tbody>
+        <% @rows.each do |r| %>  
+          <tr>
+            <td scope="col" class="h5"><strong>Bed <%= r.row_num + 1 %></strong></td>
+            <td>
+            <% @crops.each do |crop|  %>
+              <% unless crop.blank? %>
+                <% @plants = Soilcube.where(:crop_name => crop, :garden_id => @garden, :row_num => r.row_num) %>
+                <% if @plants.sum(:seedcount) > 0 %>
+                  <%= crop %> / <%= @plants.sum(:seedcount) %><br />
+                <% end %>                
+              <% end %>
+            <% end %>
+            </td>
+            <td>
+            <% unless r.irrtime(r).blank? %>
+            <%= r.irrtime(r).strftime("%B %d, %Y") %> <%= r.irrtime(r).strftime("%l:%M %p") %>
+            <% end %>
+            </td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+      
+      <br class="clear">
+      <table class="table">
+        <thead class="thead-dark">
+          <th scope="col" class="h5"><strong>Cube</strong></th>
+          <th scope="col" class="h5"><strong>Plant Name</strong</th>
+          <th scope="col" class="h5"><strong>Sow Date</strong></th>
+          <th scope="col" class="h5"><strong>Number Planted</strong></th>
+          <th scope="col" class="h5"><strong>Spacing in Inches</strong></th>
+          <th scope="col" class="h5"><strong>Light</strong></th>
+          <th scope="col" class="h5"><strong>Sow Depth</strong></th>
+        </thead>
+          <tbody>
+            <% @cubes.each do |cube| %>
+            <% if cube.crop_name.blank? %>
+              <tr>
+                <th scope="row">
+                  Bed <%= cube.row_num + 1 %>, Prism <%= cube.col_num + 1 %>
+                  <%= link_to "Plant", edit_soilcube_path(cube), class:'btn btn-link' %>            
+                </th>
+              </tr>
+            <% else %>            
+            <tr>
+              <th scope="row">
+                Bed <%= cube.row_num + 1 %>, Prism <%= cube.col_num + 1 %><br />                
+                <%= link_to "To Market", new_listing_path(:cube => cube), class: 'btn btn-primary btn-sm' %>
+              </th>
+              <td>
+                <%= cube.crop_name %>
+              </td>
+              <% unless cube.sow_time.blank? %>
+              <td>
+                <%= cube.sow_time.strftime("%B %d, %Y") %>
+              </td>
+              <% end %>
+              <td>
+                <%= cube.seedcount %>
+              </td>
+              <% if cube.planttype_id.blank? %>
+                <td></td>
+                <td></td>
+                <td></td>
+              <% else %>
+                <% @plant = Planttype.find_by_id(cube.planttype_id) %>
+                <td>
+                  <%= @plant.space %>
+                </td>
+                <td>
+                  <%= @plant.light %>
+                </td>                    
+                <td>
+                  <%= @plant.sowdepth %>
+                </td>                  
+              <% end %>
+            </tr>
+          <% end %>
+          <% end %>                          
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

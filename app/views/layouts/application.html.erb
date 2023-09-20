@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Farm AgriTech</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="PlantForm Software is a free application for managing, working,
+    and distributing house plants, outdoor plants, and primarily regenerative agriculture products.
+    The application is designed to function at the local level with products from home and community gardens.">
+    <meta name="keywords" content="Regenerative Agriculture,Private Garden,Organic Produce, Local Agriculture,
+    Sales, Purchases, Delivery">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/99fee2e8fb.js"></script>
+    
+    <%= favicon_link_tag asset_path('71890588.jpeg') %>
+  </head>
+  <body>
+  <div class= "container-fluid">
+    <%= render 'layouts/header' %>  
+  </div>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  <%= yield %>
+  <%= render 'layouts/footer' %>
+</body>
+</html>
