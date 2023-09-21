@@ -1,6 +1,7 @@
-<p class="h1">New Listing</p>
-
-<% if gardener? %>
+<p class="h1">New Listing for admin <%= @admin %></p>
+<% if @admin %>
+  <%= render 'agritechform' %>
+<% elsif gardener? %>
   <%= render 'newform' %>
 <% else %>
   <%= render 'gardens/new' %>

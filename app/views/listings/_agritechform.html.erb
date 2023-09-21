@@ -1,0 +1,34 @@
+<div class="container-fluid">
+  <div class="row form-box">
+    <div class="col">
+      <%= form_with model: @listing do |f| %>
+        <p class="lead"><%= f.label :name, "Product Name" %><%= f.text_field :name %>
+        <p class="lead"><%= f.label :description, "Describe Product" %><%= f.text_field :description %></p>
+        <p class="lead"><%= f.label :product_type, "Type of Product" %>
+          <%= f.select(:product_type, [['FAT PC'], ['FAT CPC'], ['FAT OS']]) %></p>
+        
+        <p class="lead"><%= f.label :name, "Unit ID" %><%= f.text_field :unitid %>
+        <p class="lead"><%= f.label :weight, "Warranty Length" %><%= f.number_field :warranty_length %></p>
+        <p class="lead"><%= f.label :weight, "FATSupport Cost 1 Year" %><%= f.number_field :fatsupportcost1yr %></p>
+        <p class="lead"><%= f.label :weight, "FATSupport Cost 2 Year" %><%= f.number_field :fatsupportcost2yr %></p>
+        <p class="lead"><%= f.label :weight, "FATSupport Cost 2 Year" %><%= f.number_field :fatsupportcost3yr %></p>
+        <p class="lead"><%= f.label :name, "CPU" %><%= f.text_field :cpu %>
+
+        <p class="lead"><%= f.label :weight, "Units Available" %><%= f.number_field :weight %></p>
+        <p class="lead"><%= f.label :market_date, "Date of Sale" %><%= f.datetime_select :market_date, start_year: 2019 %></p>
+        <p class="lead"><%= f.label :price, "Price (6.9% + 30 cents included)" %><%= f.text_field :price %></p>
+        <p class="lead"><%= f.label :maxorder, "Total number of orders available" %><%= f.number_field :maxorder %>
+        <p class="lead">Please enter the location of sale</p>
+        <p class="lead"><%= f.label :street, "Street" %><%= f.text_field :street %></p>
+        <p class="lead"><%= f.label :city, "City" %><%= f.text_field :city %></p>
+        <p class="lead"><%= f.label :state, "State" %><%= f.text_field :state %></p>
+        <p class="lead"><%= f.label :zipcode, "Zipcode" %><%= f.text_field :zipcode %></p>
+        <p class="lead">Contact Number or E-Mail address </p>
+        <p class="lead"><%= f.text_field :telephone %></p>
+        <p class="lead"><%= f.label :picture, "Product Picture" %></p>
+        <p class="lead"><%= f.file_field :picture %></p>
+        <%= f.submit :submit, class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

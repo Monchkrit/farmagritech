@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_20_091134) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_20_093834) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -76,16 +76,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_20_091134) do
   create_table "listings", force: :cascade do |t|
     t.string "name"
     t.text "description"
+    t.string "product_type"
     t.decimal "price"
     t.datetime "market_date", precision: nil
     t.string "picture"
+    t.string "zipcode"
     t.integer "user_id"
     t.integer "weight"
-    t.string "product_type"
     t.string "street"
     t.string "city"
     t.string "state"
-    t.string "zipcode"
     t.string "telephone"
     t.integer "maxorder"
     t.boolean "verified"
@@ -165,8 +165,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_20_091134) do
     t.datetime "irr_time", precision: nil
     t.integer "seedcount"
     t.integer "planttype_id"
-    t.bigint "row_order"
     t.bigint "column_order"
+    t.bigint "row_order"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
     t.index ["column_order"], name: "index_prisms_on_column_order", unique: true
@@ -244,6 +244,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_20_091134) do
     t.string "last_name"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+    t.boolean "admin", default: false, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

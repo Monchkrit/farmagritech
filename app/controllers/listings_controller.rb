@@ -64,6 +64,7 @@ class ListingsController < ApplicationController
 
   # GET /listings/new
   def new
+    @admin = current_user.admin
     @gardner = gardener?
     @listing = Listing.new
     @cube = Soilcube.find_by_id(params[:cube])
@@ -117,6 +118,7 @@ class ListingsController < ApplicationController
 
   helper_method :gardener?
 
+
   def gardener?
     @gardens = Garden.where(:user_id => current_user)
       if @gardens.empty?
@@ -134,7 +136,7 @@ class ListingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def listing_params
-      params.require(:listing).permit(:search, :name, :description, :product_type, :price, :market_date, :maxorder, :picture, :zipcode, :user_id, :street, :city, :state, :zipcode, :telephone, :weight, :cube, :latitude, :longtitude)
+      params.require(:listing).permit(:search, :name, :description, :product_type, :price, :market_date, :maxorder, :picture, :zipcode, :user_id, :street, :city, :state, :zipcode, :telephone, :weight, :cube, :latitude, :longtitude, :warranty_length, :fatsupportcost1yr, :fatsupportcost2yr, :fatsupportcost3yr, :cpu, :core_count, :ram, :memory_type, :hdgigs, :hdtype, :opticaldrive, :video, :videoint)
     end
 
 end
