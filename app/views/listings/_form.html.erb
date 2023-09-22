@@ -4,8 +4,13 @@
       <%= form_with model: @listing, url: listing_path do |f| %>
         <p class="lead"><%= f.label :name, "Name" %><%= f.text_field :name %></p>
         <p class="lead"><%= f.label :description, "Describe Product" %><%= f.text_field :description %></p>
-        <p class="lead"><%= f.label :product_type, "Type of Product" %>
-          <%= f.select(:product_type, [['Vegetable'], ['Herb'], ['Fruit'], ['Flowers'], ['House Plant'], ['Outdoor Plant'], ['Tree']]) %></p>
+        <% if @admin %>
+          <p class="lead"><%= f.label :product_type, "Type of Product" %>
+            <%= f.select(:product_type, [['FAT PC'], ['Vegetable'], ['Herb'], ['Fruit'], ['Flowers'], ['House Plant'], ['Outdoor Plant'], ['Tree']]) %></p>
+        <% else %>
+          <p class="lead"><%= f.label :product_type, "Type of Product" %>
+            <%= f.select(:product_type, [['Vegetable'], ['Herb'], ['Fruit'], ['Flowers'], ['House Plant'], ['Outdoor Plant'], ['Tree']]) %></p>
+        <% end %>
         <p class="lead"><%= f.label :weight, "Pounds or Units" %><%= f.number_field :weight %></p>
         <p class="lead"><%= f.label :market_date, "Date of Sale" %><%= f.datetime_select :market_date, start_year: 2019 %></p>
         <p class="lead"><%= f.label :price, "Fees are applied." %></p>

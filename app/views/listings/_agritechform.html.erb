@@ -5,15 +5,21 @@
         <p class="lead"><%= f.label :name, "Product Name" %><%= f.text_field :name %>
         <p class="lead"><%= f.label :description, "Describe Product" %><%= f.text_field :description %></p>
         <p class="lead"><%= f.label :product_type, "Type of Product" %>
-          <%= f.select(:product_type, [['FAT PC'], ['FAT CPC'], ['FAT OS']]) %></p>
-        
-        <p class="lead"><%= f.label :name, "Unit ID" %><%= f.text_field :unitid %>
-        <p class="lead"><%= f.label :weight, "Warranty Length" %><%= f.number_field :warranty_length %></p>
-        <p class="lead"><%= f.label :weight, "FATSupport Cost 1 Year" %><%= f.number_field :fatsupportcost1yr %></p>
-        <p class="lead"><%= f.label :weight, "FATSupport Cost 2 Year" %><%= f.number_field :fatsupportcost2yr %></p>
-        <p class="lead"><%= f.label :weight, "FATSupport Cost 2 Year" %><%= f.number_field :fatsupportcost3yr %></p>
-        <p class="lead"><%= f.label :name, "CPU" %><%= f.text_field :cpu %>
-
+          <%= f.select(:product_type, [['FAT PC'], ['FAT CPC'], ['FAT OS']]) %></p>        
+        <p class="lead"><%= f.label :unitid, "Unit ID" %><%= f.text_field :unitid %>
+        <p class="lead"><%= f.label :warranty_length, "Warranty Length" %><%= f.number_field :warranty_length %></p>
+        <p class="lead"><%= f.label :fatsupportcost1yr, "FATSupport Cost 1 Year" %><%= f.number_field :fatsupportcost1yr %></p>
+        <p class="lead"><%= f.label :fatsupportcost2yr, "FATSupport Cost 2 Year" %><%= f.number_field :fatsupportcost2yr %></p>
+        <p class="lead"><%= f.label :fatsupportcost3yr, "FATSupport Cost 2 Year" %><%= f.number_field :fatsupportcost3yr %></p>
+        <p class="lead"><%= f.label :cpu, "CPU" %><%= f.text_field :cpu %>
+        <p class="lead"><%= f.label :core_count, "Core Count" %><%= f.number_field :core_count %>
+        <p class="lead"><%= f.label :ram, "RAM" %><%= f.number_field :ram %>
+        <p class="lead"><%= f.label :memory_type, "Memory Type" %><%= f.text_field :memory_type %>
+        <p class="lead"><%= f.label :hdgigs, "HD Size" %><%= f.number_field :hdgigs %>
+        <p class="lead"><%= f.label :hdtype, "HD Type" %><%= f.text_field :hdtype %>
+        <p class="lead"><%= f.label :opticaldrive, "Optical Drive" %><%= f.text_field :opticaldrive %>
+        <p class="lead"><%= f.label :video, "GPU" %><%= f.text_field :video %>
+        <p class="lead"><%= f.label :videoint, "Video Interfaces" %><%= f.text_field :videoint %>
         <p class="lead"><%= f.label :weight, "Units Available" %><%= f.number_field :weight %></p>
         <p class="lead"><%= f.label :market_date, "Date of Sale" %><%= f.datetime_select :market_date, start_year: 2019 %></p>
         <p class="lead"><%= f.label :price, "Price (6.9% + 30 cents included)" %><%= f.text_field :price %></p>

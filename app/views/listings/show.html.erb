@@ -1,5 +1,6 @@
 <div class="container">
-  <div class="col">
+  <% if @fat == 'FAT PC' %>
+    <div class="col">
     <div class="row listing-box">    
       <div class="card" style: "width: 18rem;">
         <%= image_tag @listing.picture.url, class:"card-img-top" %>
@@ -8,22 +9,37 @@
         <p class="h3">
         <%= @listing.name %>
         </p>
-        <p>
-        <%= @listing.description %>
-        </p>
-        <p>
-        <%= @listing.product_type %>
-        </p>
-        <p>
-        For Sale: <%= @listing.market_date.strftime("%B %-d, %Y") %>
-        </p>
-        <p>
-        <%= "Sold by #{@lister.first_name} #{@lister.last_name}" %></p>
-        </p>
-        <p>Sold in <%= @listing.city %>, <%= @listing.state %></p>
-        <p>
-        <%= number_to_currency(@listing.price) %>
-        </p><br />
+        <ul class="list-group mt-n1 ms-n1">
+          <li class="list-group-item mt-n1 ms-n1">
+            <p>
+            <%= @listing.description %>
+            </p>
+          </li>
+          <li class="list-group-item mt-n1 ms-n1">
+            <p>
+            <%= @listing.product_type %>
+            </p>
+          </li>
+          <li class="list-group-item mt-n1 ms-n1">
+            <p>
+            For Sale: <%= @listing.market_date.strftime("%B %-d, %Y") %>
+            </p>
+          </li>
+          <li class="list-group-item mt-n1 ms-n1">
+            <p>
+            <%= "Sold by #{@lister.first_name} #{@lister.last_name}" %></p>
+            </p>
+          </li>
+          <li class="list-group-item mt-n1 ms-n1">
+            <p>Sold in <%= @listing.city %>, <%= @listing.state %></p>
+          </li>
+          <li class="list-group-item mt-n1 ms-n1">
+            <p>
+            Base Price: <%= number_to_currency(@listing.price) %>
+            </p>
+          </li>
+        </ul>
+        <br />
         <p>
         <div id="map"></div>
         <%= link_to "Order", new_listing_order_path(@listing), class: "btn btn-primary" %>
@@ -33,8 +49,119 @@
         <% end %>
         <%= link_to 'Back', listings_path, class: "btn btn-link" %>
       </div>
+      <div class="col">
+        <P CLASS="h3">
+          Specifications
+          <ul class="list-group mt-n1 ms-n1">
+            <li class="list-group-item mt-n1 ms-n1">
+              <p>
+              Warranty Length: <%= @listing.warranty_length %> Year
+              </p>
+            </li>
+            <li class="list-group-item mt-n1 ms-n1">
+              <p>
+              FAT Support Cost 1 Year: $<%= @listing.fatsupportcost1yr %>
+              </p>
+            </li>
+            <li class="list-group-item mt-n1 ms-n1">
+              <p>
+              FAT Support Cost 2 Year: $<%= @listing.fatsupportcost2yr %>
+              </p>
+            </li>
+            <li class="list-group-item mt-n1 ms-n1">
+              <p>
+              FAT Support Cost 3 Year: $<%= @listing.fatsupportcost3yr %>
+              </p>
+            </li>
+            <li class="list-group-item mt-n1 ms-n1">
+              <p>
+              CPU: <%= @listing.cpu %>
+              </p>
+            </li>
+            <li class="list-group-item mt-n1 ms-n1">
+              <p>
+              Core Count: <%= @listing.core_count %>
+              </p>
+            </li>
+            <li class="list-group-item mt-n1 ms-n1">
+              <p>
+              RAM: <%= @listing.ram %>
+              </p>
+            </li>
+            <li class="list-group-item mt-n1 ms-n1">
+              <p>
+              Memory Type: <%= @listing.memory_type %>
+              </p>
+            </li>
+            <li class="list-group-item mt-n1 ms-n1">
+              <p>
+              HD Capacity: <%= @listing.hdgigs %>
+              </p>
+            </li>
+            <li class="list-group-item mt-n1 ms-n1">
+              <p>
+              HD Type: <%= @listing.hdtype %>
+              </p>
+            </li>
+            <li class="list-group-item mt-n1 ms-n1">
+              <p>
+              Optical Drive: <%= @listing.opticaldrive %>
+              </p>
+            </li>
+            <li class="list-group-item mt-n1 ms-n1">
+              <p>
+              Graphical Processor: <%= @listing.video %>
+              </p>
+            </li>
+            <li class="list-group-item mt-n1 ms-n1">
+              <p>
+              Video Interface: <%= @listing.videoint %>
+              </p>
+            </li>
+          </ul>
+          </p>
+        <p>
+      </div>
     </div>
   </div>
+  <% else %>
+    <div class="col">
+      <div class="row listing-box">    
+        <div class="card" style: "width: 18rem;">
+          <%= image_tag @listing.picture.url, class:"card-img-top" %>
+        </div>
+        <div class="col">
+          <p class="h3">
+          <%= @listing.name %>
+          </p>
+          <p>
+          <%= @listing.description %>
+          </p>
+          <p>
+          <%= @listing.product_type %>
+          </p>
+          <p>
+          For Sale: <%= @listing.market_date.strftime("%B %-d, %Y") %>
+          </p>
+          <p>
+          <%= "Sold by #{@lister.first_name} #{@lister.last_name}" %></p>
+          </p>
+          <p>Sold in <%= @listing.city %>, <%= @listing.state %></p>
+          <p>
+          <%= number_to_currency(@listing.price) %>
+          </p><br />
+          <p>
+          <div id="map"></div>
+          <%= link_to "Order", new_listing_order_path(@listing), class: "btn btn-primary" %>
+          </p>   
+          <% if (user_signed_in?) && (current_user.id == @listing.user_id) %>
+            <%= link_to 'Edit', edit_listing_path(@listing), class: "btn btn-link" %> | 
+          <% end %>
+          <%= link_to 'Back', listings_path, class: "btn btn-link" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>
 <% if @listing.latitude.present? && @listing.longitude.present? %>
 <script>

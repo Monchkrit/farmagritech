@@ -59,6 +59,7 @@ class ListingsController < ApplicationController
   # GET /listings/1.json
   def show
     @listing = Listing.find_by_id(params[:id])
+    @fat = @listing.product_type
     @lister = User.find_by_id(@listing.user_id)
   end
 
@@ -72,6 +73,7 @@ class ListingsController < ApplicationController
 
   # GET /listings/1/edit
   def edit
+    @admin = current_user.admin
     @listings = Listing.all
   end
 

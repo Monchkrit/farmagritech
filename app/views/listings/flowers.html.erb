@@ -11,11 +11,12 @@
   </div>
 </div>
 <div class="container-fluid">
-  <div class="row">
-    <div class="col">
+  <div class="col">
+    <div class="row">
       <ul class="list-inline sort-box">
         <li class="list-inline-item sort-row">Sort: </li>
         <li class="list-inline-item sort-row"><%= link_to "All", listings_path %></li>
+        <li class="list-inline-item sort-row"><%= link_to "AgriTech", agritechs_path %></li>
         <li class="list-inline-item sort-row"><%= link_to "Vegetables", vegetables_path %></li>
         <li class="list-inline-item sort-row"><%= link_to "Fruits", fruits_path %></li>
         <li class="list-inline-item sort-row"><%= link_to "Herbs", herbs_path %></li>
@@ -30,6 +31,7 @@
           <%= f.submit "City Search" %>
         <% end %>
         </li>
-      </ul>  
+      </ul>
+    </div>
   </div>
 </div>

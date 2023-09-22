@@ -1,5 +1,5 @@
 class Listing < ApplicationRecord
-  scope :agritech, -> { where(product_type: 'AgriTech') }
+  scope :agritech, -> { where(product_type: 'FAT PC') }
   scope :vegetable, -> { where(product_type: 'Vegetable') }
   scope :herb, -> { where(product_type: 'Herb') }
   scope :fruit, -> { where(product_type: 'Fruit') }
