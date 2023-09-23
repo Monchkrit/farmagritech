@@ -134,23 +134,34 @@
           <p class="h3">
           <%= @listing.name %>
           </p>
-          <p>
-          <%= @listing.description %>
-          </p>
-          <p>
-          <%= @listing.product_type %>
-          </p>
-          <p>
-          For Sale: <%= @listing.market_date.strftime("%B %-d, %Y") %>
-          </p>
-          <p>
-          <%= "Sold by #{@lister.first_name} #{@lister.last_name}" %></p>
-          </p>
-          <p>Sold in <%= @listing.city %>, <%= @listing.state %></p>
-          <p>
-          <%= number_to_currency(@listing.price) %>
-          </p><br />
-          <p>
+          <ul class="list-group mt-n1 ms-n1">
+            <li class="list-group-item mt-n1 ms-n1">
+              <p>
+              <%= @listing.description %>
+              </p>
+            </li>
+            <li class="list-group-item mt-n1 ms-n1">
+              <p>
+              <%= @listing.product_type %>
+              </p>
+            </li>
+            <li class="list-group-item mt-n1 ms-n1">
+              <p>
+              For Sale: <%= @listing.market_date.strftime("%B %-d, %Y") %>
+              </p>
+            </li>
+            <li class="list-group-item mt-n1 ms-n1">
+              <p>
+              <%= "Sold by #{@lister.first_name} #{@lister.last_name}" %></p>
+              </p>
+            </li>
+            <li class="list-group-item mt-n1 ms-n1">
+              <p>Sold in <%= @listing.city %>, <%= @listing.state %></p>
+            <li class="list-group-item mt-n1 ms-n1">
+              <p>
+              <%= number_to_currency(@listing.price) %>
+              </p>
+            </li>
           <div id="map"></div>
           <%= link_to "Order", new_listing_order_path(@listing), class: "btn btn-primary" %>
           </p>   

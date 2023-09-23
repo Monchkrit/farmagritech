@@ -1,228 +1,298 @@
-<div class="container-md text-center work-box gardens-head">
-  <p class="display-4">AgriTech and Market Garden Products</p>
-</div>
-<div class="row">
-  <div class="col">
-    <h4><small class="text-muted"><%= @time.to_formatted_s(:long) %></small></h4>
-  </div>
-</div>
 <div class="container-fluid">
+  <div class="container-md text-center work-box gardens-head">
+    <p class="display-4 id="top"">AgriTech and Market Garden Products</p>
+  </div>
   <div class="row">
     <div class="col">
-      <ul class="list-inline sort-box">
-        <li class="list-inline-item sort-row">Sort: </li>
-        <li class="list-inline-item h6">ALL</li>
-        <li class="list-inline-item sort-row"><%= link_to "AgriTech", agritechs_path %></li>
-        <li class="list-inline-item sort-row"><%= link_to "Vegetables", vegetables_path %></li>
-        <li class="list-inline-item sort-row"><%= link_to "Fruits", fruits_path %></li>
-        <li class="list-inline-item sort-row"><%= link_to "Herbs", herbs_path %></li>
-        <li class="list-inline-item sort-row"><%= link_to "Flowers", flowers_path %></li>
-        <li class="list-inline-item sort-row"><%= link_to "Indoor Plants", indoor_plants_path %></li>
-        <li class="list-inline-item sort-row"><%= link_to "Outdoor Plants", outdoor_plants_path %></li>
-        <li class="list-inline-item sort-row"><%= link_to "Trees", trees_path %></li>
-        <li class="list-inline-item sort-row"></li>
-        <li class="list-inline-item sort-row">
-        <%= form_with url: "/listings", method: "get", local: true do |f| %>
-          <%= f.text_field :search, id: :search %>
-          <%= f.submit "City Search" %>
-        <% end %>
-        </li>
-      </ul>      
+      <h4><small class="text-muted"><%= @time.to_formatted_s(:long) %></small></h4>
     </div>
   </div>
-  <% if @fat.count > 0 %>
+  <div class="row">
+    <div class="container-fluid">
+      <nav id="navbar-example2" class="navbar navbar-expand-lg navbar-dark bg-dark px-3 mb-3">
+        <a class="navbar-brand" href="#">Sort: </a>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+          <% if @fat.count > 0 %>
+              <a class="nav-link" href="#agritech">AgriTech</a>
+          <% end %>
+            </li>
+            <li class="nav-item">
+          <% if @veg.count > 0 %>
+              <a class="nav-link" href="#veg">Vegetables</a>
+          <% end %>
+            </li>
+            <li class="nav-item">
+          <% if @fruit.count > 0 %>
+              <a class="nav-link" href="#fruit">Fruits</a>
+          <% end %>
+            </li>
+            <li class="nav-item">
+          <% if @herb.count > 0 %>
+              <a class="nav-link" href="#herb">Herbs</a>
+          <% end %>
+            </li>
+            <li class="nav-item">
+          <% if @flow.count > 0 %>
+              <a class="nav-link" href="#flow">Flowers</a>
+          <% end %>
+            </li>
+            <li class="nav-item">
+          <% if @houseplant.count > 0 %>
+              <a class="nav-link" href="#hp">House Plants</a>
+          <% end %>
+            </li>
+            <li class="nav-item">
+          <% if @outdoorplant.count > 0 %>
+              <a class="nav-link" href="#op">Outdoor Plants</a>
+          <% end %>
+            </li>
+            <li class="nav-item">
+          <% if @tree.count > 0 %>
+              <a class="nav-link" href="#tree">Trees</a>
+          <% end %>
+            </li>
+        </ul>
+      </nav>
     <div class="row">
-      <p class="h2 mx-auto px-3 work-box">Farm AgriTech Products</p>
-    </div>
-    <div class="row">
-      <% @fat.each do |fat| %>
-        <div class="col-md-3">
-          <div class="card" style: "width: 16rem;">
-          <%= image_tag fat.picture.url, class:"card-img-top" %><br />
-            <div class="card-body">
-              <h5 class="card-title"><%= fat.name %><br /></h5>
-              <p class="card-text">
-              <%= fat.description %><br />
-              <%= fat.product_type %><br />
-              <p>For Sale: <%= fat.market_date.strftime("%B %-d, %Y") %><br /></p>
-              <% @owner = User.find_by_id(fat.user_id) %>
-              <p class="h5">Sold by <%= @owner.first_name %> <%= @owner.last_name %></p>            
-              <p>Sold in <%= fat.city %>, <%= fat.state %></p>
-              <p>Maximum orders: <%= fat.maxorder %></p>
-              <p><%= number_to_currency(fat.price) %><p>
-              <%= link_to 'Show', fat, class: "btn btn-link" %><br />
-            </div>
+        <h4 id="agritech"></h4>
+        <% if @fat.count > 0 %>
+          <div class="row">
+            <p class="h2 mx-auto px-3 work-box">Farm AgriTech Products</p>
           </div>
-        </div>
-      <% end %>
-    </div>
-  <% end %>
+          <div class="row">
+            <% @fat.each do |fat| %>
+              <div class="col-md-3">
+                <div class="card" style: "width: 16rem;">
+                <%= image_tag fat.picture.url, class:"card-img-top" %><br />
+                  <div class="card-body">
+                    <h5 class="card-title"><%= fat.name %><br /></h5>
+                    <p class="card-text">
+                    <%= fat.description %><br />
+                    <%= fat.product_type %><br />
+                    <p>For Sale: <%= fat.market_date.strftime("%B %-d, %Y") %><br /></p>
+                    <% @owner = User.find_by_id(fat.user_id) %>
+                    <p class="h5">Sold by <%= @owner.first_name %> <%= @owner.last_name %></p>            
+                    <p>Sold in <%= fat.city %>, <%= fat.state %></p>
+                    <p>Maximum orders: <%= fat.maxorder %></p>
+                    <p><%= number_to_currency(fat.price) %><p>
+                    <%= link_to 'Show', fat, class: "btn btn-link" %><br />
+                  </div>
+                </div>
+              </div>
+            <% end %>
+        <a href="#top">Top</a>
+          </div>
+        <% end %>
 
-  <% if @veg.count > 0 %>
-    <div class="row">
-      <p class="h2 mx-auto px-3 work-box">Farm Vegetable Products</p>
-    </div>
-    <div class="row">
-      <% @veg.each do |veg| %>
-        <div class="col-md-3">
-          <div class="card" style: "width: 16rem;">
-          <%= image_tag veg.picture.url, class:"card-img-top" %><br />
-            <div class="card-body">
-              <h5 class="card-title"><%= veg.name %><br /></h5>
-              <p class="card-text">
-              <%= veg.description %><br />
-              <%= veg.product_type %><br />
-              <p>For Sale: <%= veg.market_date.strftime("%B %-d, %Y") %><br /></p>
-              <% @owner = User.find_by_id(veg.user_id) %>
-              <p class="h5">Sold by <%= @owner.first_name %> <%= @owner.last_name %></p>            
-              <p>Sold in <%= veg.city %>, <%= veg.state %></p>
-              <p>Maximum orders: <%= veg.maxorder %></p>
-              <p><%= number_to_currency(veg.price) %><p>
-              <%= link_to 'Show', veg, class: "btn btn-link" %><br />
-            </div>
+        <h4 id="veg"></h4>
+        <% if @veg.count > 0 %>
+          <div class="row">
+            <p class="h2 mx-auto px-3 work-box">Farm Vegetable Products</p>
           </div>
-        </div>
-      <% end %>
-    </div>
-  <% end %>
+          <div class="row">
+            <% @veg.each do |veg| %>
+              <div class="col-md-3">
+                <div class="card" style: "width: 16rem;">
+                <%= image_tag veg.picture.url, class:"card-img-top" %><br />
+                  <div class="card-body">
+                    <h5 class="card-title"><%= veg.name %><br /></h5>
+                    <p class="card-text">
+                    <%= veg.description %><br />
+                    <%= veg.product_type %><br />
+                    <p>For Sale: <%= veg.market_date.strftime("%B %-d, %Y") %><br /></p>
+                    <% @owner = User.find_by_id(veg.user_id) %>
+                    <p class="h5">Sold by <%= @owner.first_name %> <%= @owner.last_name %></p>            
+                    <p>Sold in <%= veg.city %>, <%= veg.state %></p>
+                    <p>Maximum orders: <%= veg.maxorder %></p>
+                    <p><%= number_to_currency(veg.price) %><p>
+                    <%= link_to 'Show', veg, class: "btn btn-link" %><br />
+                  </div>
+                </div>
+              </div>
+            <% end %>
+        <a href="#top">Top</a>
+          </div>
+        <% end %>
 
-  <% if @fruit.count > 0 %>
-    <div class="row">
-      <p class="h2 mx-auto px-3 work-box">Farm Fruit Products</p>
-    </div>
-    <div class="row">
-      <% @fruit.each do |fruit| %>
-        <div class="col-md-3">
-          <div class="card" style: "width: 16rem;">
-          <%= image_tag fruit.picture.url, class:"card-img-top" %><br />
-            <div class="card-body">
-              <h5 class="card-title"><%= fruit.name %><br /></h5>
-              <p class="card-text">
-              <%= fruit.description %><br />
-              <%= fruit.product_type %><br />
-              <p>For Sale: <%= fruit.market_date.strftime("%B %-d, %Y") %><br /></p>
-              <% @owner = User.find_by_id(fruit.user_id) %>
-              <p class="h5">Sold by <%= @owner.first_name %> <%= @owner.last_name %></p>            
-              <p>Sold in <%= fruit.city %>, <%= fruit.state %></p>
-              <p>Maximum orders: <%= fruit.maxorder %></p>
-              <p><%= number_to_currency(fruit.price) %><p>
-              <%= link_to 'Show', fruit, class: "btn btn-link" %><br />
-            </div>
+        <h4 id="fruit"></h4>
+        <% if @fruit.count > 0 %>
+          <div class="row">
+            <p class="h2 mx-auto px-3 work-box">Farm Fruit Products</p>
           </div>
-        </div>
-      <% end %>
-    </div>
-  <% end %>
+          <div class="row">
+            <% @fruit.each do |fruit| %>
+              <div class="col-md-3">
+                <div class="card" style: "width: 16rem;">
+                <%= image_tag fruit.picture.url, class:"card-img-top" %><br />
+                  <div class="card-body">
+                    <h5 class="card-title"><%= fruit.name %><br /></h5>
+                    <p class="card-text">
+                    <%= fruit.description %><br />
+                    <%= fruit.product_type %><br />
+                    <p>For Sale: <%= fruit.market_date.strftime("%B %-d, %Y") %><br /></p>
+                    <% @owner = User.find_by_id(fruit.user_id) %>
+                    <p class="h5">Sold by <%= @owner.first_name %> <%= @owner.last_name %></p>            
+                    <p>Sold in <%= fruit.city %>, <%= fruit.state %></p>
+                    <p>Maximum orders: <%= fruit.maxorder %></p>
+                    <p><%= number_to_currency(fruit.price) %><p>
+                    <%= link_to 'Show', fruit, class: "btn btn-link" %><br />
+                  </div>
+                </div>
+              </div>
+            <% end %>
+        <a href="#top">Top</a>
+          </div>
+        <% end %>
 
-  <% if @herb.count > 0 %>
-    <div class="row">
-      <p class="h2 mx-auto px-3 work-box">Farm Herb Products</p>
-    </div>
-    <div class="row">
-      <% @herb.each do |herb| %>
-        <div class="col-md-3">
-          <div class="card" style: "width: 16rem;">
-          <%= image_tag fruit.picture.url, class:"card-img-top" %><br />
-            <div class="card-body">
-              <h5 class="card-title"><%= herb.name %><br /></h5>
-              <p class="card-text">
-              <%= herb.description %><br />
-              <%= herb.product_type %><br />
-              <p>For Sale: <%= herb.market_date.strftime("%B %-d, %Y") %><br /></p>
-              <% @owner = User.find_by_id(herb.user_id) %>
-              <p class="h5">Sold by <%= @owner.first_name %> <%= @owner.last_name %></p>            
-              <p>Sold in <%= herb.city %>, <%= herb.state %></p>
-              <p>Maximum orders: <%= herb.maxorder %></p>
-              <p><%= number_to_currency(herb.price) %><p>
-              <%= link_to 'Show', herb, class: "btn btn-link" %><br />
-            </div>
+        <h4 id="herb"></h4>
+        <% if @herb.count > 0 %>
+          <div class="row">
+            <p class="h2 mx-auto px-3 work-box">Herb Products</p>
           </div>
-        </div>
-      <% end %>
-    </div>
-  <% end %>
+          <div class="row">
+            <% @herb.each do |herb| %>
+              <div class="col-md-3">
+                <div class="card" style: "width: 16rem;">
+                <%= image_tag herb.picture.url, class:"card-img-top" %><br />
+                  <div class="card-body">
+                    <h5 class="card-title"><%= herb.name %><br /></h5>
+                    <p class="card-text">
+                    <%= herb.description %><br />
+                    <%= herb.product_type %><br />
+                    <p>For Sale: <%= herb.market_date.strftime("%B %-d, %Y") %><br /></p>
+                    <% @owner = User.find_by_id(herb.user_id) %>
+                    <p class="h5">Sold by <%= @owner.first_name %> <%= @owner.last_name %></p>            
+                    <p>Sold in <%= herb.city %>, <%= herb.state %></p>
+                    <p>Maximum orders: <%= herb.maxorder %></p>
+                    <p><%= number_to_currency(herb.price) %><p>
+                    <%= link_to 'Show', herb, class: "btn btn-link" %><br />
+                  </div>
+                </div>
+              </div>
+            <% end %>
+        <a href="#top">Top</a>
+          </div>
+        <% end %>
 
-  <% if @houseplant.count > 0 %>
-    <div class="row">
-      <p class="h2 mx-auto px-3 work-box">House Plant Products</p>
-    </div>
-    <div>
-      <% @houseplant.each do |houseplant| %>
-        <div class="col-md-3">
-          <div class="card" style: "width: 16rem;">
-          <%= image_tag fruit.picture.url, class:"card-img-top" %><br />
-            <div class="card-body">
-              <h5 class="card-title"><%= houseplant.name %><br /></h5>
-              <p class="card-text">
-              <%= houseplant.description %><br />
-              <%= houseplant.product_type %><br />
-              <p>For Sale: <%= houseplant.market_date.strftime("%B %-d, %Y") %><br /></p>
-              <% @owner = User.find_by_id(houseplant.user_id) %>
-              <p class="h5">Sold by <%= @owner.first_name %> <%= @owner.last_name %></p>            
-              <p>Sold in <%= houseplant.city %>, <%= houseplant.state %></p>
-              <p>Maximum orders: <%= houseplant.maxorder %></p>
-              <p><%= number_to_currency(houseplant.price) %><p>
-              <%= link_to 'Show', houseplant, class: "btn btn-link" %><br />
-            </div>
+        <h4 id="flow"></h4>
+        <% if @flow.count > 0 %>
+          <div class="row">
+            <p class="h2 mx-auto px-3 work-box">Flower Products</p>
           </div>
-        </div>
-      <% end %>
-    </div>
-  <% end %>
+          <div class="row">
+            <% @flow.each do |flow| %>
+              <div class="col-md-3">
+                <div class="card" style: "width: 16rem;">
+                <%= image_tag fruit.picture.url, class:"card-img-top" %><br />
+                  <div class="card-body">
+                    <h5 class="card-title"><%= flow.name %><br /></h5>
+                    <p class="card-text">
+                    <%= flow.description %><br />
+                    <%= flow.product_type %><br />
+                    <p>For Sale: <%= flow.market_date.strftime("%B %-d, %Y") %><br /></p>
+                    <% @owner = User.find_by_id(flow.user_id) %>
+                    <p class="h5">Sold by <%= @owner.first_name %> <%= @owner.last_name %></p>            
+                    <p>Sold in <%= flow.city %>, <%= flow.state %></p>
+                    <p>Maximum orders: <%= flow.maxorder %></p>
+                    <p><%= number_to_currency(flow.price) %><p>
+                    <%= link_to 'Show', flow, class: "btn btn-link" %><br />
+                  </div>
+                </div>
+              </div>
+            <% end %>
+        <a href="#top">Top</a>
+          </div>
+        <% end %>
 
-  <% if @outdoorplant.count > 0 %>
-    <div class="row">
-      <p class="h2 mx-auto px-3 work-box">Outdoor Plant Products</p>
-    </div>
-    <div>
-      <% @outdoorplant.each do |outdoorplant| %>
-        <div class="col-md-3">
-          <div class="card" style: "width: 16rem;">
-          <%= image_tag outdoorplant.picture.url, class:"card-img-top" %><br />
-            <div class="card-body">
-              <h5 class="card-title"><%= outdoorplant.name %><br /></h5>
-              <p class="card-text">
-              <%= outdoorplant.description %><br />
-              <%= outdoorplant.product_type %><br />
-              <p>For Sale: <%= outdoorplant.market_date.strftime("%B %-d, %Y") %><br /></p>
-              <% @owner = User.find_by_id(outdoorplant.user_id) %>
-              <p class="h5">Sold by <%= @owner.first_name %> <%= @owner.last_name %></p>            
-              <p>Sold in <%= outdoorplant.city %>, <%= outdoorplant.state %></p>
-              <p>Maximum orders: <%= outdoorplant.maxorder %></p>
-              <p><%= number_to_currency(outdoorplant.price) %><p>
-              <%= link_to 'Show', outdoorplant, class: "btn btn-link" %><br />
-            </div>
+        <h4 id="hp"></h4>
+        <% if @houseplant.count > 0 %>
+          <div class="row">
+            <p class="h2 mx-auto px-3 work-box">House Plant Products</p>
           </div>
-        </div>
-      <% end %>
-    </div>
-  <% end %>
+          <div>
+            <% @houseplant.each do |houseplant| %>
+              <div class="col-md-3">
+                <div class="card" style: "width: 16rem;">
+                <%= image_tag fruit.picture.url, class:"card-img-top" %><br />
+                  <div class="card-body">
+                    <h5 class="card-title"><%= houseplant.name %><br /></h5>
+                    <p class="card-text">
+                    <%= houseplant.description %><br />
+                    <%= houseplant.product_type %><br />
+                    <p>For Sale: <%= houseplant.market_date.strftime("%B %-d, %Y") %><br /></p>
+                    <% @owner = User.find_by_id(houseplant.user_id) %>
+                    <p class="h5">Sold by <%= @owner.first_name %> <%= @owner.last_name %></p>            
+                    <p>Sold in <%= houseplant.city %>, <%= houseplant.state %></p>
+                    <p>Maximum orders: <%= houseplant.maxorder %></p>
+                    <p><%= number_to_currency(houseplant.price) %><p>
+                    <%= link_to 'Show', houseplant, class: "btn btn-link" %><br />
+                  </div>
+                </div>
+              </div>
+            <% end %>
+        <a href="#top">Top</a>
+          </div>
+        <% end %>
 
-  <% if @tree.count > 0 %>
-    <div class="row">
-      <p class="h2 mx-auto px-3 work-box">Tree Products</p>
-    </div>
-    <div>
-      <% @tree.each do |tree| %>
-        <div class="col-md-3">
-          <div class="card" style: "width: 16rem;">
-            <%= image_tag tree.picture.url, class:"card-img-top" %><br />
-            <div class="card-body">
-              <h5 class="card-title"><%= tree.name %><br /></h5>
-              <p class="card-text">
-              <%= tree.description %><br />
-              <%= tree.product_type %><br />
-              <p>For Sale: <%= tree.market_date.strftime("%B %-d, %Y") %><br /></p>
-              <% @owner = User.find_by_id(tree.user_id) %>
-              <p class="h5">Sold by <%= @owner.first_name %> <%= @owner.last_name %></p>            
-              <p>Sold in <%= tree.city %>, <%= tree.state %></p>
-              <p>Maximum orders: <%= tree.maxorder %></p>
-              <p><%= number_to_currency(tree.price) %><p>
-              <%= link_to 'Show', tree, class: "btn btn-link" %><br />
-            </div>
+        <h4 id="op"></h4>
+        <% if @outdoorplant.count > 0 %>
+          <div class="row">
+            <p class="h2 mx-auto px-3 work-box">Outdoor Plant Products</p>
           </div>
-        </div>
-      <% end %>
-    </div>
-  <% end %>
+          <div>
+            <% @outdoorplant.each do |outdoorplant| %>
+              <div class="col-md-3">
+                <div class="card" style: "width: 16rem;">
+                <%= image_tag outdoorplant.picture.url, class:"card-img-top" %><br />
+                  <div class="card-body">
+                    <h5 class="card-title"><%= outdoorplant.name %><br /></h5>
+                    <p class="card-text">
+                    <%= outdoorplant.description %><br />
+                    <%= outdoorplant.product_type %><br />
+                    <p>For Sale: <%= outdoorplant.market_date.strftime("%B %-d, %Y") %><br /></p>
+                    <% @owner = User.find_by_id(outdoorplant.user_id) %>
+                    <p class="h5">Sold by <%= @owner.first_name %> <%= @owner.last_name %></p>            
+                    <p>Sold in <%= outdoorplant.city %>, <%= outdoorplant.state %></p>
+                    <p>Maximum orders: <%= outdoorplant.maxorder %></p>
+                    <p><%= number_to_currency(outdoorplant.price) %><p>
+                    <%= link_to 'Show', outdoorplant, class: "btn btn-link" %><br />
+                  </div>
+                </div>
+              </div>
+            <% end %>
+        <a href="#top">Top</a>
+          </div>
+        <% end %>
+
+        <h4 id="tree"></h4>
+        <% if @tree.count > 0 %>
+          <div class="row">
+            <p class="h2 mx-auto px-3 work-box">Tree Products</p>
+          </div>
+          <div>
+            <% @tree.each do |tree| %>
+              <div class="col-md-3">
+                <div class="card" style: "width: 16rem;">
+                  <%= image_tag tree.picture.url, class:"card-img-top" %><br />
+                  <div class="card-body">
+                    <h5 class="card-title"><%= tree.name %><br /></h5>
+                    <p class="card-text">
+                    <%= tree.description %><br />
+                    <%= tree.product_type %><br />
+                    <p>For Sale: <%= tree.market_date.strftime("%B %-d, %Y") %><br /></p>
+                    <% @owner = User.find_by_id(tree.user_id) %>
+                    <p class="h5">Sold by <%= @owner.first_name %> <%= @owner.last_name %></p>            
+                    <p>Sold in <%= tree.city %>, <%= tree.state %></p>
+                    <p>Maximum orders: <%= tree.maxorder %></p>
+                    <p><%= number_to_currency(tree.price) %><p>
+                    <%= link_to 'Show', tree, class: "btn btn-link" %><br />
+                  </div>
+                </div>
+              </div>
+            <% end %>
+        <a href="#top">Top</a>
+          </div>
+        <% end %>
+  </div>
 </div>

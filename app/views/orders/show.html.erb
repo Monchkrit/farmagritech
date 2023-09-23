@@ -15,7 +15,7 @@
     </tr>
     <tr>
       <td class="center"><%= image_tag @order.listing.picture.url, class:"img-thumbnail" %></td>
-      <td><%= link_to "Pay Here", charge_path, class:"btn btn-primary" %></td>
+      <td><%= link_to "Reserve", purchases_path, class:"btn btn-primary" %></td>
       <td class="center"><%= @order.listing.name %></td>
       <td class="center"><%= number_to_currency(@order.listing.price) %></td>
       <td class="center"><%= @order.farmer.first_name %> <%= @order.farmer.last_name %></td>

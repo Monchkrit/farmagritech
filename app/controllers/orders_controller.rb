@@ -3,7 +3,7 @@ class OrdersController < ApplicationController
   before_action :authenticate_user!
 
   # Handle the pages for users to see what they bought and farmers to see what they sold.
-  
+
   def charge
     @session_id = flash[:session_id]
   end
@@ -22,22 +22,22 @@ class OrdersController < ApplicationController
     @listing = Listing.find_by_id(@order.listing_id)
     @listprice = (@listing.price * 100).to_i
 
-    Stripe.api_key = 'sk_test_dNYsGhVfYYmw1N1DmxNLeZdC00x6Ef4Eay'
+    # Stripe.api_key = 'sk_test_dNYsGhVfYYmw1N1DmxNLeZdC00x6Ef4Eay'
 
-    session = Stripe::Checkout::Session.create(
-      payment_method_types: ['card'],
-      line_items: [{
-        name: @listing.name,
-        description: @listing.description,
-        amount: @listprice,
-        currency: 'usd',
-        quantity: 1,
-      }],
-      success_url: 'https://www.plantformsoftware.com/purchases',
-      cancel_url:  'https://www.plantformsoftware.com/cancel',
-    )
+    # session = Stripe::Checkout::Session.create(
+    #   payment_method_types: ['card'],
+    #   line_items: [{
+    #     name: @listing.name,
+    #     description: @listing.description,
+    #     amount: @listprice,
+    #     currency: 'usd',
+    #     quantity: 1,
+    #   }],
+    #   success_url: 'https://www.plantformsoftware.com/purchases',
+    #   cancel_url:  'https://www.plantformsoftware.com/cancel',
+    # )
 
-    flash[:session_id] = session.id
+    # flash[:session_id] = session.id
   end
 
   # GET /orders/new
@@ -58,7 +58,7 @@ class OrdersController < ApplicationController
     @order.listing_id = @listing.id
     @order.buyer_id = current_user.id
     @order.farmer_id = @farmer
-    
+
     if @listing.maxorder > 0
     Listing.decrement_counter(:maxorder, @listing)
     end
@@ -85,7 +85,7 @@ class OrdersController < ApplicationController
       end
     end
   end
- 
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_order
