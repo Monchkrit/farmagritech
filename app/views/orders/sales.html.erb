@@ -21,11 +21,11 @@
         <% if order.verified == true %>        
           <span class="badge badge-pill badge-success">Verified</span>
         <% else %>
-          <%= form_with model: order, url: listing_order_path(order.listing_id, order), method: :patch, local: true do |f| %>
+        <%= form_with model: order, url: listing_order_path(order.listing_id, order), method: :patch, local: true do |f| %>
           <%= f.label "Check to Verify" %>
           <%= f.check_box "verified" %>
           <%= f.submit %>
-          <% end %>
+        <% end %> 
         <% end %>
       </td>
       <td class="center"><%= order.listing.name %></td>

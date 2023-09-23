@@ -76,13 +76,13 @@ class OrdersController < ApplicationController
 
   def update
     respond_to do |format|
-      if @order.update_attributes(order_params)
+      @order.update_columns(verified: true)
         format.html { redirect_to sales_path, notice: 'Order was successfully updated.' }
         format.json { head :no_content }
-      else
-        format.html {render action: 'edit' }
-        format.json { render json: @order.errors, status: :unprocessable_entity }
-      end
+
+        # format.html {render action: 'edit' }
+        # format.json { render json: @order.errors, status: :unprocessable_entity }
+
     end
   end
 
