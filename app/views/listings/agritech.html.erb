@@ -35,3 +35,25 @@
     </div>
   </div>
 </div>
+<div class="row">
+  <% @listings.each do |listing| %>
+    <div class="col-md-3">
+      <div class="card" style: "width: 18rem;">
+      <%= image_tag listing.picture.url, class:"card-img-top" %><br />
+        <div class="card-body">
+          <h5 class="card-title"><%= listing.name %><br /></h5>
+          <p class="card-text">
+          <%= listing.description %><br />
+          <%= listing.product_type %><br />
+          <p>For Sale: <%= listing.market_date.strftime("%B %-d, %Y") %><br /></p>
+          <% @owner = User.find_by_id(listing.user_id) %>
+          <p class="h5">Sold by <%= @owner.first_name %> <%= @owner.last_name %></p>
+          <p>Sold in <%= listing.city %>, <%= listing.state %></p>
+          <p>Maximum orders: <%= listing.maxorder %></p>
+          <p>Base Price: <%= number_to_currency(listing.price) %></p><br />
+          <%= link_to 'Show', listing, class: "btn btn-link" %><br />
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

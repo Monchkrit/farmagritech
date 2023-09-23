@@ -4,55 +4,63 @@ class ListingsController < ApplicationController
 
   def agritech
     @time = Time.zone.now
-    @listings = Listing.agritech.search(params[:search]).order("update_date DESC")
+    @listings = Listing.agritech.search(params[:search]).order("market_date ASC")
   end
 
   def vegetables
     @time = Time.zone.now
-    @listings = Listing.vegetable.search(params[:search]).order("market_date DESC")
+    @listings = Listing.vegetable.search(params[:search]).order("market_date ASC")
   end
 
   def fruits
     @time = Time.zone.now
-    @listings = Listing.fruit.search(params[:search]).order("market_date DESC")
+    @listings = Listing.fruit.search(params[:search]).order("market_date ASC")
   end
 
   def herbs
     @time = Time.zone.now
-    @listings = Listing.herb.search(params[:search]).order("market_date DESC")
+    @listings = Listing.herb.search(params[:search]).order("market_date ASC")
   end
 
   def flowers
     @time = Time.zone.now
-    @listings = Listing.flower.search(params[:search]).order("market_date DESC")
+    @listings = Listing.flower.search(params[:search]).order("market_date ASC")
   end
 
   def indoor_plants
     @time = Time.zone.now
-    @listings = Listing.indoor_plant.search(params[:search]).order("market_date DESC")
+    @listings = Listing.indoor_plant.search(params[:search]).order("market_date ASC")
   end
 
   def outdoor_plants
     @time = Time.zone.now
-    @listings = Listing.outdoor_plant.search(params[:search]).order("market_date DESC")
+    @listings = Listing.outdoor_plant.search(params[:search]).order("market_date ASC")
   end
 
   def trees
     @time = Time.zone.now
-    @listings = Listing.tree.search(params[:search]).order("market_date DESC")
+    @listings = Listing.tree.search(params[:search]).order("market_date ASC")
   end
 
   def farmer
     @time = Time.zone.now
     @garden = Garden.where(:user_id => current_user)
-    @listings = Listing.where(:user_id => current_user).order("market_date DESC")
+    @listings = Listing.where(:user_id => current_user).order("market_date ASC")
   end
 
   # GET /listings
   # GET /listings.json
   def index
     @time = Time.zone.now
-    @listings = Listing.search(params[:search]).order("market_date DESC")
+    @listings = Listing.search(params[:search]).order("market_date ASC")
+    @fat = @listings.where(:product_type => 'FAT PC')
+    @veg = @listings.where(:product_type => 'Vegetable')
+    @flow = @listings.where(:product_type => 'Flowers')
+    @fruit = @listings.where(:product_type => 'Fruit')
+    @herb = @listings.where(:product_type => 'Herb')
+    @houseplant = @listings.where(:product_type => 'House Plant')
+    @outdoorplant = @listings.where(:product_type => 'Outdoor Plant')
+    @tree = @listings.where(:product_type => 'Tree')
   end
 
   # GET /listings/1
@@ -138,7 +146,7 @@ class ListingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def listing_params
-      params.require(:listing).permit(:search, :name, :description, :product_type, :price, :market_date, :maxorder, :picture, :zipcode, :user_id, :street, :city, :state, :zipcode, :telephone, :weight, :cube, :latitude, :longtitude, :warranty_length, :fatsupportcost1yr, :fatsupportcost2yr, :fatsupportcost3yr, :cpu, :core_count, :ram, :memory_type, :hdgigs, :hdtype, :opticaldrive, :video, :videoint)
+      params.require(:listing).permit(:search, :name, :description, :product_type, :price, :market_date, :maxorder, :picture, :zipcode, :user_id, :street, :city, :state, :zipcode, :telephone, :weight, :cube, :latitude, :longtitude, :warranty_length, :fatsupportcost1yr, :fatsupportcost2yr, :fatsupportcost3yr, :cpu, :core_count, :ram, :memory_type, :hdgigs, :hdtype, :opticaldrive, :video, :videoint, :update_date)
     end
 
 end
