@@ -49,6 +49,7 @@ gem 'bcrypt', '~> 3.1', '>= 3.1.19'
 gem 'bootsnap', '~> 1.16', require: false
 
 group :development, :test do
+  gem 'localhost'
   gem 'rspec-rails', '~> 6.0', '>= 6.0.3'
   gem 'factory_bot_rails', '~> 6.2'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
