@@ -1,7 +1,7 @@
 class SoilcubesController < ApplicationController
   before_action :authenticate_user!
   before_action :require_authorized_for_current_cube
-  
+
     def edit
     @time = Time.zone.now
     @cube = Soilcube.find_by_id(params[:id])
@@ -13,11 +13,11 @@ class SoilcubesController < ApplicationController
   end
 
   def update
+    @current_cube.update(cube_params)
     @time = Time.zone.now
     @prism = Prism.find_by_id(params[:prism_id])
     @cube = Soilcube.find_by_id(params[:id])
     @garden = Garden.find_by_id(@cube.garden_id)
-    @cube.update_attributes(cube_params)     
     redirect_to garden_path(@garden)
   end
 

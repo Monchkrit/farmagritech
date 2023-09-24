@@ -2,7 +2,7 @@
   <div class="row form-box">
     <div class="col">
       <%= form_with model: @listing do |f| %>
-        <p class="lead"><%= f.label :name, "Product Name" %><%= f.text_field :name %>
+        <p class="lead pt-2"><%= f.label :name, "Product Name" %><%= f.text_field :name %>
         <p class="lead"><%= f.label :description, "Describe Product" %><%= f.text_field :description %></p>
         <p class="lead"><%= f.label :product_type, "Type of Product" %>
           <%= f.select(:product_type, [['FAT PC'], ['FAT CPC'], ['FAT OS']]) %></p>        
@@ -32,8 +32,8 @@
         <p class="lead">Contact Number or E-Mail address </p>
         <p class="lead"><%= f.text_field :telephone %></p>
         <p class="lead"><%= f.label :picture, "Product Picture" %></p>
-        <p class="lead"><%= f.file_field :picture %></p>
-        <%= f.submit :submit, class: "btn btn-primary" %>
+        <p class="lead pb-2"><%= f.file_field :picture %></p>
+        <%= f.submit :submit, class: "btn btn-primary mb-2" %>
       <% end %>
     </div>
   </div>

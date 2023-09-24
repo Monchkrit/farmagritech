@@ -9,15 +9,15 @@
       <span class="border border-white">
         <p class="h1">Plant and Market Your Cube</p>
         <%= form_with model: @cube, url: soilcube_path(@cube), method: "patch", local: true do |f| %>
-          <%= f.label :crop_name, "Crop Name", class:"lead" %>
+          <%= f.label :crop_name, "Crop Name", class:"lead mb-2" %>
           <p><%= f.text_field :crop_name %></p>
-          <p><%= f.label :seedcount, "Number to plant in this cube", class:"lead" %></p>
+          <%= f.label :seedcount, "Number to plant in this cube", class:"lead mb-2" %>
           <p><%= f.number_field :seedcount %></p>
           <%= f.hidden_field :sow_time, :value => @time %>
           <%= f.submit "Plant" %>
           <%= link_to "Back", garden_path(@garden), class: 'btn btn-link' %>
           <%= link_to "To Market", new_listing_path(:cube => @cube), class: 'btn btn-primary' %>          
-        <% end %>          
+        <% end %>
       </span>
     </div>
   </div>

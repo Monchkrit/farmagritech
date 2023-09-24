@@ -2,18 +2,10 @@
   <div class="row form-box">
     <div class="col">
       <%= form_with model: @listing do |f| %>
-
-<%
-=begin%>
- If I'm the user I should see the AgriTech form instead of the regular product form 
-<%
-=end%>
-
-
         <% if @cube.blank? %>
-          <p class="lead"><%= f.label :name, "Name" %><%= f.text_field :name %></p>
+          <p class="lead pt-2"><%= f.label :name, "Name" %><%= f.text_field :name %></p>
           <% else %>
-          <p class="lead"><%= f.label :name, "Name" %><%= f.text_field :name, value: @cube.crop_name %></p>
+          <p class="lead pt-2"><%= f.label :name, "Name" %><%= f.text_field :name, value: @cube.crop_name %></p>
         <% end %>
         <p class="lead"><%= f.label :description, "Describe Product" %><%= f.text_field :description %></p>
         <p class="lead"><%= f.label :product_type, "Type of Product" %>
@@ -31,7 +23,7 @@
         <p class="lead"><%= f.text_field :telephone %></p>
         <p class="lead"><%= f.label :picture, "Product Picture" %></p>
         <p class="lead"><%= f.file_field :picture %></p>
-        <%= f.submit :submit, class: "btn btn-primary" %>
+        <%= f.submit :submit, class: "btn btn-primary mb-2" %>
       <% end %>
     </div>
   </div>
