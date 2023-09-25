@@ -30,6 +30,6 @@
 /config/application.yml
 
 # Ignore the gemfile and .ruby-version
-.ruby-version
-gemfile
-Gemfile.lock
+/.ruby-version
+/Gemfile
+/Gemfile.lock
