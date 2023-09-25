@@ -1,9 +1,9 @@
 <div class="container">
   <% if @fat == 'FAT PC' %>
     <div class="col">
-    <div class="row listing-box">    
-      <div class="card" style: "width: 18rem;">
-        <%= image_tag @listing.picture.url, class:"card-img-top" %>
+    <div class="row listing-box">
+      <div class="card">
+        <%= image_tag @listing.picture.url, class:"card-img-top pic-box" %>
       </div>
       <div class="col">
         <p class="h3">

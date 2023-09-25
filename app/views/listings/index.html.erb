@@ -184,7 +184,7 @@
             <% @flow.each do |flow| %>
               <div class="col-md-3">
                 <div class="card" style: "width: 16rem;">
-                <%= image_tag fruit.picture.url, class:"card-img-top" %><br />
+                <%= image_tag flow.picture.url, class:"card-img-top" %><br />
                   <div class="card-body">
                     <h5 class="card-title"><%= flow.name %><br /></h5>
                     <p class="card-text">
@@ -214,7 +214,7 @@
             <% @houseplant.each do |houseplant| %>
               <div class="col-md-3">
                 <div class="card" style: "width: 16rem;">
-                <%= image_tag fruit.picture.url, class:"card-img-top" %><br />
+                <%= image_tag houseplant.picture.url, class:"card-img-top" %><br />
                   <div class="card-body">
                     <h5 class="card-title"><%= houseplant.name %><br /></h5>
                     <p class="card-text">
