@@ -32,7 +32,7 @@
       <% unless bed.cultdate(bed).blank? %>
         <p>Last Cultivated: <%= bed.cultdate(bed).strftime("%B %d, %Y") %> <%= bed.cultdate(bed).strftime("%l:%M %p") %></p>
       <% end %>
-      <button type="button" class="btn-success job-button"><%= link_to "Create Cultivate Job", new_job_path(:garden_id => current_garden, :job_name => "Cultivate") %></button>
+      <button type="button" class="button-box btn btn-info"><%= link_to "Create Cultivate Job", new_job_path(:garden_id => current_garden, :job_name => "Cultivate") %></button>
       
     </div>
     <div class="col-sm work-box">
@@ -41,7 +41,7 @@
       <% unless bed.feeddate(bed).blank? %>
         <p>Last Feeding: <%= bed.feeddate(bed).strftime("%B %d, %Y") %> <%= bed.feeddate(bed).strftime("%l:%M %p") %></p>
       <% end %>
-      <button type="button" class="btn-success job-button"><%= link_to "Create Feed Job", new_job_path(:garden_id => current_garden, :job_name => "Feed") %></button>
+      <button type="button" class="button-box btn btn-info"><%= link_to "Create Feed Job", new_job_path(:garden_id => current_garden, :job_name => "Feed") %></button>
       
       </p>
     </div>
@@ -59,7 +59,7 @@
         Date Planted: <%= @cubes.where(:row_id => bed).last.sow_time.strftime("%B %d, %Y") %>        
       </p>
         <% end %>
-      <p><button type="button" class="btn-success job-button"><%= link_to "Create Seed/Plant Job", new_job_path(:garden_id => current_garden, :job_name => "Seed/Plant") %></button></p>
+      <p><button type="button" class="button-box btn btn-info"><%= link_to "Create Seed/Plant Job", new_job_path(:garden_id => current_garden, :job_name => "Seed/Plant") %></button></p>
     </div>
     <div class="col-sm work-box">
       <p class="h3 work-head">Weeding</p>
@@ -67,7 +67,7 @@
       <% unless bed.weeddate(bed).blank? %>
         <p>Last Weeding: <%= bed.weeddate(bed).strftime("%B %d, %Y") %> <%= bed.weeddate(bed).strftime("%l:%M %p") %></p>
       <% end %>
-      <p><button type="button" class="btn-success job-button"><%= link_to "Create Weed Job", new_job_path(:garden_id => current_garden, :job_name => "Weed") %></button></p>
+      <p><button type="button" class="button-box btn btn-info"><%= link_to "Create Weed Job", new_job_path(:garden_id => current_garden, :job_name => "Weed") %></button></p>
     </div>
     <div class="col-sm work-box">
       <p class="h3 work-head">Watering</p>
@@ -75,7 +75,7 @@
       <% unless bed.irrtime(bed).blank? %>
         <p>Last Irrigated: <%= bed.irrtime(bed).strftime("%B %d, %Y") %> <%= bed.irrtime(bed).strftime("%l:%M %p") %></p>
       <% end %>
-      <p><button type="button" class="btn-success job-button"><%= link_to "Create Water Job", new_job_path(:garden_id => current_garden, :job_name => "Water") %></button></p>
+      <p><button type="button" class="button-box btn btn-info"><%= link_to "Create Water Job", new_job_path(:garden_id => current_garden, :job_name => "Water") %></button></p>
     </div>
     <div class="col-sm work-box">
       <p class="h3 work-head">Harvesting</p>
@@ -83,7 +83,7 @@
       <% unless bed.harvestdate(bed).blank? %>
         <p>Last Harvest: <%= bed.harvestdate(bed).strftime("%B %d, %Y") %> <%= bed.harvestdate(bed).strftime("%l:%M %p") %></p>
       <% end %>
-      <p><button type="button" class="btn-success job-button"><%= link_to "Create Harvest Job", new_job_path(:garden_id => current_garden, :job_name => "Harvest") %></button></p>
+      <p><button type="button" class="button-box btn btn-info"><%= link_to "Create Harvest Job", new_job_path(:garden_id => current_garden, :job_name => "Harvest") %></button></p>
       </p>
     </div>
   </div><br />

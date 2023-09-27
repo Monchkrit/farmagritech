@@ -48,10 +48,13 @@
               </li>
             <% else %>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#"><%= link_to "Add Listing / ", new_listing_path, class: "button-box btn btn-info" %></a>
+                <a class="nav-link" aria-current="page" href="#"><%= link_to 'Make Garden', new_garden_path, class: "button-box btn btn-info ms-2" %></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#"><%= link_to "Sign In", new_user_session_path, class: "button-box btn btn-info" %></a>
+                <a class="nav-link" aria-current="page" href="#"><%= link_to "Add Listing", new_listing_path, class: "button-box btn btn-info ms-2" %></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#"><%= link_to "Sign In", new_user_session_path, class: "button-box btn btn-info ms-2" %></a>
               </li>
             <% end %>
           </ul>
