@@ -4,7 +4,7 @@
   <table class="table table-hover">
     <thead class="thead-dark">
       <th class="center">Image</th>
-      <th>Pay Here</th>
+      <th>Reserve Here</th>
       <th class="center">Item</th>
       <th class="center">Price</th>
       <th class="center">Farmer's Name</th>
@@ -14,18 +14,18 @@
       <th class="center">Date Purchased</th>
     </tr>
     <tr>
-      <td class="center"><%= image_tag @order.listing.picture.url, class:"img-thumbnail" %></td>
+      <td class="center"><%= image_tag @order.listing.picture.url, class:"img-thumbnail  align-top" %></td>
       <td><%= link_to "Reserve", purchases_path, class:"btn btn-primary" %></td>
-      <td class="center"><%= @order.listing.name %></td>
-      <td class="center"><%= number_to_currency(@order.listing.price) %></td>
-      <td class="center"><%= @order.farmer.first_name %> <%= @order.farmer.last_name %></td>
+      <td class="center align-top"><%= @order.listing.name %></td>
+      <td class="center  align-top"><%= number_to_currency(@order.listing.price) %></td>
+      <td class="center  align-top"><%= @order.farmer.first_name %> <%= @order.farmer.last_name %></td>
       <% @listing = Listing.find_by_id(@order.listing_id) %>
-      <td><%= @listing.street %><br />
+      <td class="align-top"><%= @listing.street %><br />
         <%= @order.listing.city %>, <%= @order.listing.state %><br />
         <%= @listing.zipcode %><br /></td>
-      <td class="center"><%= @listing.telephone %><br />
-      <td class="center"><%= @order.listing.market_date.strftime("%B %-d, %Y") %> at <%= @order.listing.market_date.strftime("%l:%M %p") %><br />
-      <td class="center"><%= @order.created_at.strftime("%B %-d, %Y") %></td>
+      <td class="center  align-top"><%= @listing.telephone %><br />
+      <td class="center  align-top"><%= @order.listing.market_date.strftime("%B %-d, %Y") %> at <%= @order.listing.market_date.strftime("%l:%M %p") %><br />
+      <td class="center  align-top"><%= @order.created_at.strftime("%B %-d, %Y") %></td>
       <td>        
     </tr>
   </table>
