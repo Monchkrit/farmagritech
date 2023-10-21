@@ -12,46 +12,56 @@
       <nav id="navbar-example2" class="navbar navbar-expand-lg navbar-dark bg-dark px-3 mb-3">
         <a class="navbar-brand" href="#">Sort: </a>
         <ul class="nav nav-pills">
-            <li class="nav-item">
-          <% if @fat.count > 0 %>
+          <li class="nav-item">
+            <% if @fat.count > 0 %>
               <a class="nav-link" href="#agritech">AgriTech</a>
-          <% end %>
-            </li>
-            <li class="nav-item">
-          <% if @veg.count > 0 %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <% if @tool.count > 0 %>
+              <a class="nav-link" href="#tool">Tools</a>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <% if @supply.count > 0 %>
+              <a class="nav-link" href="#supply">Supplies</a>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <% if @veg.count > 0 %>
               <a class="nav-link" href="#veg">Vegetables</a>
-          <% end %>
-            </li>
-            <li class="nav-item">
-          <% if @fruit.count > 0 %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <% if @fruit.count > 0 %>
               <a class="nav-link" href="#fruit">Fruits</a>
-          <% end %>
-            </li>
-            <li class="nav-item">
-          <% if @herb.count > 0 %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <% if @herb.count > 0 %>
               <a class="nav-link" href="#herb">Herbs</a>
-          <% end %>
-            </li>
-            <li class="nav-item">
-          <% if @flow.count > 0 %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <% if @flow.count > 0 %>
               <a class="nav-link" href="#flow">Flowers</a>
-          <% end %>
-            </li>
-            <li class="nav-item">
-          <% if @houseplant.count > 0 %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <% if @houseplant.count > 0 %>
               <a class="nav-link" href="#hp">House Plants</a>
-          <% end %>
-            </li>
-            <li class="nav-item">
-          <% if @outdoorplant.count > 0 %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <% if @outdoorplant.count > 0 %>
               <a class="nav-link" href="#op">Outdoor Plants</a>
-          <% end %>
-            </li>
-            <li class="nav-item">
-          <% if @tree.count > 0 %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <% if @tree.count > 0 %>
               <a class="nav-link" href="#tree">Trees</a>
-          <% end %>
-            </li>
+            <% end %>
+          </li>
         </ul>
       </nav>
     <div class="row">
@@ -77,6 +87,66 @@
                     <p>Maximum orders: <%= fat.maxorder %></p>
                     <p><%= number_to_currency(fat.price) %><p>
                     <%= link_to 'Show', fat, class: "btn btn-link" %><br />
+                  </div>
+                </div>
+              </div>
+            <% end %>
+        <a href="#top">Top</a>
+          </div>
+        <% end %>
+
+        <h4 id="tool"></h4>
+        <% if @tool.count > 0 %>
+          <div class="row">
+            <p class="h2 mx-auto px-3 work-box">Tools</p>
+          </div>
+          <div class="row">
+            <% @tool.each do |tool| %>
+              <div class="col-md-3">
+                <div class="card" style: "width: 16rem;">
+                <%= image_tag tool.picture.url, class:"card-img-top" %><br />
+                  <div class="card-body">
+                    <h5 class="card-title"><%= tool.name %><br /></h5>
+                    <p class="card-text">
+                    <%= tool.description %><br />
+                    <%= tool.product_type %><br />
+                    <p>For Sale: <%= tool.market_date.strftime("%B %-d, %Y") %><br /></p>
+                    <% @owner = User.find_by_id(tool.user_id) %>
+                    <p class="h5">Sold by <%= @owner.first_name %> <%= @owner.last_name %></p>            
+                    <p>Sold in <%= tool.city %>, <%= tool.state %></p>
+                    <p>Maximum orders: <%= tool.maxorder %></p>
+                    <p><%= number_to_currency(tool.price) %><p>
+                    <%= link_to 'Show', tool, class: "btn btn-link" %><br />
+                  </div>
+                </div>
+              </div>
+            <% end %>
+        <a href="#top">Top</a>
+          </div>
+        <% end %>
+
+        <h4 id="supply"></h4>
+        <% if @supply.count > 0 %>
+          <div class="row">
+            <p class="h2 mx-auto px-3 work-box">Supplies</p>
+          </div>
+          <div class="row">
+            <% @supply.each do |supply| %>
+              <div class="col-md-3">
+                <div class="card" style: "width: 16rem;">
+                <%= image_tag supply.picture.url, class:"card-img-top" %><br />
+                  <div class="card-body">
+                    <h5 class="card-title"><%= supply.name %><br /></h5>
+                    <p class="card-text">
+                    <%= supply.description %><br />
+                    <%= supply.product_type %><br />
+                    <p>For Sale: <%= supply.market_date.strftime("%B %-d, %Y") %><br /></p>
+                    <% @owner = User.find_by_id(supply.user_id) %>
+                    <p class="h5">Sold by <%= @owner.first_name %> <%= @owner.last_name %></p>            
+                    <p>Sold in <%= supply.city %>, <%= supply.state %></p>
+                    <p>Maximum orders: <%= supply.maxorder %></p>
+                    <p><%= number_to_currency(supply.price) %><p>
+                    <%= link_to 'Show', supply, class: "btn btn-link" %><br />
                   </div>
                 </div>
               </div>

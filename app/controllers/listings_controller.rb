@@ -7,6 +7,16 @@ class ListingsController < ApplicationController
     @listings = Listing.agritech.search(params[:search]).order("market_date ASC")
   end
 
+  def tools
+    @time = Time.zone.now
+    @listings = Listing.tool.search(params[:search]).order("market_date ASC")
+  end
+
+  def supplies
+    @time = Time.zone.now
+    @listings = Listing.supply.search(params[:search]).order("market_date ASC")
+  end
+
   def vegetables
     @time = Time.zone.now
     @listings = Listing.vegetable.search(params[:search]).order("market_date ASC")
@@ -54,6 +64,8 @@ class ListingsController < ApplicationController
     @time = Time.zone.now
     @listings = Listing.search(params[:search]).order("market_date ASC")
     @fat = @listings.where(:product_type => 'FAT PC')
+    @tool = @listings.where(:product_type => 'Tool')
+    @supply = @listings.where(:product_type => 'Supply')
     @veg = @listings.where(:product_type => 'Vegetable')
     @flow = @listings.where(:product_type => 'Flowers')
     @fruit = @listings.where(:product_type => 'Fruit')
