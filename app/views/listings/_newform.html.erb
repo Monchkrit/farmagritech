@@ -10,7 +10,7 @@
         <p class="lead"><%= f.label :description, "Describe Product" %><%= f.text_field :description %></p>
         <p class="lead"><%= f.label :product_type, "Type of Product" %>
           <%= f.select(:product_type, [['Tool'], ['Supply'], ['Vegetable'], ['Herb'], ['Fruit'], ['Flowers'], ['House Plant'], ['Outdoor Plant'], ['Tree']]) %></p>
-        <p class="lead"><%= f.label :weight, "Pounds or Units" %><%= f.number_field :weight %></p>
+        <p class="lead"><%= f.label :weight, "Pounds or Units per Order" %><%= f.number_field :weight %></p>
         <p class="lead"><%= f.label :market_date, "Date of Sale" %><%= f.datetime_select :market_date, start_year: 2019 %></p>
         <p class="lead"><%= f.label :price, "Price (6.9% + 30 cents included)" %><%= f.text_field :price %></p>
         <p class="lead"><%= f.label :maxorder, "Total number of orders available" %><%= f.number_field :maxorder %>
