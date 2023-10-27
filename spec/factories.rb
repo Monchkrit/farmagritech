@@ -39,7 +39,7 @@ FactoryBot.define do
   end
 
   factory :enrollment do
-    
+
   end
 
   factory :prodtype do
@@ -84,7 +84,7 @@ FactoryBot.define do
   end
 
   factory :soilcube do
-    
+
   end
 
   factory :planttype do
@@ -106,15 +106,15 @@ FactoryBot.define do
   end
 
   factory :soil do
-    
+
   end
 
   factory :chorizon do
-    
+
   end
 
   factory :component do
-    
+
   end
 
   factory :phmuszipcode do
@@ -132,7 +132,7 @@ FactoryBot.define do
   end
 
   factory :prism do
-    
+
   end
 
 
