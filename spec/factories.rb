@@ -59,7 +59,7 @@ FactoryBot.define do
     description { "MyText" }
     product_type { 1 }
     price { "9.99" }
-    market_date { "2019-08-11 18:10:02" }
+    market_date { "2023-08-11 18:10:02" }
     picture { "MyString" }
     zipcode { "MyString" }
     user_id { 1 }
@@ -79,7 +79,7 @@ FactoryBot.define do
     name { "MyString" }
     description { "MyString" }
     product_type { "MyString" }
-    market_date { "2019-08-08 07:45:51" }
+    market_date { "2023-08-08 07:45:51" }
     price { "9.99" }
   end
 
