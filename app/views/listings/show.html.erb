@@ -1,8 +1,8 @@
 <div class="container">
   <% if @fat == 'FAT PC' %>
     <div class="col">
-    <div class="row listing-box">
-      <div class="card">
+    <div class="row listing-box mx-auto p-2">
+      <div class="card mx-auto p-2">
         <%= image_tag @listing.picture.url, class:"card-img-top pic-box" %>
       </div>
       <div class="col">
@@ -38,16 +38,7 @@
             Base Price: <%= number_to_currency(@listing.price) %>
             </p>
           </li>
-        </ul>
-        <br />
-        <p>
-        <div id="map"></div>
-        <%= link_to "Order", new_listing_order_path(@listing), class: "btn btn-primary" %>
-        </p>   
-        <% if (user_signed_in?) && (current_user.id == @listing.user_id) %>
-          <%= link_to 'Edit', edit_listing_path(@listing), class: "btn btn-link" %> | 
-        <% end %>
-        <%= link_to 'Back', listings_path, class: "btn btn-link" %>
+        </ul>        
       </div>
       <div class="col">
         <P CLASS="h3">
@@ -120,14 +111,19 @@
             </li>
           </ul>
           </p>
-        <p>
+        <div id="map"></div>
+        <%= link_to "Order", new_listing_order_path(@listing), class: "btn btn-primary" %>
+        <% if (user_signed_in?) && (current_user.id == @listing.user_id) %>
+          <%= link_to 'Edit', edit_listing_path(@listing), class: "btn btn-link" %> | 
+        <% end %>
+        <%= link_to 'Back', listings_path, class: "btn btn-link" %>
       </div>
     </div>
   </div>
   <% else %>
     <div class="col">
-      <div class="row listing-box">    
-        <div class="card" style: "width: 18rem;">
+      <div class="row listing-box mx-auto p-2">    
+        <div class="card mx-auto p-2" style: "width: 18rem;">
           <%= image_tag @listing.picture.url, class:"card-img-top" %>
         </div>
         <div class="col">
@@ -164,7 +160,6 @@
             </li>
           <div id="map"></div>
           <%= link_to "Order", new_listing_order_path(@listing), class: "btn btn-primary" %>
-          </p>   
           <% if (user_signed_in?) && (current_user.id == @listing.user_id) %>
             <%= link_to 'Edit', edit_listing_path(@listing), class: "btn btn-link" %> | 
           <% end %>
