@@ -16,15 +16,23 @@
             <p class="h5">Sold by <%= @farmer.first_name %> <%= @farmer.last_name %></p>            
             <p>Sold in <%= @listing.city %>, <%= @listing.state %></p>
             <p>Items remaining: <%= @listing.maxorder %></p>
-            <p><%= number_to_currency(@listing.price) %></p><br />
+            <p><%= number_to_currency(@listing.price) %></p>
+            <p>
+              <% if @listing.product_type = "FATPC" %>
+                <p>Farm AgriTech provides 1 to 3 years of computer support and security (FAT OS). Final price will include your selected FAT OS.</p>
+                <p>FAT OS Cost 1 Year: <%= @listing.fatsupportcost1yr %></p>
+                <p>FAT OS Cost 2 Year: <%= @listing.fatsupportcost2yr %></p>
+                <p>FAT OS Cost 3 Year: <%= @listing.fatsupportcost3yr %></p>
+              <% end %>
+            </p>
             <%= link_to 'Back', @listing, class: "btn btn-link" %><br />
           </div>
         </div>
       </div>
       <% if signed_in? %>
         <%= form_with scope: :order, url: listing_orders_path, local: true do |f| %>
-            <%= f.hidden_field :user_id %>
-            <%= f.submit "Order", class: 'btn btn-primary' %>
+          <%= f.hidden_field :user_id %>
+          <%= f.submit "Order", class: 'btn btn-primary' %>
         <% end %>
       <% end %>
     </div>

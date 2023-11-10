@@ -16,7 +16,7 @@ class Listing < ApplicationRecord
   before_validation :set_address
   geocoded_by :address
   after_validation :geocode
-  before_save :add_fee
+  # before_save :add_fee
 
   validates :name, :description, :product_type, :weight, :market_date, :price, :picture, :street, :city, :state, :zipcode, :telephone, :maxorder, presence: true
 

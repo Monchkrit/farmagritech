@@ -29,7 +29,12 @@
             <th class="badge badge-pill badge-dark">Unverified</td>
             <% end %>
             <td class="center"><%= order.listing.name %></td>
-            <td class="center"><%= number_to_currency(order.listing.price) %></td>
+            <td class="center">
+              <p><%= number_to_currency(order.listing.price) %></p>
+              <% if order.listing.product_type == "FAT PC" %>
+                <p>Plus FAT OS</p>
+              <% end %>
+            </td>
             <td class="center"><%= order.farmer.first_name %> <%= order.farmer.last_name %></td>
             <% @listing = Listing.find_by_id(order.listing_id) %>
             <td><%= @listing.street %><br />

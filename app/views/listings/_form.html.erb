@@ -15,6 +15,11 @@
         <p class="lead"><%= f.label :market_date, "Date of Sale" %><%= f.datetime_select :market_date, start_year: 2023 %></p>
         <p class="lead"><%= f.label :price, "Fees are applied." %></p>
         <p class="lead"><%= f.label :price, "Remember to reset this value or the fees will compound" %><%= f.text_field :price %></p>
+        <% if @admin %>
+          <p class="lead"><%= f.label :fatsupportcost1yr, "FATSupport Cost 1 Year" %><%= f.number_field :fatsupportcost1yr %></p>
+          <p class="lead"><%= f.label :fatsupportcost2yr, "FATSupport Cost 2 Year" %><%= f.number_field :fatsupportcost2yr %></p>
+          <p class="lead"><%= f.label :fatsupportcost3yr, "FATSupport Cost 3 Year" %><%= f.number_field :fatsupportcost3yr %></p>
+        <% end %>
         <p class="lead"><%= f.label :maxorder, "Total number of orders" %><%= f.number_field :maxorder %>
         <p class="lead">Please enter the location of sale</p>
         <p class="lead"><%= f.label :street, "Street" %><%= f.text_field :street %></p>
