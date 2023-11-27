@@ -18,7 +18,7 @@
             <p>Items remaining: <%= @listing.maxorder %></p>
             <p><%= number_to_currency(@listing.price) %></p>
             <p>
-              <% if @listing.product_type = "FATPC" %>
+              <% if @listing.product_type == "FAT PC" %>
                 <p>Farm AgriTech provides 1 to 3 years of computer support and security (FAT OS). Final price will include your selected FAT OS.</p>
                 <p>FAT OS Cost 1 Year: <%= @listing.fatsupportcost1yr %></p>
                 <p>FAT OS Cost 2 Year: <%= @listing.fatsupportcost2yr %></p>
