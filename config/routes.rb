@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'pages/contact'
   get 'pages/terms'
   get 'pages/privacy'
+  get 'pages/fatlsp'
   get 'planttypes/index'
   get 'planttypes/import'
   get 'chorizons/index'
