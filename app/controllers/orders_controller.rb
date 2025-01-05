@@ -11,11 +11,13 @@ class OrdersController < ApplicationController
   def sales
     @time = Time.zone.now
     @orders = Order.all.where(:farmer_id => current_user.id).order("created_at DESC")
+    puts "Order details: #{@orders.count}" # This will printto the server console
   end
 
   def purchases
     @time = Time.zone.now
     @orders = Order.where(:buyer => current_user).order("created_at DESC")
+    puts "Order details: #{@orders.count}" # This will printto the server console
   end
 
   def show

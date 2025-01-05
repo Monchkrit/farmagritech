@@ -26,7 +26,6 @@
           <th scope="col" class="h5"><strong>Crops / Number Planted</strong><br />
             <strong>Date Planted</strong>
           </th>
-          <th scope="col" class="h5"><strong><%= link_to "Plant Hardiness Zone", "https://planthardiness.ars.usda.gov/PHZMWeb/Default.aspx", :target => "_blank" %></strong></th>
         </thead>
         <tbody>
           <tr>
@@ -56,20 +55,9 @@
                 <% end %>
               <% end %>
             </td>
-            <td>
-              <% @phz.each do |phtitle| %>
-              <%= phtitle.zonetitle %> &#x2109
-              <% end %>
-              <br />Minimum Average Temperature
-            </td>        
           </tr>
         </tbody>
       </table>
-      <div class="row justify-content-center">
-        <button type="button" class="btn btn-success " data-toggle="modal" data-target="#soilModal">
-          Soil Information
-        </button>
-      </div>
       <% @soil.each do |soil| %>
       <table class="table">
         <thead class="thead-dark">
