@@ -31,6 +31,7 @@
             <td class="center"><%= order.listing.name %></td>
             <td class="center">
               <p><%= number_to_currency(order.listing.price) %></p>
+              <p><%= number_to_currency(order.listing.price_in_btc) %> Sats</p>
               <% if order.listing.product_type == "FAT PC" %>
                 <p>Plus FAT OS</p>
               <% end %>

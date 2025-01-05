@@ -21,7 +21,10 @@
         <td class="center"><%= listing.name %></td>
         <td class="center"><%= listing.description %></td>
         <td class="center"><%= listing.market_date.strftime("%B %-d, %Y") %></td>
-        <td class="center"><%= number_to_currency(listing.price) %></td>
+        <td class="center">
+          <p><%= number_to_currency(listing.price) %></p>
+          <p><%= listing.price_in_btc %> Sats</p>  
+        </td>
         <td class="center"><%= listing.maxorder %></td>
         <td>
           <ul class="list-group">

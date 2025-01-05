@@ -157,6 +157,7 @@
               <p>
               <%= number_to_currency(@listing.price) %>
               </p>
+              <p><%= @listing.price_in_btc %> Sats<p>
             </li>
           <div id="map"></div>
           <%= link_to "Order", new_listing_order_path(@listing), class: "btn btn-primary" %>

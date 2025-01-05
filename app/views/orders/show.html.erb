@@ -18,6 +18,7 @@
       <td><%= link_to "Reserve", purchases_path, class:"btn btn-primary" %></td>
       <td class="center align-top"><%= @order.listing.name %></td>
       <td class="center  align-top"><%= number_to_currency(@order.listing.price) %></td>
+      <td class="center  align-top"><%= @order.listing.price_in_btc %> Sats</td>
       <td class="center  align-top"><%= @order.farmer.first_name %> <%= @order.farmer.last_name %></td>
       <% @listing = Listing.find_by_id(@order.listing_id) %>
       <td class="align-top"><%= @listing.street %><br />
