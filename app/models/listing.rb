@@ -41,6 +41,12 @@ class Listing < ApplicationRecord
     listcube = Soilcube.find_by(id: cubeid)
   end
 
+  def price_in_btc
+    exchange_rate = BtcExchangeRateService.new.fetch_rate
+    puts "Exchange rate: #{exchange_rate}" # Debugging line
+    (self.price / exchange_rate).round(8) * 100000000
+  end
+
   private
 
   def add_fee

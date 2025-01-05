@@ -2,6 +2,8 @@ class ListingsController < ApplicationController
   before_action :authenticate_user!, only: [:farmer, :new, :edit, :create, :update]
   before_action :set_listing, only: [:show, :edit, :update, :destroy]
 
+  BASE_URL = "https://api.coinbase.com/v2"
+  
   def agritech
     @time = Time.zone.now
     @listings = Listing.agritech.search(params[:search]).order("market_date ASC")

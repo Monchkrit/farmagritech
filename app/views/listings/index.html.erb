@@ -175,7 +175,8 @@
                     <p class="h5">Sold by <%= @owner.first_name %> <%= @owner.last_name %></p>            
                     <p>Sold in <%= veg.city %>, <%= veg.state %></p>
                     <p>Maximum orders: <%= veg.maxorder %></p>
-                    <p><%= number_to_currency(veg.price) %><p>
+                    <p><%= number_to_currency(veg.price) %></p>
+                    <p><%= veg.price_in_btc %> Sats<p>
                     <%= link_to 'Show', veg, class: "btn btn-link" %><br />
                   </div>
                 </div>
