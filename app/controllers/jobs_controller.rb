@@ -33,7 +33,7 @@ class JobsController < ApplicationController
   def update
     @garden = Garden.find_by_id(params[:garden_id])
     @job = Job.find_by_id(params[:id])
-    @job.update_attributes(job_params)
+    @job.update(job_params)
     if @job.status == true
     @listitem = Accounting.new
     @listitem.list_job(@job.garden_id, @job.id, @job.start_time, @job.finish_time, @job.farmer_id, @job.gardener_id)
