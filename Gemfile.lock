@@ -295,7 +295,7 @@ GEM
     ruby-vips (2.2.2)
       ffi (~> 1.12)
       logger
-    rubyzip (2.4)
+    rubyzip (2.4.1)
     sass-embedded (1.83.1-x86_64-linux-gnu)
       google-protobuf (~> 4.29)
     sassc-embedded (1.80.1)
