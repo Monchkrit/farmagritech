@@ -51,6 +51,7 @@
           <p>Sold in <%= listing.city %>, <%= listing.state %></p>
           <p>Maximum orders: <%= listing.maxorder %></p>
           <p>Base Price: <%= number_to_currency(listing.price) %></p><br />
+          <p>BTC Price: <%= listing.price_in_btc %></b>
           <%= link_to 'Show', listing, class: "btn btn-link" %><br />
         </div>
       </div>

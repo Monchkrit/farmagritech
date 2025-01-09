@@ -15,8 +15,7 @@
         <th class="center">Price</th>
         <th class="center">Buyer Name</th>
         <th class="center">Buyer E-mail</th>
-        <th class="center">Date Sold</th>
-        <th class="center">Deliver Date and Time</th>
+        <th class="center">Date on Sale</th>
       </thead>
       <% @orders.each do |order| %>
       <tr>      
@@ -40,7 +39,6 @@
         <td class="center"><%= order.buyer.first_name %> <%= order.buyer.last_name %></td>
         <td class="center"><%= order.buyer.email %></td>
         <td class="center"><%= order.created_at.strftime("%B %-d, %Y") %></td>
-        <td class="center"><%= order.listing.market_date.strftime("%B %-d, %Y") %> at <%= order.listing.market_date.strftime("%l:%M %p") %></td>
       </tr>
       <% end %>
     </table>

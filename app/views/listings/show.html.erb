@@ -22,11 +22,6 @@
           </li>
           <li class="list-group-item mt-n1 ms-n1">
             <p>
-            For Sale: <%= @listing.market_date.strftime("%B %-d, %Y") %>
-            </p>
-          </li>
-          <li class="list-group-item mt-n1 ms-n1">
-            <p>
             <%= "Sold by #{@lister.first_name} #{@lister.last_name}" %></p>
             </p>
           </li>
@@ -37,31 +32,58 @@
             <p>
             Base Price: <%= number_to_currency(@listing.price) %>
             </p>
+            <p>
+            <%= @listing.price_in_btc %> Sats
+            </p>
+          </li>
+          <li class="list-group-item mt-n1 ms-n1">
+            <p>
+            FAT Support Cost 1 Year: <%= number_to_currency(@listing.fatsupportcost1yr) %>
+            </p>
+            <p>
+            <%= @listing.sup_in_btc %> Sats
+            </p>
+          </li>
+          <li class="list-group-item mt-n1 ms-n1">
+            <p>
+            FAT Support Cost Monthly: <%= number_to_currency(@listing.fatsupportcost1yr / 12) %>
+            </p>
+            <p>
+            <%= @listing.month_sup_in_btc %> Sats
+            </p>
+          </li>
+          <li class="list-group-item mt-n1 ms-n1">
+            <p class="h5">
+            Required Microsoft Licenses
+            </p>
+            <p>
+            Enterprise Mobility + Security E3
+            </p>
+            <p>Monthly: $10.60</p>
+            <p>
+            Microsoft Defender for Endpoint P1
+            </p>
+            <p>Monthly: $3.00</p>
+            <p class="h5">
+            Optional Microsoft License
+            </p>
+            <p>
+            Microsoft 365 Business Standard
+            </p>
+            <p>Monthly: $12.50</p>
           </li>
         </ul>        
       </div>
       <div class="col">
-        <P CLASS="h3">
+        <% if @admin %>
+          <p class="h3">Unit ID: <%= @listing.unitid %></p>
+        <% end %>
+        <p class="h3">
           Specifications
           <ul class="list-group mt-n1 ms-n1">
             <li class="list-group-item mt-n1 ms-n1">
               <p>
               Warranty Length: <%= @listing.warranty_length %> Year
-              </p>
-            </li>
-            <li class="list-group-item mt-n1 ms-n1">
-              <p>
-              FAT Support Cost 1 Year: $<%= @listing.fatsupportcost1yr %>
-              </p>
-            </li>
-            <li class="list-group-item mt-n1 ms-n1">
-              <p>
-              FAT Support Cost 2 Year: $<%= @listing.fatsupportcost2yr %>
-              </p>
-            </li>
-            <li class="list-group-item mt-n1 ms-n1">
-              <p>
-              FAT Support Cost 3 Year: $<%= @listing.fatsupportcost3yr %>
               </p>
             </li>
             <li class="list-group-item mt-n1 ms-n1">

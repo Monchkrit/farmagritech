@@ -17,8 +17,6 @@
           <th class="center">Farmer's Name</th>
           <th>Pickup Address</th>
           <th class="center">Contact Number or Email</th>
-          <th class="center">Pickup Date and Time</th>
-          <th class="center">Date Purchased</th>
         </thead>
         <% @orders.each do |order| %>
           <tr>
@@ -33,7 +31,7 @@
               <p><%= number_to_currency(order.listing.price) %></p>
               <p><%= number_to_currency(order.listing.price_in_btc) %> Sats</p>
               <% if order.listing.product_type == "FAT PC" %>
-                <p>Plus FAT OS</p>
+                <p>Plus FAT IT</p>
               <% end %>
             </td>
             <td class="center"><%= order.farmer.first_name %> <%= order.farmer.last_name %></td>
@@ -42,8 +40,6 @@
               <%= @listing.city %>, <%= order.state %><br />
               <%= @listing.zipcode %><br /></td>      
             <td class="center"><%= @listing.telephone %><br />
-            <td class="center"><%= @listing.market_date.strftime("%B %-d, %Y") %> at <%= @listing.market_date.strftime("%l:%M %p") %><br />
-            <td class="center"><%= order.created_at.strftime("%B %-d, %Y") %></td>
           </tr>
         <% end %>
     </table>

@@ -19,11 +19,27 @@
             <p><%= number_to_currency(@listing.price) %></p>
             <p>
               <% if @listing.product_type == "FAT PC" %>
-                <p>Farm AgriTech provides 1 to 3 years of computer support and security (FAT OS). Final price will include your selected FAT OS.</p>
-                <p>FAT OS Cost 1 Year: <%= @listing.fatsupportcost1yr %></p>
-                <p>FAT OS Cost 2 Year: <%= @listing.fatsupportcost2yr %></p>
-                <p>FAT OS Cost 3 Year: <%= @listing.fatsupportcost3yr %></p>
-              <% end %>
+                <p class="h5">Farm AgriTech IT (FAT IT)
+                <p>FAT IT Cost 1 Month: <%= number_to_currency(@listing.fatsupportcost1yr / 12) %></p>
+                <p class="h5">
+                Required Microsoft Licenses
+                </p>
+                <p>
+                Enterprise Mobility + Security E3
+                </p>
+                <p>Monthly: $10.60</p>
+                <p>
+                Microsoft Defender for Endpoint P1
+                </p>
+                <p>Monthly: $3.00</p>
+                <p class="h5">
+                Optional Microsoft License
+                </p>
+                <p>
+                Microsoft 365 Business Standard
+                </p>
+                <p>Monthly: $12.50</p>
+                <% end %>
             </p>
             <%= link_to 'Back', @listing, class: "btn btn-link" %><br />
           </div>

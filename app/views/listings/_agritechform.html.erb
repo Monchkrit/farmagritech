@@ -1,6 +1,7 @@
 <div class="container-fluid">
   <div class="row form-box">
     <div class="col">
+    <p class="h3"><%= @listing.unitid %></p>
       <%= form_with model: @listing do |f| %>
         <p class="lead pt-2"><%= f.label :name, "Product Name" %><%= f.text_field :name %>
         <p class="lead"><%= f.label :description, "Describe Product" %><%= f.text_field :description %></p>
@@ -9,8 +10,6 @@
         <p class="lead"><%= f.label :unitid, "Unit ID" %><%= f.text_field :unitid %>
         <p class="lead"><%= f.label :warranty_length, "Warranty Length" %><%= f.number_field :warranty_length %></p>
         <p class="lead"><%= f.label :fatsupportcost1yr, "FATSupport Cost 1 Year" %><%= f.number_field :fatsupportcost1yr %></p>
-        <p class="lead"><%= f.label :fatsupportcost2yr, "FATSupport Cost 2 Year" %><%= f.number_field :fatsupportcost2yr %></p>
-        <p class="lead"><%= f.label :fatsupportcost3yr, "FATSupport Cost 3 Year" %><%= f.number_field :fatsupportcost3yr %></p>
         <p class="lead"><%= f.label :cpu, "CPU" %><%= f.text_field :cpu %>
         <p class="lead"><%= f.label :core_count, "Core Count" %><%= f.number_field :core_count %>
         <p class="lead"><%= f.label :ram, "RAM" %><%= f.number_field :ram %>

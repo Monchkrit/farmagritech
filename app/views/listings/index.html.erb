@@ -80,11 +80,10 @@
                     <p class="card-text">
                     <%= fat.description %><br />
                     <%= fat.product_type %><br />
-                    <p>For Sale: <%= fat.market_date.strftime("%B %-d, %Y") %><br /></p>
                     <% @owner = User.find_by_id(fat.user_id) %>
                     <p class="h5">Sold by <%= @owner.first_name %> <%= @owner.last_name %></p>            
                     <p>Sold in <%= fat.city %>, <%= fat.state %></p>
-                    <p>Maximum orders: <%= fat.maxorder %></p>
+                    <p>Available units: <%= fat.maxorder %></p>
                     <p><%= number_to_currency(fat.price) %><p>
                     <p><%= fat.price_in_btc %> Sats<p>
                     <%= link_to 'Show', fat, class: "btn btn-link" %><br />
@@ -115,7 +114,7 @@
                     <% @owner = User.find_by_id(tool.user_id) %>
                     <p class="h5">Sold by <%= @owner.first_name %> <%= @owner.last_name %></p>            
                     <p>Sold in <%= tool.city %>, <%= tool.state %></p>
-                    <p>Maximum orders: <%= tool.maxorder %></p>
+                    <p>Available orders: <%= tool.maxorder %></p>
                     <p><%= number_to_currency(tool.price) %><p>
                     <p><%= tool.price_in_btc %> Sats<p>
                     <%= link_to 'Show', tool, class: "btn btn-link" %><br />
@@ -146,7 +145,7 @@
                     <% @owner = User.find_by_id(supply.user_id) %>
                     <p class="h5">Sold by <%= @owner.first_name %> <%= @owner.last_name %></p>            
                     <p>Sold in <%= supply.city %>, <%= supply.state %></p>
-                    <p>Maximum orders: <%= supply.maxorder %></p>
+                    <p>Available orders: <%= supply.maxorder %></p>
                     <p><%= number_to_currency(supply.price) %><p>
                     <p><%= supply.price_in_btc %> Sats<p>
                     <%= link_to 'Show', supply, class: "btn btn-link" %><br />
@@ -177,7 +176,7 @@
                     <% @owner = User.find_by_id(veg.user_id) %>
                     <p class="h5">Sold by <%= @owner.first_name %> <%= @owner.last_name %></p>            
                     <p>Sold in <%= veg.city %>, <%= veg.state %></p>
-                    <p>Maximum orders: <%= veg.maxorder %></p>
+                    <p>Available orders: <%= veg.maxorder %></p>
                     <p><%= number_to_currency(veg.price) %></p>
                     <p><%= veg.price_in_btc %> Sats<p>
                     <%= link_to 'Show', veg, class: "btn btn-link" %><br />
@@ -208,7 +207,7 @@
                     <% @owner = User.find_by_id(fruit.user_id) %>
                     <p class="h5">Sold by <%= @owner.first_name %> <%= @owner.last_name %></p>            
                     <p>Sold in <%= fruit.city %>, <%= fruit.state %></p>
-                    <p>Maximum orders: <%= fruit.maxorder %></p>
+                    <p>Available orders: <%= fruit.maxorder %></p>
                     <p><%= number_to_currency(fruit.price) %><p>
                     <p><%= fruit.price_in_btc %> Sats<p>
                     <%= link_to 'Show', fruit, class: "btn btn-link" %><br />
@@ -239,7 +238,7 @@
                     <% @owner = User.find_by_id(herb.user_id) %>
                     <p class="h5">Sold by <%= @owner.first_name %> <%= @owner.last_name %></p>            
                     <p>Sold in <%= herb.city %>, <%= herb.state %></p>
-                    <p>Maximum orders: <%= herb.maxorder %></p>
+                    <p>Available orders: <%= herb.maxorder %></p>
                     <p><%= number_to_currency(herb.price) %><p>
                     <p><%= herb.price_in_btc %> Sats<p>
                     <%= link_to 'Show', herb, class: "btn btn-link" %><br />
@@ -270,7 +269,7 @@
                     <% @owner = User.find_by_id(flow.user_id) %>
                     <p class="h5">Sold by <%= @owner.first_name %> <%= @owner.last_name %></p>            
                     <p>Sold in <%= flow.city %>, <%= flow.state %></p>
-                    <p>Maximum orders: <%= flow.maxorder %></p>
+                    <p>Available orders: <%= flow.maxorder %></p>
                     <p><%= number_to_currency(flow.price) %><p>
                     <p><%= flow.price_in_btc %> Sats<p>
                     <%= link_to 'Show', flow, class: "btn btn-link" %><br />
@@ -301,7 +300,7 @@
                     <% @owner = User.find_by_id(houseplant.user_id) %>
                     <p class="h5">Sold by <%= @owner.first_name %> <%= @owner.last_name %></p>            
                     <p>Sold in <%= houseplant.city %>, <%= houseplant.state %></p>
-                    <p>Maximum orders: <%= houseplant.maxorder %></p>
+                    <p>Available orders: <%= houseplant.maxorder %></p>
                     <p><%= number_to_currency(houseplant.price) %><p>
                     <p><%= houseplant.price_in_btc %> Sats<p>
                     <%= link_to 'Show', houseplant, class: "btn btn-link" %><br />
@@ -332,7 +331,7 @@
                     <% @owner = User.find_by_id(outdoorplant.user_id) %>
                     <p class="h5">Sold by <%= @owner.first_name %> <%= @owner.last_name %></p>            
                     <p>Sold in <%= outdoorplant.city %>, <%= outdoorplant.state %></p>
-                    <p>Maximum orders: <%= outdoorplant.maxorder %></p>
+                    <p>Available orders: <%= outdoorplant.maxorder %></p>
                     <p><%= number_to_currency(outdoorplant.price) %><p>
                     <p><%= outdoorplant.price_in_btc %> Sats<p>
                     <%= link_to 'Show', outdoorplant, class: "btn btn-link" %><br />
@@ -363,7 +362,7 @@
                     <% @owner = User.find_by_id(tree.user_id) %>
                     <p class="h5">Sold by <%= @owner.first_name %> <%= @owner.last_name %></p>            
                     <p>Sold in <%= tree.city %>, <%= tree.state %></p>
-                    <p>Maximum orders: <%= tree.maxorder %></p>
+                    <p>Available orders: <%= tree.maxorder %></p>
                     <p><%= number_to_currency(tree.price) %><p>
                     <p><%= tree.price_in_btc %> Sats<p>
                     <%= link_to 'Show', tree, class: "btn btn-link" %><br />

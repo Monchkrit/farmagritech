@@ -78,6 +78,7 @@ class ListingsController < ApplicationController
   # GET /listings/1
   # GET /listings/1.json
   def show
+    @admin = current_user.admin
     @listing = Listing.find_by_id(params[:id])
     @fat = @listing.product_type
     @lister = User.find_by_id(@listing.user_id)
@@ -158,7 +159,7 @@ class ListingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def listing_params
-      params.require(:listing).permit(:search, :name, :description, :product_type, :price, :market_date, :maxorder, :picture, :zipcode, :user_id, :street, :city, :state, :zipcode, :telephone, :weight, :cube, :latitude, :longtitude, :warranty_length, :fatsupportcost1yr, :fatsupportcost2yr, :fatsupportcost3yr, :cpu, :core_count, :ram, :memory_type, :hdgigs, :hdtype, :opticaldrive, :video, :videoint, :update_date)
+      params.require(:listing).permit(:search, :name, :description, :product_type, :price, :market_date, :maxorder, :picture, :zipcode, :user_id, :street, :city, :state, :zipcode, :telephone, :weight, :cube, :latitude, :longtitude, :warranty_length, :fatsupportcost1yr, :fatsupportcost2yr, :fatsupportcost3yr, :cpu, :core_count, :ram, :memory_type, :hdgigs, :hdtype, :opticaldrive, :video, :videoint, :unitid, :update_date)
     end
 
 end

@@ -47,6 +47,16 @@ class Listing < ApplicationRecord
     (self.price / exchange_rate).round(8) * 100000000
   end
 
+  def sup_in_btc
+    exchange_rate = BtcExchangeRateService.new.fetch_rate
+    puts "Exchange rate: #{exchange_rate}" # Debugging line
+    (self.fatsupportcost1yr / exchange_rate).round(8) * 100000000
+  end
+
+  def month_sup_in_btc
+    (sup_in_btc / 12).round(2)
+  end
+
   private
 
   def add_fee
