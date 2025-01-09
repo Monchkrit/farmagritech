@@ -19,7 +19,9 @@
             <p><%= number_to_currency(@listing.price) %></p>
             <p>
               <% if @listing.product_type == "FAT PC" %>
-                <p class="h5">Farm AgriTech IT (FAT IT)
+                <p class="h5">Computer Base Price: <%= number_to_currency(@listing.price) %></p>
+                <p><%= @listing.price_in_btc %> Sats</p>
+                <p class="h5">Farm AgriTech IT (FAT IT)</p>
                 <p>FAT IT Cost 1 Month: <%= number_to_currency(@listing.fatsupportcost1yr / 12) %></p>
                 <p class="h5">
                 Required Microsoft Licenses

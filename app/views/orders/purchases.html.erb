@@ -29,9 +29,9 @@
             <td class="center"><%= order.listing.name %></td>
             <td class="center">
               <p><%= number_to_currency(order.listing.price) %></p>
-              <p><%= number_to_currency(order.listing.price_in_btc) %> Sats</p>
+              <p><%= order.listing.price_in_btc %> Sats</p>
               <% if order.listing.product_type == "FAT PC" %>
-                <p>Plus FAT IT</p>
+                <p>Plus FAT IT and Microsoft Licenses</p>
               <% end %>
             </td>
             <td class="center"><%= order.farmer.first_name %> <%= order.farmer.last_name %></td>
