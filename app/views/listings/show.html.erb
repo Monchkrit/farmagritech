@@ -89,6 +89,7 @@
               </p>
             </li>
           <% if @listing.description != "Monitor" %>
+          <% if @listing.description != "Docking Station" %>
             <li class="list-group-item mt-n1 ms-n1">
               <p>
               CPU: <%= @listing.cpu %>
@@ -129,6 +130,7 @@
               Graphical Processor: <%= @listing.video %>
               </p>
             </li>
+          <% end %>
           <% end %>
             <li class="list-group-item mt-n1 ms-n1">
               <p>
