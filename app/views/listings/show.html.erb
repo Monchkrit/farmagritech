@@ -44,7 +44,7 @@
             <%= @listing.sup_in_btc %> Sats
             </p>
           </li>
-        <% if @listing.description != "Monitor" %>
+        <% if @listing.description != "Monitor" && @listing.description != "Docking Station" %>
           <li class="list-group-item mt-n1 ms-n1">
             <p>
             FAT Support Cost Monthly: <%= number_to_currency(@listing.fatsupportcost1yr / 12) %>
@@ -88,8 +88,7 @@
               Warranty Length: <%= @listing.warranty_length %> Year
               </p>
             </li>
-          <% if @listing.description != "Monitor" %>
-          <% if @listing.description != "Docking Station" %>
+          <% if @listing.description != "Monitor" && @listing.description != "Docking Station" %>
             <li class="list-group-item mt-n1 ms-n1">
               <p>
               CPU: <%= @listing.cpu %>
@@ -130,7 +129,6 @@
               Graphical Processor: <%= @listing.video %>
               </p>
             </li>
-          <% end %>
           <% end %>
             <li class="list-group-item mt-n1 ms-n1">
               <p>
