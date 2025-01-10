@@ -12,13 +12,13 @@
             <p class="card-text">
             <%= @listing.description %><br />
             <%= @listing.product_type %><br />
-            <p>For Sale: <%= @listing.market_date.strftime("%B %-d, %Y") %><br /></p>
             <p class="h5">Sold by <%= @farmer.first_name %> <%= @farmer.last_name %></p>            
             <p>Sold in <%= @listing.city %>, <%= @listing.state %></p>
             <p>Items remaining: <%= @listing.maxorder %></p>
             <p><%= number_to_currency(@listing.price) %></p>
             <p>
               <% if @listing.product_type == "FAT PC" %>
+              <% if @listing.description != "Monitor" %>
                 <p class="h5">Computer Base Price: <%= number_to_currency(@listing.price) %></p>
                 <p><%= @listing.price_in_btc %> Sats</p>
                 <p class="h5">Farm AgriTech IT (FAT IT)</p>
@@ -41,7 +41,8 @@
                 Microsoft 365 Business Standard
                 </p>
                 <p>Monthly: $12.50</p>
-                <% end %>
+              <% end %>
+              <% end %>  
             </p>
             <%= link_to 'Back', @listing, class: "btn btn-link" %><br />
           </div>

@@ -44,6 +44,7 @@
             <%= @listing.sup_in_btc %> Sats
             </p>
           </li>
+        <% if @listing.description != "Monitor" %>
           <li class="list-group-item mt-n1 ms-n1">
             <p>
             FAT Support Cost Monthly: <%= number_to_currency(@listing.fatsupportcost1yr / 12) %>
@@ -72,6 +73,7 @@
             </p>
             <p>Monthly: $12.50</p>
           </li>
+        <% end %>
         </ul>        
       </div>
       <div class="col">
@@ -86,6 +88,7 @@
               Warranty Length: <%= @listing.warranty_length %> Year
               </p>
             </li>
+          <% if @listing.description != "Monitor" %>
             <li class="list-group-item mt-n1 ms-n1">
               <p>
               CPU: <%= @listing.cpu %>
@@ -126,6 +129,7 @@
               Graphical Processor: <%= @listing.video %>
               </p>
             </li>
+          <% end %>
             <li class="list-group-item mt-n1 ms-n1">
               <p>
               Video Interface: <%= @listing.videoint %>

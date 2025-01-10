@@ -16,8 +16,10 @@
       <td><%= link_to "Reserve", purchases_path, class:"btn btn-primary" %></td>
       <td class="center align-top"><%= @order.listing.name %></td>
       <td class="center  align-top">
-        <p><%= number_to_currency(@order.listing.price) %> + FAT IT and Microsoft Licenses</p>
-        <p><%= @order.listing.price_in_btc %> Sats + FAT IT and Microsoft Licenses</p>
+        <p><%= number_to_currency(@order.listing.price) %>
+          <% if @listing.description != "Monitor" %> + FAT IT and Microsoft Licenses<% end %></p>
+        <p><%= @order.listing.price_in_btc %> Sats
+          <% if @listing.description != "Monitor" %> + FAT IT and Microsoft Licenses<% end %></p>
       </td>
       <td class="center  align-top"><%= @order.farmer.first_name %> <%= @order.farmer.last_name %></td>
       <% @listing = Listing.find_by_id(@order.listing_id) %>
