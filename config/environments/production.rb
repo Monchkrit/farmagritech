@@ -12,6 +12,7 @@ Rails.application.configure do
     enable_startls_auto: true,
     open_timeout: 30, # Increase the open timeout
     read_timeout: 60 # Increase the read timeout
+  }
   # Code is not reloaded between requests.
   config.cache_classes = true
 
