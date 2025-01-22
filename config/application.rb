@@ -5,9 +5,6 @@ require 'rails/all'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
-Dotenv::Railtie.load
-
-DB_PASSWORD = ENV['DB_PASSWORD']
 
 module Plantform
   class Application < Rails::Application
