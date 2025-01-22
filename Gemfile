@@ -7,7 +7,7 @@ gem 'json', '~> 2.6', '>= 2.6.3'
 gem 'stripe', '~> 9.3'
 gem 'mini_magick', '~> 4.12'
 gem 'ranked-model', '~> 0.4.9'
-gem 'dotenv-rails', '~> 2.8', '>= 2.8.1'
+gem 'dotenv-rails', :groups => [:development, :test]
 gem 'geocoder', '~> 1.8', '>= 1.8.2'
 gem 'fog-aws', '~> 3.19'
 gem 'figaro', '~> 1.2'

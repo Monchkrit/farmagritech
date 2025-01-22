@@ -33,3 +33,6 @@
 /.ruby-version
 /Gemfile
 /Gemfile.lock
+
+# Ignore the enviornmental variables file
+.env
