@@ -1,16 +1,17 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  config.action_mailer.default_url_options = { :host => 'plantform.herokuapp.com' }
+  config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
-    port: 587,
-    domain: "plantformsoftware.com",
-    authentication: "plain",
-    enable_starttle_auto: true,
-    user_name: ENV["GMAIL_USERNAME"],
-    password: ENV["GMAIL_PASSWORD"]
-  }
+    address: ENV['SMTP_ADDRESS'],
+    port: ENV['SMTP_PORT'],
+    domain: ENV['SMTP_DOMAIN'],
+    user_name: ENV['SMTP_USER'],
+    password: ENV['SMTP_PASSWORD'],
+    authentication: 'login',
+    enable_startls_auto: true,
+    open_timeout: 30, # Increase the open timeout
+    read_timeout: 60 # Increase the read timeout
   # Code is not reloaded between requests.
   config.cache_classes = true
 
