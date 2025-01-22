@@ -36,3 +36,6 @@
 
 # Ignore the enviornmental variables file
 .env
+
+# Ignore credentials
+/config/credentials.yml.enc
