@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_20_093834) do
+ActiveRecord::Schema[7.0].define(version: 2025_01_27_203532) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -123,6 +123,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_20_093834) do
     t.boolean "verified"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+    t.string "county"
   end
 
   create_table "phmuszipcodes", force: :cascade do |t|
@@ -178,6 +179,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_20_093834) do
     t.integer "row_num"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+  end
+
+  create_table "shipping_addresses", force: :cascade do |t|
+    t.string "street"
+    t.string "city"
+    t.string "state"
+    t.string "zip"
+    t.string "county"
+    t.bigint "order_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["order_id"], name: "index_shipping_addresses_on_order_id"
   end
 
   create_table "soilcubes", force: :cascade do |t|
@@ -249,4 +262,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_20_093834) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "shipping_addresses", "orders"
 end

@@ -16,6 +16,7 @@
         <th class="center">Buyer Name</th>
         <th class="center">Buyer E-mail</th>
         <th class="center">Date on Sale</th>
+        <th class="center">Shipping Address</th>
       </thead>
       <% @orders.each do |order| %>
       <tr>      
@@ -26,8 +27,28 @@
           <%= form_with model: order, url: listing_order_path(order.listing_id, order), method: :patch, local: true do |f| %>
             <%= f.label "Check to Verify" %>
             <%= f.check_box "verified" %>
-            <%= f.submit %>
-          <% end %> 
+            <div>
+            <%= f.label :street, "Street" %>
+            <%= f.text_field :street %>
+            </div>
+            <div>
+              <%= f.label :street, "City" %>
+              <%= f.text_field :city %>
+            </div>
+            <div>
+              <%= f.label :street, "State" %>
+              <%= f.text_field :state %>
+            </div>
+            <div>
+              <%= f.label :street, "Zipcode" %>
+              <%= f.text_field :zipcode %>
+            </div>
+            <div>
+              <%= f.label :street, "County" %>
+              <%= f.text_field :county %>
+            </div>
+              <%= f.submit %>
+            <% end %> 
           <% end %>
         </td>
         <td class="center"><%= order.listing.name %></td>
@@ -39,6 +60,10 @@
         <td class="center"><%= order.buyer.first_name %> <%= order.buyer.last_name %></td>
         <td class="center"><%= order.buyer.email %></td>
         <td class="center"><%= order.created_at.strftime("%B %-d, %Y") %></td>
+        <td class="center">
+          <p><%= order.street %>, <%= order.city %>, <p><%= order.state %> <%= order.zipcode %></p>
+          <p><%= order.county %></p>
+        </td>
       </tr>
       <% end %>
     </table>

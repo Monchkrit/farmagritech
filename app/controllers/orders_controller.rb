@@ -61,7 +61,7 @@ class OrdersController < ApplicationController
 
   def update
     respond_to do |format|
-      @order.update_columns(verified: true)
+      @order.update(order_params)
         format.html { redirect_to sales_path, notice: 'Order was successfully updated.' }
         format.json { head :no_content }
 
@@ -84,6 +84,6 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:street, :city, :zipcode, :state, :listing_id, :verified)
+      params.require(:order).permit(:street, :city, :zipcode, :state, :county, :listing_id, :verified)
     end
 end
