@@ -90,7 +90,7 @@
                     <p class="h5">Sold by <%= @owner.first_name %> <%= @owner.last_name %></p>            
                     <p>Sold in <%= fat.city %>, <%= fat.state %></p>
                     <p>Available units: <%= fat.maxorder %></p>
-                    <p><%= number_to_currency(fat.price) %><p>
+                    <p><%= number_to_currency(fat.price) %> + tax and delivery if greater than 100 miles<p>
                     <p><%= fat.price_in_btc %> Sats<p>
                     <%= link_to 'Show', fat, class: "btn btn-link" %><br />
                   </div>
