@@ -1,4 +1,12 @@
 FactoryBot.define do
+  factory :shipping_address do
+    street { "MyString" }
+    city { "MyString" }
+    state { "MyString" }
+    zip { "MyString" }
+    county { "MyString" }
+  end
+
   factory :product do
     name { "MyString" }
     picture { "MyString" }

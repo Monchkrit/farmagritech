@@ -18,6 +18,7 @@ gem 'sprockets-rails', '~> 3.4', '>= 3.4.2', :require => 'sprockets/railtie'
 gem 'jquery-rails', '~> 4.6'
 gem 'bootstrap', '~> 5.3.1'
 gem 'faraday', '~> 2.12', '>=2.12.2'
+gem 'attr_encrypted', '~> 4.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 7.0.8'
