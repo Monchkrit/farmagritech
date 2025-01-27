@@ -41,19 +41,21 @@
         <td class="center"><%= order.buyer.email %></td>
         <td class="center"><%= order.created_at.strftime("%B %-d, %Y") %></td>
         <td class="center">
-          <%= form_with(model: @order, local: true) do |f| %>
-            <%= f.label :address %>
-            <%= f.text_field :address, class: "form-control" %>
-            <%= f.label :city %>
-            <%= f.text_field :city, class: "form-control" %>
-            <%= f.label :state %>
-            <%= f.text_field :state, class: "form-control" %>
-            <%= f.label :zip %>
-            <%= f.text_field :zip, class: "form-control" %>
-            <%= f.label :county %>
-            <%= f.text_field :county, class: "form-control" %>
+          <%= form_with model: order, url: listing_order_path(order.listing_id, order), method: :patch, local: true do |f| %>
+            <%= f.fields_for :shipping_address do |address_form| %>
+              <%= f.label :address %>
+              <%= f.text_field :street, class: "form-control" %>
+              <%= f.label :city %>
+              <%= f.text_field :city, class: "form-control" %>
+              <%= f.label :state %>
+              <%= f.text_field :state, class: "form-control" %>
+              <%= f.label :zip %>
+              <%= f.text_field :zip, class: "form-control" %>
+              <%= f.label :county %>
+              <%= f.text_field :county, class: "form-control" %>
+            <% end %>
+            <%= f.submit "Ship", class: 'btn btn-primary' %>
           <% end %>
-            <%= f.submit "Order", class: 'btn btn-primary' %>
         </td>
       </tr>
       <% end %>

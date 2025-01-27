@@ -5,6 +5,15 @@ FactoryBot.define do
     state { "MyString" }
     zip { "MyString" }
     county { "MyString" }
+    order { nil }
+  end
+
+  factory :shipping_address do
+    street { "MyString" }
+    city { "MyString" }
+    state { "MyString" }
+    zip { "MyString" }
+    county { "MyString" }
   end
 
   factory :product do

@@ -6,6 +6,7 @@ class CreateShippingAddresses < ActiveRecord::Migration[7.0]
       t.string :state
       t.string :zip
       t.string :county
+      t.references :order, null: true, foreign_key: true
 
       t.timestamps
     end
