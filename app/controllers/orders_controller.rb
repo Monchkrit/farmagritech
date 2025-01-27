@@ -31,6 +31,7 @@ class OrdersController < ApplicationController
     @listing = Listing.find_by_id(params[:listing_id])
     @session_id = flash[:session_id]
     @farmer = User.find_by_id(@listing.user_id)
+    @order.build_shipping_address
   end
 
   # POST /orders
@@ -43,7 +44,7 @@ class OrdersController < ApplicationController
     @order.listing_id = @listing.id
     @order.buyer_id = current_user.id
     @order.farmer_id = @farmer
-
+    @order.build_shipping_address(order_params)
     if @listing.maxorder > 0
     Listing.decrement_counter(:maxorder, @listing)
     end
@@ -84,6 +85,6 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:street, :city, :zipcode, :state, :listing_id, :verified)
+      params.require(:order).permit(:street, :city, :zipcode, :state, :listing_id, :verified, shipping_address_attributes: [:street, :city, :zipcode, :state, :county])
     end
 end

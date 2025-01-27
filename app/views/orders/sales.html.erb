@@ -16,6 +16,7 @@
         <th class="center">Buyer Name</th>
         <th class="center">Buyer E-mail</th>
         <th class="center">Date on Sale</th>
+        <th class="center">Shipping Address</th>
       </thead>
       <% @orders.each do |order| %>
       <tr>      
@@ -39,6 +40,20 @@
         <td class="center"><%= order.buyer.first_name %> <%= order.buyer.last_name %></td>
         <td class="center"><%= order.buyer.email %></td>
         <td class="center"><%= order.created_at.strftime("%B %-d, %Y") %></td>
+        <td class="center">
+          <%= form_with(model: @order, local: true) do |form| %>
+            <%= form.label :address %>
+            <%= form.text_field :address, class: "form-control" %>
+            <%= form.label :city %>
+            <%= form.text_field :city, class: "form-control" %>
+            <%= form.label :state %>
+            <%= form.text_field :state, class: "form-control" %>
+            <%= form.label :zip %>
+            <%= form.text_field :zip, class: "form-control" %>
+            <%= form.label :county %>
+            <%= form.text_field :county, class: "form-control" %>
+          <% end %>
+        </td>
       </tr>
       <% end %>
     </table>
